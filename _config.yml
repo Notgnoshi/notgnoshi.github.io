@@ -1,11 +1,10 @@
 # Site settings
 title: Not a gnoshi...
-email: your-email@domain.com
-description: ""
+description: "Test Description here"
 baseurl: ""
 url: "http://yourdomain.com"
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: notgnoshi
+github_username:  Notgnoshi
 
 # Build settings
 markdown: kramdown

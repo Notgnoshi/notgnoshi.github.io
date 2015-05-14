@@ -2,12 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Not a Gnoshi...</title>
-    <description>Some people call me Nots...</description>
+    <description>Some people call me Nots. I don&#39;t really care, but I&#39;m not a Gnoshi!</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 May 2015 12:20:57 -0600</pubDate>
-    <lastBuildDate>Thu, 14 May 2015 12:20:57 -0600</lastBuildDate>
+    <pubDate>Thu, 14 May 2015 13:41:13 -0600</pubDate>
+    <lastBuildDate>Thu, 14 May 2015 13:41:13 -0600</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
+    
+      <item>
+        <title>Why Blog</title>
+        <description>&lt;p&gt;Psssst! Is this thing on?&lt;/p&gt;
+</description>
+        <pubDate>Thu, 14 May 2015 13:39:30 -0600</pubDate>
+        <link>/2015/05/14/Why-blog/</link>
+        <guid isPermaLink="true">/2015/05/14/Why-blog/</guid>
+        
+        <category>blogging</category>
+        
+        
+      </item>
     
       <item>
         <title>Welcome to Jekyll!</title>

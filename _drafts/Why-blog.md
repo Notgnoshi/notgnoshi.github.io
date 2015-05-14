@@ -1,6 +1,5 @@
 ---
 layout: post
-published: false
 tags: blogging
 #As I have it set up right now, tags don't seem to do anything...
 ---

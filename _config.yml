@@ -1,7 +1,6 @@
 # Site settings
 title: Not a gnoshi...
 description: "Test Description here"
-baseurl: "/notgnoshi.github.io"
 twitter_username: Notgnoshi
 github_username:  Notgnoshi
 email: "Notgnoshi@gmail.com"

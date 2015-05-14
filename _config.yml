@@ -1,7 +1,7 @@
 # Site settings
 title: Not a gnoshi...
 description: "Test Description here"
-baseurl: ""
+baseurl: "http://notgnoshi.github.io"
 url: "http://notgnoshi.github.io"
 twitter_username: notgnoshi
 github_username:  Notgnoshi

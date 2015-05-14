@@ -3,10 +3,10 @@
   <channel>
     <title>Not a gnoshi...</title>
     <description>Test Description here</description>
-    <link>http://notgnoshi.github.io/notgnoshi.github.io/</link>
-    <atom:link href="http://notgnoshi.github.io/notgnoshi.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 May 2015 10:57:01 -0600</pubDate>
-    <lastBuildDate>Thu, 14 May 2015 10:57:01 -0600</lastBuildDate>
+    <link>http://notgnoshi.github.io/</link>
+    <atom:link href="http://notgnoshi.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 14 May 2015 10:58:41 -0600</pubDate>
+    <lastBuildDate>Thu, 14 May 2015 10:58:41 -0600</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
     
       <item>
@@ -26,8 +26,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 </description>
         <pubDate>Thu, 14 May 2015 03:18:22 -0600</pubDate>
-        <link>http://notgnoshi.github.io/notgnoshi.github.io/jekyll/update/2015/05/14/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://notgnoshi.github.io/notgnoshi.github.io/jekyll/update/2015/05/14/welcome-to-jekyll/</guid>
+        <link>http://notgnoshi.github.io/jekyll/update/2015/05/14/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">http://notgnoshi.github.io/jekyll/update/2015/05/14/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>

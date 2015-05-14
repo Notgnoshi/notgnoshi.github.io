@@ -1,0 +1,12 @@
+# Site settings
+title: Not a gnoshi...
+email: your-email@domain.com
+description: ""
+baseurl: ""
+url: "http://yourdomain.com"
+twitter_username: jekyllrb
+github_username:  jekyll
+
+# Build settings
+markdown: kramdown
+permalink: pretty

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Not a gnoshi...</title>
-    <description>Test Description here</description>
+    <title>Not a Gnoshi...</title>
+    <description>Some people call me Nots...</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 May 2015 11:22:01 -0600</pubDate>
-    <lastBuildDate>Thu, 14 May 2015 11:22:01 -0600</lastBuildDate>
+    <pubDate>Thu, 14 May 2015 12:20:57 -0600</pubDate>
+    <lastBuildDate>Thu, 14 May 2015 12:20:57 -0600</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
     
       <item>

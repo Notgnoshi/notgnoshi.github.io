@@ -5,14 +5,17 @@
     <h2 class="footer-heading">{{ site.title }}</h2>
 
     <div class="footer-col-1 column">
-      <ul>
-        <li>{{ site.title }}</li>
-        <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-      </ul>
+        <p class="text">{{ site.description }}</p>
     </div>
 
     <div class="footer-col-2 column">
+
+    </div>
+
+    <div class="footer-col-3 column">
+
       <ul>
+        <li><a href="mailto:{{ site.email }}" style="padding-left:20px">{{ site.email }}</a></li>
         {% if site.github_username %}<li>
           <a href="https://github.com/{{ site.github_username }}">
             <span class="icon github">
@@ -52,9 +55,9 @@
       </ul>
     </div>
 
-    <div class="footer-col-3 column">
-      <p class="text">{{ site.description }}</p>
-    </div>
+
+
+
 
   </div>
 

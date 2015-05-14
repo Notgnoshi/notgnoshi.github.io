@@ -1,11 +1,11 @@
 # Site settings
 title: Not a gnoshi...
 description: "Test Description here"
-baseurl: "http://notgnoshi.github.io"
+baseurl: "/notgnoshi.github.io"
 url: "http://notgnoshi.github.io"
-twitter_username: notgnoshi
+twitter_username: Notgnoshi
 github_username:  Notgnoshi
-email: "notgnoshi@gmail.com"
+email: "Notgnoshi@gmail.com"
 
 # Build settings
 markdown: kramdown

@@ -5,6 +5,7 @@ baseurl: "http://notgnoshi.github.io"
 url: "http://notgnoshi.github.io"
 twitter_username: notgnoshi
 github_username:  Notgnoshi
+email: "notgnoshi@gmail.com"
 
 # Build settings
 markdown: kramdown

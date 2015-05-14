@@ -8,3 +8,5 @@ email: "Notgnoshi@gmail.com"
 # Build settings
 markdown: kramdown
 permalink: pretty
+kramdown:
+    input: GFM

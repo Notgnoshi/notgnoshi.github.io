@@ -3,15 +3,15 @@
   <channel>
     <title>Not a gnoshi...</title>
     <description>Test Description here</description>
-    <link>http://notgnoshi.github.io/</link>
-    <atom:link href="http://notgnoshi.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 14 May 2015 11:03:37 -0600</pubDate>
-    <lastBuildDate>Thu, 14 May 2015 11:03:37 -0600</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Thu, 14 May 2015 11:22:01 -0600</pubDate>
+    <lastBuildDate>Thu, 14 May 2015 11:22:01 -0600</lastBuildDate>
     <generator>Jekyll v2.2.0</generator>
     
       <item>
         <title>Welcome to Jekyll!</title>
-        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!
+        <description>&lt;p&gt;You’ll find this post in your &lt;code&gt;_posts&lt;/code&gt; directory - edit this post and re-build (or run with the &lt;code&gt;-w&lt;/code&gt; switch) to see your changes!&lt;br /&gt;
 To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; directory that follows the convention: YYYY-MM-DD-name-of-post.ext.&lt;/p&gt;
 
 &lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
@@ -26,8 +26,8 @@ To add new posts, simply add a file in the &lt;code&gt;_posts&lt;/code&gt; direc
 
 </description>
         <pubDate>Thu, 14 May 2015 03:18:22 -0600</pubDate>
-        <link>http://notgnoshi.github.io/jekyll/update/2015/05/14/welcome-to-jekyll/</link>
-        <guid isPermaLink="true">http://notgnoshi.github.io/jekyll/update/2015/05/14/welcome-to-jekyll/</guid>
+        <link>/jekyll/update/2015/05/14/welcome-to-jekyll/</link>
+        <guid isPermaLink="true">/jekyll/update/2015/05/14/welcome-to-jekyll/</guid>
         
         
         <category>jekyll</category>

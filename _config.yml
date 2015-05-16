@@ -11,6 +11,7 @@ permalink: pretty
 kramdown:
     input: GFM
 analytics:
-  provider: google
-  google:
-      tracking_id: 'UA-63013145-1'
+    provider: google
+    google:
+        tracking_id: 'UA-63013145-1'
+safe: true

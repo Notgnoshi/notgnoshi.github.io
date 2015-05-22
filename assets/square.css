@@ -1,0 +1,106 @@
+.MathJax_Display {
+    margin:0;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+.box {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    background-color: rgb(240,240,240);
+}
+
+.partial {
+    border: 1px dashed black;
+}
+
+.top {
+
+}
+
+.side {
+    padding-right:5px;
+}
+
+#two .box {
+    height: 125px;
+}
+
+#three .box {
+    height: 125px;
+}
+
+#four .box {
+    height: 62.5px;
+}
+
+#five .box {
+    height: 62.5px;
+}
+
+#top-five-x {
+    height:40px;
+    width: 62.5px;
+}
+
+#bottom-five-x {
+    height:62.5px;
+    width:40px;
+}
+
+.thirty-nine {
+    width: 72px;
+    height:72px;
+}
+
+.twenty-five {
+    width: 62.5px;
+    height: 62.5px;
+}
+
+.sixty-four {
+    width: 102.5px;
+    height: 102.5px;
+}
+
+.unit {
+    width:350px;
+    clear:both;
+    margin-left: auto;
+    margin-right: auto;
+    height: 120px;
+}
+
+.unit table {
+    padding:0px;
+    float:left;
+    position: relative;
+    top:50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform:translateY(-50%);
+}
+
+p {
+    clear:both;
+}
+
+#one {
+    margin-top:-10px;
+}
+
+#small-unit {
+    height: 90px;
+}
+
+.opr{
+    margin: 10px;
+    padding:10px;
+}
+
+.shift-down {
+    margin-top:12px;
+}

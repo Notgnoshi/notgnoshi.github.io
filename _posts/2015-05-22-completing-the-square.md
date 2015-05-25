@@ -2,6 +2,8 @@
 layout: post
 title: Completing the Square
 tags:
+  - Algebra
+  - Geometry
 ---
 <link rel="stylesheet" href="{{ "/assets/square.css" | prepend: site.baseurl }}">
 
@@ -225,4 +227,3 @@ Now of course we could have used our friend, the quadratic formula, which probab
 <br>
 
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
-

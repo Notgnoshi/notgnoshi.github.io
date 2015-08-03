@@ -13,7 +13,7 @@ I was reading [*The Joy of X*](http://www.amazon.com/Joy-Guided-Tour-Math-Infini
 
 Suppose we have $$x^2 + 10x = 39$$. We want to find $$x$$, but our equation doesn't factor easily, and we can't really move things around to make it easier to work with. We need to do something else.
 
-&ensp;&ensp;Before we get to solving it, let's look at how we might represent $$x^2$$ geometrically. Let's represent it as a square with dimensions $$x$$ by $$x$$. We'll display the dimensions next to their corresponding sides for clarity.
+&ensp;&ensp;Before we get to solving it, let's look at how we might represent $$x^2$$ geometrically. Purely for the hell of it (not really) let's represent $$x^2$$ as a square with dimensions $$x$$ by $$x$$. We'll display the dimensions next to their corresponding sides for clarity.
 
 <div class="unit" id="small-unit">
     <table id="one">
@@ -44,7 +44,7 @@ Suppose we have $$x^2 + 10x = 39$$. We want to find $$x$$, but our equation does
     </table>
 </div>
 
-&ensp;&ensp;Note that this $$10x$$ rectangle is equivalent with two $$5$$ by $$x$$ rectangles. Splitting this rectangle into two pieces is an ingenious move that will allow us to do what's called "completing the square."
+&ensp;&ensp;Note that this $$10x$$ rectangle is equivalent with two $$5$$ by $$x$$ rectangles. Splitting this rectangle into two pieces is a <strike>frivolously contrived</strike> ingenious move that will allow us to do what's called "completing the square."
 
 <div class="unit">
     <table id="three">
@@ -96,7 +96,7 @@ Suppose we have $$x^2 + 10x = 39$$. We want to find $$x$$, but our equation does
     </table>
 </div>
 
-&ensp;&ensp;Using this, let's represent $$x^2 + 10x = 39$$ geometrically by attaching the corresponding rectangles to each other. We lay the left hand side out in this manner for the heck of it, not knowing that it's a key maneuver for what's next.
+&ensp;&ensp;Using this, let's represent $$x^2 + 10x = 39$$ geometrically by attaching the corresponding rectangles to each other. We lay the left hand side out in this manner for the hell of it, totally not knowing that doing so is a key maneuver for what's next.
 
 <div class="unit">
     <table id="six">
@@ -132,7 +132,7 @@ Suppose we have $$x^2 + 10x = 39$$. We want to find $$x$$, but our equation does
     </table>
 </div>
 
-&ensp;&ensp;This ugly representation of our equation tantalizingly suggests our next step. Let's **complete the square** by adding the missing part of the square on the left. From the dimensions displayed on the outside edge of our rectangles we know the size of the missing square to be $$5$$ by $$5$$, or $$25$$.
+&ensp;&ensp;This ugly representation of our equation tantalizingly suggests our next step. Let's **complete the square** by adding the missing part of the square on the left. It feels natural, right? From the dimensions displayed on the outside edge of our rectangles we know the size of the missing square to be $$5$$ by $$5$$, or $$25$$.
 
 <div class="unit">
     <table id="eight">
@@ -180,7 +180,7 @@ Suppose we have $$x^2 + 10x = 39$$. We want to find $$x$$, but our equation does
     </table>
 </div>
 
-&ensp;&ensp;The square we've just created has dimensions of $$(x+5)$$ by $$(x+5)$$, and we know its area to be $$39+25$$, or $$64$$. We can therefore set up $$(x+5)^2 = 64$$ as an algebraic representation of our squares.
+&ensp;&ensp;The square we've just created has dimensions of $$(x+5)$$ by $$(x+5)$$, and we know its area to be $$39+25$$, or $$64$$. We can therefore set up the equation $$(x+5)^2 = 64$$ as an algebraic representation of our squares.
 
 <div class="unit">
     <table id="eleven">
@@ -220,9 +220,9 @@ $$(x+5)=\pm8$$
 
 $$x+5=8 \text{ and } x+5=-8$$
 
-&ensp;&ensp;It's a simple matter to solve these, we add $$-5$$ to both sides to get our answers of $$x=3$$ and $$x=-13$$.
+&ensp;&ensp;It's a simple matter to solve these. We add $$-5$$ to both sides of both equations to get our answers of $$x=3$$ and $$x=-13$$.
 
-Now of course we could have used our friend, the quadratic formula, which probably would have been much easier, but that would remove the *fun* of thinking through how we can solve our simple little example equation by completing the square, and definitely remove the satisfaction I got when it "clicked."
+Now of course we could have used our <strike>diabolic enemy</strike> friend, the quadratic formula, which would have spat our solutions right out in our faces. This probably would have been much easier, but that would remove the *fun* of thinking through how we can solve our simple example equation by completing the square, and definitely remove the satisfaction I got when it "clicked."
 
 <br>
 

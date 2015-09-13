@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The First Few Weeks as a Freshman
+title: My First Few Weeks as a Freshman
 ---
 
 I just started my freshman year at South Dakota School of Mines and Technology. Wooo! Big deal, the freshman at a fairly small school is writing a blog! Wooo! Sure, but not quite. I'm a freshman with a two year degree from a community college about 45 minutes away from my hometown. So when I say I'm a math major, I'm not saying that as someone who took AP Calc and kind of enjoyed it, I'm saying that as someone who took Calc I-III and am now in Diff Eq (oh wow, that's so advanced, I could solve all the world's problems, but I'm too busy writing this blog post). The next few paragraphs will further destroy any confidence you might have mistakenly had in my intelligence, so uhhh, maybe turn back now?

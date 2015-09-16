@@ -1,0 +1,10 @@
+.mem_array td {
+    border: 1px solid black;
+    width:10px;
+    height:10px;
+    vertical-align: middle;
+}
+
+.mem_array table {
+    border-collapse: collapse;
+}

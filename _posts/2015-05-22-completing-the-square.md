@@ -5,7 +5,7 @@ tags:
   - Algebra
   - Geometry
 ---
-<link rel="stylesheet" href="{{ "/assets/square.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/assets/styles/square.css" | prepend: site.baseurl }}">
 
 I've had a lot of math since the idea of completing the square was first introduced to me, and while comparatively a simple matter, I've always found it a difficult concept to grasp and a difficult process to perform.
 

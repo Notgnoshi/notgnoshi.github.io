@@ -27,7 +27,7 @@ $$ (x+5)(x+5) = 64 \\$$
 
 $$ (x+5)^2 = 64 $$
 
-This means that we can take te square root of both sides to get our answer. Now of course, we're super sophisticated and we realize that when we take the square root of a number we get two answers, one positive and one negative.
+This means that we can take the square root of both sides to get our answer. Now of course, we're super sophisticated and we realize that when we take the square root of a number we get two answers, one positive and one negative.
 
 $$ \sqrt{(x+5)^2} = \sqrt{64} \\$$
 

@@ -23,11 +23,11 @@ Writing has a way of solidifying your thoughts, so I wanted to write about what 
 * $$$
 * I'm from a very rural area. The nearest town doesn't even have paved roads. The very thought of living in a densely populated area sends panic through my heart. I need open spaces and alone time.
 * Language and cultural barriers.
-* Being all alone super duper far from home. Hmmm, that might go in the above list.
+* Being all alone super duper far from home. This is probably both a pro and a con.
 * I'm not sure how I would measure up intelligence-wise against other students both internationally and against other students competing for these scholarships and study opportunities.
 
 I'm almost certain that what I'm actually concerned about isn't in the above list, but I'm not really sure what makes me so nervous about it. I just listed what came to mind.
 
 #### The Reality:
 
-I don't really know what I'm talking about.
+I don't know what I'm talking about.

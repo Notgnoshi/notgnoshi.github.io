@@ -13,7 +13,7 @@ $$ \int k\, dx $$
 
 As you can see, the answer $$ kx + C $$ is far too complicated for one to calculate without several sheets of scratch paper and lots of caffeine. Also, the special case where $$ k = 0 $$ deserves much careful consideration, of which I was apparently mentally insufficient.
 
-Just today on a quiz in Diff Eq, I couldn't figure out how to calculate $$ \int \frac{1}{u^2}\, du $$ or $$ \int \frac{1}{u^3}\, du $$ after performing $$u$$-substitution. It did not compute that $$ \frac{1}{u^a} $$ is identical to $$ u^{-a} $$ which is easily integratable. However, I am proud of myself for remembering how to integrate $$ -\tan 3x \sec^3 3x $$. It's not terribly complicated, but for someone who wrote the above paragraphs, please, allow me some celebration.
+Just today on a quiz in Diff. Eq., I couldn't figure out how to calculate $$ \int \frac{1}{u^2}\, du $$ or $$ \int \frac{1}{u^3}\, du $$ after performing $$u$$-substitution. It did not compute that $$ \frac{1}{u^a} $$ is identical to $$ u^{-a} $$ which is easily integratable. However, I am proud of myself for remembering how to integrate $$ -\tan 3x \sec^3 3x $$. It's not terribly complicated, but for someone who wrote the above paragraphs, please, allow me some celebration.
 
 Little things like these make me doubt my future as a math major, but for now I'm going to stick with it because when I'm not feeling like an absolute idiot I greatly enjoy mathemagics.
 

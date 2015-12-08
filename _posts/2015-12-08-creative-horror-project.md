@@ -3,11 +3,11 @@ layout: post
 title: Horror Project
 ---
 
-I'm taking Horror Literature & Film this semester. Why, I don't know, I'm not a horror fan, but it satisfies an upper level humanities requirement, so I can't complain too much. Anyways, we had to write an original piece of horror as one of our last assignments, and I figured what the hell, if I put this much effort into writing it, I might as well post it.
+I'm taking Horror Literature & Film this semester. Why, I don't know. I'm not a horror fan, but it satisfies an upper level humanities requirement, so I can't complain too much. Anyways, we had to write an original piece of horror as one of our last assignments, and I figured what the hell, if I put this much effort into writing it, I might as well post it. It's not a very good story, but who do you think I am, a writer?
 
 ---
 
-### Insert Title Here
+### Math - Not Even Once
 
 
 >For the Sirens were dead, and the billows boomed

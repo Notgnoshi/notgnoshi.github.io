@@ -7,6 +7,9 @@ email: "Notgnoshi@gmail.com"
 
 # Build settings
 markdown: kramdown
+syntax-highlighting:
+    enabled : true
+#    css: syntax.css
 permalink: pretty
 kramdown:
     input: GFM

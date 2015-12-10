@@ -1,11 +1,6 @@
 ---
 layout: post
 title: Using your favorite iDevice on Linux
-tags:
-  -Linux
-  -Apple
-  -iTunes
-  -clusterfuck
 ---
 
 Anyone that has tried to use their iDevice alongside a Linux install knows the excruciating pain of attempting to sync music or, God forbid, other media to their device. Reddit, Ask Ubuntu, the Ubuntu Forums, and other various and assorted places on the internet people turn to for help in their darkest hours are littered with questions relating to these issues. However, not a single one of the myriad of answers and third party tools I found helped. I suspect this is because many of the answers I found were several years old, and in Apple's infinite wisdom, Apple continually changes their device protocols.

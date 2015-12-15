@@ -26,7 +26,7 @@ Even still, she was curious. The TAs had seemed serious about it, and from the w
 
 Damn. Dr. Kalshok's lecture was over already. If only they would go that fast when she was paying attention and supposedly learning something. Melany didn't know how long she had been sitting there, but she did notice a small pool of liquid on the desk suspiciously close to where her head was resting on her crossed arms. It had been there before she sat down. The only other option was that she had been drooling in Advanced Calculus, and that just wasn't acceptable.
 
-Melany got up and discretely wiped off her desk. The study rooms in the chemistry building were the quietest and most comfortable, so she started the long walk past the Electrical Engineering and Physics Department buildings. Normal students study in the library, but the library seemed to have a magical sway over Melany; she had missed too many classes because of her love for books; she knew that she would accomplish nothing should she opt for the more traditional approach of studying in the library.
+Melany got up and discreetly wiped off her desk. The study rooms in the chemistry building were the quietest and most comfortable, so she started the long walk past the Electrical Engineering and Physics Department buildings. Normal students study in the library, but the library seemed to have a magical sway over Melany; she had missed too many classes because of her love for books; she knew that she would accomplish nothing should she opt for the more traditional approach of studying in the library.
 
  It was beautiful out. There was the smell of ozone in the air from a light shower earlier that morning, and the trees had just started to change colors. The pavement was dark with moisture, and the sun just barely peeked out from behind the clouds. It was the kind of scene Melany didn't really expect to see on campus because it was too picture-perfect; it was the kind of thing you saw in the brochures and recruitment pamphlets, but never in real life.
 
@@ -50,7 +50,7 @@ Books have a magical smell, old books most of all. But the leather bindings thes
 
 Feeling like she won the lottery, Melany promised herself that she would resume her trek to the chemistry building and study for her upcoming exam once she unloaded her box of goodies to her car. Surprisingly, it was a promise she kept, though she frequently wished she could turn her attention to her new acquisition.
 
-It was a successful study session, but when she finished, she was far too exhausted for more mental effort, so Melany drove to her apartment and lost herself for a few hours in the harm loving embrace of Netflix.
+It was a successful study session, but when she finished, she was far too exhausted for more mental effort, so Melany drove to her apartment and lost herself for a few hours in the warm loving embrace of Netflix.
 
 After sleeping in the next morning and performing the typical college student morning routine, she made it to her desk right as her humanities professor began lecturing. Melany had a full day of classes right up until the hour before her Abstract Algebra exam. She was an astoundingly intelligent student, and knew exactly what and how to study for the exam.
 

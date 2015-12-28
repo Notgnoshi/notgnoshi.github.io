@@ -40,6 +40,10 @@ IMAGE
 Graph theorists also concern themselves with the **degree** of nodes, or the number of edges connected to a particular node. In fact, this was how Euler solved what is sometimes called the very first graph theory [problem](https://en.wikipedia.org/wiki/Seven_Bridges_of_K%C3%B6nigsberg), by considering the degree of nodes, and whether they were even or odd.
 
 ### Some Important Definitions:
+TODO: create includes for definitions and create custom CSS styles for them.
+* own stylesheet
+* markdown or html?
+* use include or a <div> with CSS class?
 
 PLANAR GRAPH
 

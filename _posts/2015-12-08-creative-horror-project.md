@@ -18,7 +18,7 @@ I'm taking Horror Literature & Film this semester. Why, I don't know. I'm not a 
 >
 >Though man had discovered them never.
 
-~**Ambrose Bierce**
+**Ambrose Bierce**
 
 "...and in proving this simple statement, we can show that the subset $$A$$ of manifold $$M$$ is, in fact, compact." Melany Cree wished she could focus on what Dr. Kalshok was talking about. She knew that it would be on the next exam, but more than that, Melany knew that formulating advanced proofs was a necessary skill for her to have if she were to ever hold a math research position with any success. The thing is, all Melany could think about was the conversation she overheard a few of the TAs talking about just the day before. It was impossible that it was anything other than a urban legend; such things simply don't happen in real life.
 

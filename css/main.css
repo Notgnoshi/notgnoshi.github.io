@@ -29,8 +29,13 @@ html, body { height: 100%; }
 }
 
 #archive_link {
-    width: 105px;
+    width: 87px;
     margin:auto;
+}
+
+#post_page {
+    width: 65px;
+    margin: auto;
 }
 
 body {

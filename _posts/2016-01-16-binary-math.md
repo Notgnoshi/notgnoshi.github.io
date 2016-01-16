@@ -6,11 +6,11 @@ category: finite
 
 We can represent **AND**, **OR**, and **NOT** using algebraic addition, negation, and multiplication.
 
-We can represent $$A$$ **AND** $$B$$ simply as $$AB$$.
+We represent $$A$$ **AND** $$B$$ simply as $$AB$$.
 
-We can represent $$A$$ **OR** $$B$$ as $$A + B$$.
+We represent $$A$$ **OR** $$B$$ as $$A + B$$.
 
-**NOT** $$A$$ is typically denoted by $$\bar A$$.
+**NOT** $$A$$ is typically denoted by $$\overline{A}$$ in the context of **Boolean Algebra**.
 
 Using this notation, we can rewrite some logical statement $$A \land B \lor \neg C$$ as $$AB + \overline{C}$$ (keeping in mind operator precedence), or $$\neg (A \lor B) \land C$$ as $$(\overline{A + B})C$$. We can easily evaluate these expressions with the following rules.
 

@@ -1,0 +1,35 @@
+.MathJax_Display {
+    margin:0;
+}
+
+table.truth, tr, th, td {
+    color: black;
+    border-collapse: collapse;
+    text-align: center;
+    padding:3px;
+    margin-left:auto;
+    margin-right:auto;
+    min-width: 31px;
+    min-height: 31px;
+}
+
+td:hover {
+    border:1px solid #2a7ae2;
+}
+
+tr > td:last-of-type {
+    border-left: 1px solid #184c9a;
+    border-right: 1px solid #184c9a;
+}
+
+tr:first-of-type {
+    border: 1px solid #184c9a;
+}
+
+table.truth {
+    border: 1px solid #184c9a;
+}
+
+tr:hover {
+    background-color: #f5f5f5
+}

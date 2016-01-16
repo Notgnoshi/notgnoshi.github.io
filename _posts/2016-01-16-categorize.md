@@ -4,7 +4,7 @@ title: Class Notes
 categories: [notes, misc]
 ---
 
-As a part of my studying process, I'm going to be rewriting all of my notes this semester in a bit more of a rigorous manner than I normally would. I think this will help me learn much better, and if I'm going to rewrite them (using $$\LaTeX$$) I might as well post them.
+As a part of my studying process, I'm going to be rewriting all of my [notes](/notes/) this semester in a bit more of a rigorous manner than I normally would. I think this will help me learn much better, and if I'm going to rewrite them (using $$\LaTeX$$) I might as well post them.
 
 The hard part was figuring out how to best organize them. I wanted a page with a list of all my class notes, organized by class. To do this, I thought about several options, but after browsing through the Jekyll [Documentation](https://jekyllrb.com/docs/home/) the only thing I tried was setting post categories.
 

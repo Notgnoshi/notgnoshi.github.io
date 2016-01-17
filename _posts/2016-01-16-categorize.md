@@ -42,6 +42,7 @@ Here's the end result of much Googling and keyboard smashing.
     {% raw %}{% assign i = 0 %}
     {% for post in site.posts %}
         {% if post.categories contains "post" %}
+            {% assign i = i | plus: 1 %}
             <li>
                 <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
                 <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
@@ -49,14 +50,14 @@ Here's the end result of much Googling and keyboard smashing.
         {% else %}
             {% unless post.categories contains "notes" %}
                 {% assign i = i | plus: 1 %}
-                    <li>
-                        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                    </li>
-                    {% if i > 8 %}
-                        {% break %}
-                    {% endif %}
+                <li>
+                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </li>
             {% endunless %}
+        {% endif %}
+        {% if i > 7 %}
+            {% break %}
         {% endif %}
     {% endfor %}{% endraw %}
 </ul>

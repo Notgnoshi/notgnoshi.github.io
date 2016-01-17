@@ -55,7 +55,7 @@ Here's the end result of much Googling and keyboard smashing.
                     </li>
                     {% if i > 8 %}
                         {% break %}
-                        {% endif %}
+                    {% endif %}
             {% endunless %}
         {% endif %}
     {% endfor %}{% endraw %}

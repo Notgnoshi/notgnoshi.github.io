@@ -39,7 +39,7 @@ Here's the end result of much Googling and keyboard smashing.
 
 {% highlight html %}
 <ul class="posts">
-    {% assign i = 0 %}
+    {% raw %}{% assign i = 0 %}
     {% for post in site.posts %}
         {% if post.categories contains "post" %}
             <li>
@@ -58,6 +58,6 @@ Here's the end result of much Googling and keyboard smashing.
                         {% endif %}
             {% endunless %}
         {% endif %}
-    {% endfor %}
+    {% endfor %}{% endraw %}
 </ul>
 {% endhighlight %}

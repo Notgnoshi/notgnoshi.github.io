@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 03 Binary Math
-category: finite
+categories: [notes, finite]
 ---
 <!-- Custom styles for the truth tables -->
 <link rel="stylesheet" href="{{ "/assets/styles/truth_tables.css" | prepend: site.baseurl }}">

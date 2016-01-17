@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 01 Intro to Propositional Logic
-category: finite
+categories: [notes, finite]
 ---
 
 At first blush there seems to be several types of logic. There's logic that's all about **AND**s, **OR**s, quantifiers, mathematics, Boolean Algebra, and all that other jazz. There's also that logic that liberal arts majors take, which is all about syllogisms, debates, and the English language. These are the same type of logic though, and they follow the same rules. And they're both useful.

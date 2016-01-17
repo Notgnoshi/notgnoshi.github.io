@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 01 ODEs
-category: diff
+categories: [notes, diff]
 ---
 
 A **differential equation** is an equation that relates a function to its derivatives. **ODE**s are differential equations in one **dependent** variable.

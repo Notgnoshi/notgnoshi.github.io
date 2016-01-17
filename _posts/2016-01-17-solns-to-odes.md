@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 02 More about ODEs
-category: diff
+categories: [notes, diff]
 ---
 
 *Observation:* A function $$y(x)$$ containing parameters $$c_1, c_2, ...$$ is the **general solution** of a linear differential equation if it has two properties:

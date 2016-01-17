@@ -5,14 +5,28 @@ title: Posts
 <!-- Index page, list of posts -->
 <div class="home">
 <h1 id="post_page" style="margin-bottom:30px; font-size:20pt; border-bottom: solid 1px #e8e8e8">Posts</h1>
-  <ul class="posts">
-    {% for post in site.posts limit:8 %}
-      <li>
-        <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+    <ul class="posts">
+        {% assign i = 0 %}
+        {% for post in site.posts %}
+            {% if post.categories contains "post" %}
+                <li>
+                    <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                </li>
+            {% else %}
+                {% unless post.categories contains "notes" %}
+                    {% assign i = i | plus: 1 %}
+                        <li>
+                            <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+                            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </li>
+                        {% if i > 8 %}
+                            {% break %}
+                            {% endif %}
+                {% endunless %}
+            {% endif %}
+        {% endfor %}
+    </ul>
   <div id="archive_link">
       <a class="post-link" href="archive/">More Posts</a>
   </div>

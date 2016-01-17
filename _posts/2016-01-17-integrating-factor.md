@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 03 Development of the Integrating Factor Method
-category: diff
+categories: [notes, diff]
 ---
 
 Given a differential equation $$y' + 3y = e^{2x}$$ we can see that it is not **separable**. Purely by magic we are going to multiply through by $$e^{3x}$$ to find the solution.

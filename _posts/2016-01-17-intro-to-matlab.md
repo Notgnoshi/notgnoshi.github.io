@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 01 Intro to MatLab
-category: numerical
+categories: [notes, numerical]
 ---
 
 We've spent the first few classes in Numerical Analysis learning some basic Matlab syntax. The most basic commands are entered into the **Command Window** at the `>>` prompt. Matlab is an interpreted language, and is executed as soon as it's entered.

@@ -4,7 +4,7 @@ title: Notes
 permalink: /notes/
 ---
 
-This semester, I'm in a handful of math courses, and I thought I would rewrite and post my notes as a part of my studying process. This post will be a list of links to all my class notes.
+This semester, I'm in a handful of math courses, and I thought I would rewrite and post my notes as a part of my studying process. This page will be a list of links to all my class notes.
 
 <p>
     Differential Equations:

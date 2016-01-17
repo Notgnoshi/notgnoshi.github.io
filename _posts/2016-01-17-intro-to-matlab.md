@@ -42,6 +42,7 @@ b = [2
 5]
 {% endhighlight %}
 
+You can take the transpose of `a` with `a'`.
 There are many ways to define a matrix.
 
 {% highlight matlab %}
@@ -75,6 +76,9 @@ A =
 >> B = ones(1, 3)
 B =
     1   1   1
+>> A = randn(4, 4); % Random 4x4 matrix
+>> inv( A ); % Find the inverse of A
+>> diag( [5 5 5 5] ); % Create a 4x4 matrix with a main diagonal of 5s
 {% endhighlight %}
 
 You can create lists spanning a range very easily in Matlab.

@@ -1,0 +1,6 @@
+img.centered {
+    width: 42%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}

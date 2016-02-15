@@ -25,7 +25,7 @@ The tokenizer is language specific. It groups the characters from the scanner in
 
 Given the following example source code,
 
-{% highlight python linenos %}
+{% highlight python %}
 def foo( a ):
     x = 6
     return x + a
@@ -55,7 +55,7 @@ The parser takes all of the tokens from the source file, and creates what is cal
 
 The following figure is the corresponding AST for the following code snippet, taken from the Wikipedia article on [ASTs](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 
-{% highlight python linenos %}
+{% highlight python %}
 while b != 0:
   if a > b:
     a = a - b

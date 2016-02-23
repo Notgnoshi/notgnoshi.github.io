@@ -72,3 +72,6 @@ This method is still sensitive to $$x_0$$, and requires two previous data points
 We can remove the requirement to keep $$x_{i-1}$$ in our computations by using the other definition of a derivative.
 
 $$x_{i+1} = x_i - \frac{\delta x_i f(x_i)}{f(x_i + \delta x_i) - f(x_i)}$$ where $$\delta$$ is some small number relative in size to the root.
+
+
+Maybe someday I'll come back to this and create some better graphics.

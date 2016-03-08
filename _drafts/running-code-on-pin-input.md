@@ -23,7 +23,7 @@ while True:
         sys.exit()
 {% endhighlight %}
 
-One thing to note is that `subprocess.check_output` *checks* the *output* of whatever subprocess it starts. This can be used to do stuff. For example, we write this information to a log file along with some date and time information once the executable exits.
+One thing to note is that `subprocess.check_output` *checks* the *output* of whatever subprocess it starts. This can be used to do stuff. For example, we write this information to a log file once the executable exits.
 
 I thought about using the Python `logging` module, but it wasn't immediately obvious if I could log stuff from the C executable with it. Part of the reason we need to log this information is because we cannot connect over SSH while the robot is running (it's supposed to be autonomous).
 

@@ -20,7 +20,7 @@ Also, you can use `#line n` to set the very next line number to `n` and the next
 Other useful macros might include
 
 * `#define SHOW(X) cout << # X " = " << (X) << endl`, useful for debugging.
-* For simplified logging, we can do 
+* For simplified logging, we can do
   {% highlight c %}
 #define LOG(log)                                            \
 if (!log.enabled()) {}                                      \
@@ -31,5 +31,7 @@ log_t errorlog;
 
 LOG(errorlog) << "This doesn't look good:" << somedata;
   {% endhighlight %}
-  
+
 There are many, many more use cases. If you're interested, look [here](http://jhnet.co.uk/articles/cpp_magic) for some more magic.
+
+I recently had to write a logger for a project I'm involved with, and I found `#define LOG(...) log_print(__FILE__, __LINE__, __FUNCTION__, __VA_ARGS__ )` inside. It's a bit more complicated than the macros above, but much more awesome. With an appropriate `log_print` function defined, you can simple `#define printf LOG` when you want to log `printf` statements in C/C++. The preprocessor will replace `printf("stuff %s\n", "example of a format specifier here");` with `LOG("stuff %s\n", "example of a format specifier here");`, which is in turn replaced with `log_print(__FILE__, __LINE__, __FUNCTION__, "stuff %s\n", "example of a format specifier here")`, which can do whatever you want it to. I'll have to write up a post on it sometime in the near future.

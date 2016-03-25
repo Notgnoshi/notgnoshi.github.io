@@ -3,7 +3,7 @@ layout: post
 title: Implementing GPIO on an Odroid-XU
 ---
 
-I'm a part of the Robotics team at [SDSMT](www.sdsmt.edu) and one of the projects that I've been working on is getting pin I/O up and running on the Odroid-XU for our upcoming competition. I spent maybe 25 hours working on finding a library that makes working with GPIO easier, but was unable to find one for the Odroid-XU. I did end up finding [one](https://github.com/mlinuxguy/odpygpio) (it even works!). However, it exposed some details the user doesn't need to know, and, at least for me, doesn't care about. So I wrote a small Python wrapper to cover all the ugly stuff.
+I'm a part of the Robotics team at [SDSMT](http://www.sdsmt.edu) and one of the projects that I've been working on is getting pin I/O up and running on the Odroid-XU for our upcoming competition. I spent maybe 25 hours working on finding a library that makes working with GPIO easier, but was unable to find one for the Odroid-XU. I did end up finding [one](https://github.com/mlinuxguy/odpygpio) (it even works!). However, it exposed some details the user doesn't need to know, and, at least for me, doesn't care about. So I wrote a small Python wrapper to cover all the ugly stuff.
 
 Here's what the end result looks like.
 

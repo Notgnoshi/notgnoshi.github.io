@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Class Notes
-categories: [notes, misc, post]
 ---
 
 As a part of my studying process, I'm going to be rewriting all of my [notes](/notes/) this semester in a bit more of a rigorous manner than I normally would. I think this will help me learn much better, and if I'm going to rewrite them (using $$\LaTeX$$) I might as well post them.

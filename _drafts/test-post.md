@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Test Post
-categories: [post, other]
 ---
 <!-- Custom styles for the images -->
 <link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">

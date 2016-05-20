@@ -1,7 +1,6 @@
 ---
 layout: post
 title: To-do list
-categories: [notes, misc]
 ---
 
 * Numerical analysis (num. anal, kappa) class notes. Hard to do in the middle of the semester because it's picture heavy and I don't have the time to create good looking graphics that explain the concepts well.

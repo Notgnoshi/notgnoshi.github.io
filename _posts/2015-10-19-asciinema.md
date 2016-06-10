@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Asciinema: Record Your Terminal"
+title: "Asciinema"
+subtitle: "Recording your terminal"
 #author: Notgnoshi
 meta:
 ---

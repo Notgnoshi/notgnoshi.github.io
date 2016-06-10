@@ -8,15 +8,18 @@ title: To-do list
 * **Differential equations** notes. This summer.
 * Update out-of-date images on maximization post.
 * Make a nice favicon (minecraft head?)
-* tags and categories
+* tags, categories, pagination...
 * **Update Jailbreak Post**
 * `EmailIP.py`. Both versions. Cron job
 * Project Euler solutions
 * Pointers
-* Think about linking real name with blog.
-    * reddit
-    * minecraft
-    * twitter
-    * SDSMTRobotics -- already know
 * Domain name & VPS
 * VPN
+* Bitwise reverse and counting in C
+* `tikz` and/or `pgfplots`
+* Big-O notation
+* `sin`/`cos` implementations in C
+* Functions and Sets
+* The Polya method
+* Strunk & White?
+* **Python tutorial**

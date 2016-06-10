@@ -1,6 +1,8 @@
 ---
 layout: post
-title: "Even and Odd Functions: A Reminder"
+title: "Even and Odd Functions"
+subtitle: "A Reminder"
+meta:
 categories: [post, other]
 ---
 

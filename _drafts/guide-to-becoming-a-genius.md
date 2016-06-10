@@ -1,6 +1,7 @@
 ---
 layout: post
-title: An Old Friend's Guide to Becoming a Genius
+title: Becoming a Genius
+subtitle: "An old friend's ``guide\""
 ---
 
 To start off, I don't condone any of this, but have found myself returning to it every now and then for a good laugh.

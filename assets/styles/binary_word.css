@@ -1,0 +1,30 @@
+table.binary_word, tr, th, td {
+    color: black;
+    border: 1px solid #184c9a;
+    border-collapse: collapse;
+    text-align: center;
+    padding:3px;
+    margin-left:auto;
+    margin-right:auto;
+    min-width: 31px;
+    min-height: 31px;
+}
+
+td:hover {
+    border:1px solid #2a7ae2;
+    background-color: #f5f5f5;
+}
+
+table.floating_point, tr, th, td {
+    color: black;
+    border: 1px solid #184c9a;
+    border-collapse: collapse;
+    text-align: center;
+    padding:3px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:auto;
+    margin-right:auto;
+    min-width: 31px;
+    min-height: 31px;
+}

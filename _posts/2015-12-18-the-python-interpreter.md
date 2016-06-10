@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Introduction to the Python Interpreter
+title: The Python Interpreter
+subtitle: An introduction
 ---
 
 #### Introduction:

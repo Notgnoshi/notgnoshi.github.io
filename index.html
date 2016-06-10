@@ -12,14 +12,25 @@ title: Posts
                 {% assign i = i | plus: 1 %}
                 <li>
                     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                        {{ post.title }}
+                        {% if post.subtitle %}
+                            <span class="subtitle">{{ post.subtitle }}</span>
+                        {% endif %}
+                    </a>
+
                 </li>
             {% else %}
                 {% unless post.categories contains "notes" %}
                     {% assign i = i | plus: 1 %}
                     <li>
                         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+                            {{ post.title }}
+                            {% if post.subtitle %}
+                                <span class="subtitle">{{ post.subtitle }}</span>
+                            {% endif %}
+                        </a>
                     </li>
                 {% endunless %}
             {% endif %}

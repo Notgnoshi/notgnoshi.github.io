@@ -201,6 +201,13 @@ a:visited { color: #2a7ae2; }
   color: #818181;
 }
 
+.posts .subtitle {
+  display: block;
+  font-size: 20px;
+  color: #797979;
+  padding-left:20px;
+}
+
 
 /* Post styles */
 /* ----------------------------------------------------------*/
@@ -212,6 +219,11 @@ a:visited { color: #2a7ae2; }
   letter-spacing: -1.75px;
   line-height: 1;
   font-weight: 300;
+}
+
+.post-header .subtitle {
+  font-size: 25px;
+  padding-left: 20px;
 }
 
 .post-header .meta {

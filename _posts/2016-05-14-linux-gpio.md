@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Using /sys/class/leds/ to flash system LEDs"
+title: "Flashing system LEDs"
+subtitle: "A tutorial on /sys/class/leds/"
 ---
 
 This last semester I was tasked with finding a GPIO solution for an Odroid XU. It didn't turn out to be very difficult, but it so happens to be easier than I thought. While I was looking into using `/sys/class/gpio/` to work with GPIO pins on a Linux machine, I found that Linux users have control of a few of their system LEDs by manipulating `/sys/class/leds/`.

@@ -18,6 +18,10 @@ subtitle: to test things
 <img class="centered" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/False_position_method.svg/351px-False_position_method.svg.png" alt="false position">
 <img class="centered-full" src="{{ "/assets/floating-point-math/roundoff-error.png" | prepend: site.baseurl }}" alt="number line holes">
 
+<hr>
+
+<hr/>
+
 <table class="truth">
     <tr>
         <td>$$p$$</td>
@@ -34,6 +38,8 @@ subtitle: to test things
         <td>T</td>
     </tr>
 </table>
+
+---
 
 <table class="binary_word">
     <tr>

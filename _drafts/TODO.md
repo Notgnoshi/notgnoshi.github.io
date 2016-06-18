@@ -7,7 +7,6 @@ title: To-do list
 * Python serial posts.
 * **Differential equations** notes. This summer.
 * Update out-of-date images on maximization post.
-* Make a nice favicon (minecraft head?)
 * tags, categories, pagination...
 * **Update Jailbreak Post**
 * `EmailIP.py`. Both versions. Cron job
@@ -19,7 +18,6 @@ title: To-do list
 * `tikz` and/or `pgfplots`
 * Big-O notation
 * `sin`/`cos` implementations in C
-* Functions and Sets
 * The Polya method
 * Strunk & White?
 * **Python tutorial**

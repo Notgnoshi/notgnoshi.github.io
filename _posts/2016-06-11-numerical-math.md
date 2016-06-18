@@ -28,7 +28,7 @@ $$\varepsilon_t = \frac{\text{true value} - \text{approximation}}{\text{true val
 
 Note that this value will be between 0 and 1 and can be expressed as a percent by multiplying by 100%.
 
-<hr>
+---
 
 However, we live in the real world; we oftentimes do not know the true value of a computation, so the above formulas become useless. For these situations, we can normalize the error with respect to the approximation itself
 
@@ -134,7 +134,7 @@ $$\pm s \times b^e$$
 
 where $$s$$ is the **significand** or **mantissa**, $$b$$ is the **base** of the number system being used, and $$e$$ is the **exponent**. Prior to using this form however, the number is **normalized** by shifting the decimal place so that there is only one significant digit left of the decimal point. This is done so the computer doesn't store needless zeros.
 
-<hr>
+---
 
 Let's create a toy system in base-10 with a 5-digit word size.
 
@@ -156,7 +156,7 @@ The following is the number line showing some of the limitations of our toy syst
 
 A more subtle limitation is the gaps between the representable numbers. Note that the gap size is relative to the magnitude of the numbers being represented. For numbers with an exponent of -1 (between 0.1 and 1), the number spacing is on intervals of 0.01. For ever increase in exponent, the gap size decreases by a factor of ten. For example, with an exponent of 1, the spacing increases to a gap size with width 0.1. This means roundoff error is proportional to a number's magnitude. It also means that the relative error *has an upper bound*. This upper bound is called the **machine epsilon**.
 
-<hr>
+---
 
 We talked just a bit earlier about normalizing numbers in scientific notation, that is, taking $$0.0034 \times 10^{0}$$ and converting it to $$3.4 \times 10^{-3}$$. Because binary numbers consist of *only* 1s and 0s, we know for a fact that if a number is normalized the leading digit is a 1. This means that we don't even have to store it!
 
@@ -166,7 +166,7 @@ $$\pm (1 + f) \times 2^e$$
 
 where $$f$$ is the mantissa and $$e$$ is the exponent.
 
-<hr>
+---
 
 The standard **IEEE Double-Precision Format** uses 8 *bytes* (64 bits) to represent floating-point numbers. You can read about it in more detail [here](https://en.wikipedia.org/wiki/IEEE_floating_point). The following is how those 64 bits are broken up into the exponent and mantissa.
 
@@ -245,11 +245,11 @@ If our approximation is $$O(h)$$, or a **first order** approximation, halving th
 
 This means that there are two ways to decrease the truncation error in a Taylor series approximation: add more terms to the approximation, or decrease the step size $$h$$.
 
-<hr>
+---
 
 My Numerical Analysis professor constantly joked that the class should have been called "Fun with Taylor Series". It was no joke.
 
-<hr>
+---
 
 One final note. So far, I've talked about roundoff error and truncation error as two separate entities. In reality, the error in our system is the sum of both errors.
 

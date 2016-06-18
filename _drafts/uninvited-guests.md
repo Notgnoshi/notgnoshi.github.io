@@ -42,7 +42,7 @@ Comescu promptly lost consciousness. Finishing up, the two mice returned to wher
 
 Two days later, Comescu bolted from his sleep. "I'm starving!" he exclaimed. With all due care, the mouse extracted himself from his recliner and stepped on a piece of broken ceramic. "Wonder where that came from?" he muttered. Picking up the shard, he threw it away and made himself a sandwich.
 
-<hr>
+---
 
 <img class="centered" src="{{ "/assets/writing/under-the-rug.jpg" | prepend: site.baseurl }}" alt="Under the Rug">
 
@@ -86,7 +86,7 @@ Instead of claiming it as his own however, James inquired of the creature why it
 
 Startled, the shocked child stood there dumbly as the creature snagged the book, burrowed beneath the rug, and was never heard from again.
 
-<hr>
+---
 
 This last one was supposed to be a fictional origin story of something. I chose to explain the origins of music.
 
@@ -121,4 +121,5 @@ Gustav knew one thing - he must get home, where he could analyze and hopefully r
 Up he jerked, with a gasp. Gustav Adolphus had dreamed! Wonderful dreams! He remembered every single vivid detail; the uncharted lands had been the human intellect, and the impregnable fortress was his innermost thoughts, feelings, and emotions. Yes emotions, Gustav was not quite as impassive as he had once thought. Hurriedly, he reached for his bag -- it contained his entire supply of parchment, on which he strove to relate the entirety of his dream.
 
 Gustav Adolphus spent the rest of his life bent over his desk, researching, and developing a system of tone production. Thus music came to be.
-<hr>
+
+---

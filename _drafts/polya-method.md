@@ -7,7 +7,7 @@ In 1995, [George Polya](https://en.wikipedia.org/wiki/George_Pólya) wrote a boo
 
 This is an outline of the problem solving method Polya introduces in his book.
 
-<hr>
+---
 
 1. Understand the problem
     * What are the unknown(s)?
@@ -37,6 +37,6 @@ This is an outline of the problem solving method Polya introduces in his book.
     * Is it possible to obtain the same result in a different manner?
     * Can you use the result, or even the method, for some other problem?
 
-<hr>
+---
 
 I would recommend reading Polya's book, as he goes into far more detail than this simple outline. Polya wrote his book for math students and teachers, but it's applicable to *any* problem significant enough to be difficult to solve. I would particularly recommend paying more attention to steps 1 and 4, as they're what I usually neglect, and I suspect others neglect them too.

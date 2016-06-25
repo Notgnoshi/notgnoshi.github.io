@@ -3,7 +3,7 @@ layout: post
 title: To-do list
 ---
 
-* Numerical analysis (num. anal, kappa) class notes. Hard to do in the middle of the semester because it's picture heavy and I don't have the time to create good looking graphics that explain the concepts well.
+* **Numerical analysis notes.**
 * Python serial posts.
 * **Differential equations** notes. This summer.
 * Update out-of-date images on maximization post.
@@ -11,7 +11,6 @@ title: To-do list
 * **Update Jailbreak Post**
 * `EmailIP.py`. Both versions. Cron job
 * Project Euler solutions
-* Pointers
 * Domain name & VPS
 * VPN
 * Bitwise reverse and counting in C
@@ -21,3 +20,4 @@ title: To-do list
 * The Polya method
 * Strunk & White?
 * **Python tutorial**
+* Design Patterns

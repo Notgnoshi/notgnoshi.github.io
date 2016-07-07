@@ -4,7 +4,7 @@ title: "Flashing system LEDs"
 subtitle: "A tutorial on /sys/class/leds/"
 ---
 
-This last semester I was tasked with finding a GPIO solution for an Odroid XU. It didn't turn out to be very difficult, but it so happens to be easier than I thought. While I was looking into using `/sys/class/gpio/` to work with GPIO pins on a Linux machine, I found that Linux users have control of a few of their system LEDs by manipulating `/sys/class/leds/`.
+This last semester I was tasked with finding a GPIO solution for an Odroid XU. It didn't turn out to be very difficult, but it's actually even easier than I thought. While I was looking into using `/sys/class/gpio/` to work with GPIO pins on a Linux machine, I found that Linux users have control of a few of their system LEDs by manipulating `/sys/class/leds/`.
 
 First thing's first, here's how `/sys/class/leds/` is laid out:
 
@@ -73,4 +73,4 @@ do
 done
 {% endhighlight %}
 
-The script will have to be run as root. You can give it executable permissions by issuing `sudo chmod +x led.sh`. Then you can run it simply by `sudo ./led.sh`.
+The script will have to be run as root.

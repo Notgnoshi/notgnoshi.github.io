@@ -195,10 +195,9 @@ print(np.finfo(np.float32).eps)  # 1.19209e-07
 print(np.finfo(np.float64).eps)  # 2.22044604925e-16
 {% endhighlight %}
 
-You can also calculate the machine epsilon for a given data type using the following Python snippet
+You can also calculate the machine epsilon for a given data type using the following Python 3 snippet
 
 {% highlight python %}
-#!/usr/bin/python3
 def machineEpsilon(func=float):
     eps = func(1)
     while func(1) + func(eps) != func(1):

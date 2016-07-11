@@ -22,5 +22,9 @@ title: To-do list
 * **Python tutorial**
 * Design Patterns
 * `#pragma once`
+* Insult Generator
+* Abstract/Modern Algebra:
+  - definition, motivation
+  - Groups, Rings, Fields
 
 The idea that "Continuous functions are ones that can be drawn without picking up your pen" leads us to the idea that the identity function $$x$$ is discontinuous because it takes two strokes of the pen to write.

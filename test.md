@@ -117,3 +117,5 @@ $$\begin{cases}a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\ a_{21} x_1 
     <summary>Spoiler</summary>
     <p>Everybody dies.</p>
 </details>
+
+<p draggable="true">This is draggable (<code>&lt;p draggable="true"&gt;&lt;/p&gt;</code>)</p>

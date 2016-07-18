@@ -13,7 +13,7 @@ $$ \Theta = \frac{A(R) + A(S)}{A(T)} $$
 
 where $$A(T)$$, $$A(R)$$, and $$A(S)$$ represents the area of triangle $$T$$ and rectangles $$R$$ and $$S$$ respectively. Let $$h$$ and $$b$$ be real numbers, and let $$0 < s < r < 1$$. We define our shapes by the following diagram.
 
-<img src="{{ "/assets/maximization-problem/fig1.png"  | prepend: site.baseurl }}" alt="Triangle T" style="margin-left:auto; margin-right:auto; display:block;"/>
+<img src="{{ "/assets/posts/maximization-problem/fig1.png"  | prepend: site.baseurl }}" alt="Triangle T" style="margin-left:auto; margin-right:auto; display:block;"/>
 
 The general outline of our problem solving strategy will be:
 
@@ -26,7 +26,7 @@ The general outline of our problem solving strategy will be:
 
 First, the triangles $$T$$ and $$T_s$$ are similar.
 
-<img src="{{ "/assets/maximization-problem/fig2.png"  | prepend: site.baseurl }}" alt="Triangles T and T_s" style="margin-left:auto; margin-right:auto; display:block;"/>
+<img src="{{ "/assets/posts/maximization-problem/fig2.png"  | prepend: site.baseurl }}" alt="Triangles T and T_s" style="margin-left:auto; margin-right:auto; display:block;"/>
 
 This means that we can represent $$s_w$$ using a ratio. Specifically, we have
 

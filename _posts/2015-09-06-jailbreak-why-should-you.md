@@ -32,10 +32,10 @@ I made a lot of references to jailbreaking in a [post]({% post_url 2015-07-28-id
   Makes the new Music app fancier looking. While, I couldn't get it looking right, you can set the tint color, the primary and secondary text colors, etc.
 
   <div style="width:100%px; margin:0 auto;">
-    <img src="{{ "/assets/why-jailbreak/now-playing.png"  | prepend: site.baseurl }}" alt="Now Playing" style="float:left; width:33.3%;"/>
-    <img src="{{ "/assets/why-jailbreak/album-view.png"  | prepend: site.baseurl }}" alt="Album View" style="float:left; width:33.3%;"/>
-    <img src="{{ "/assets/why-jailbreak/gauss-settings.png"  | prepend: site.baseurl }}" alt="Gauss Settings" style="float:left; width:33.3%;"/>
-  </div>  
+    <img src="{{ "/assets/posts/why-jailbreak/now-playing.png"  | prepend: site.baseurl }}" alt="Now Playing" style="float:left; width:33.3%;"/>
+    <img src="{{ "/assets/posts/why-jailbreak/album-view.png"  | prepend: site.baseurl }}" alt="Album View" style="float:left; width:33.3%;"/>
+    <img src="{{ "/assets/posts/why-jailbreak/gauss-settings.png"  | prepend: site.baseurl }}" alt="Gauss Settings" style="float:left; width:33.3%;"/>
+  </div>
 
   I know what you're thinking. Isn't that gorgeous?
 * **iCleaner**

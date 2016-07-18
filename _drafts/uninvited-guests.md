@@ -10,7 +10,7 @@ I recently finished a small bit of cleaning and found some of my old writing pro
 
 The following two stories are supposed to be a response to a picture by [Harris Burdick.](https://en.wikipedia.org/wiki/The_Mysteries_of_Harris_Burdick)
 
-<img class="centered" src="{{ "/assets/writing/uninvited-guests.jpg" | prepend: site.baseurl }}" alt="Uninvited Guests">
+<img class="centered" src="{{ "/assets/posts/writing/uninvited-guests.jpg" | prepend: site.baseurl }}" alt="Uninvited Guests">
 
 ## Uninvited Guests
 
@@ -44,7 +44,7 @@ Two days later, Comescu bolted from his sleep. "I'm starving!" he exclaimed. Wit
 
 ---
 
-<img class="centered" src="{{ "/assets/writing/under-the-rug.jpg" | prepend: site.baseurl }}" alt="Under the Rug">
+<img class="centered" src="{{ "/assets/posts/writing/under-the-rug.jpg" | prepend: site.baseurl }}" alt="Under the Rug">
 
 ## Under the Rug
 

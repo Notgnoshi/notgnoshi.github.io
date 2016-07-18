@@ -152,7 +152,7 @@ $$\varepsilon_t = \frac{0.03125 - 0.031}{0.03125} = 0.008$$
 
 The following is the number line showing some of the limitations of our toy system
 
-<img class="centered-full" src="{{ "/assets/floating-point-math/roundoff-error.png" | prepend: site.baseurl }}" alt="number line holes">
+<img class="centered-full" src="{{ "/assets/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
 
 A more subtle limitation is the gaps between the representable numbers. Note that the gap size is relative to the magnitude of the numbers being represented. For numbers with an exponent of -1 (between 0.1 and 1), the number spacing is on intervals of 0.01. For ever increase in exponent, the gap size decreases by a factor of ten. For example, with an exponent of 1, the spacing increases to a gap size with width 0.1. This means roundoff error is proportional to a number's magnitude. It also means that the relative error *has an upper bound*. This upper bound is called the **machine epsilon**.
 

@@ -16,7 +16,7 @@ This is a test page. Go away.
 
 
 <img class="centered" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/False_position_method.svg/351px-False_position_method.svg.png" alt="false position">
-<img class="centered-full" src="{{ "/assets/floating-point-math/roundoff-error.png" | prepend: site.baseurl }}" alt="number line holes">
+<img class="centered-full" src="{{ "/assets/posts/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
 
 <hr>
 
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     main()
 {% endhighlight %}
 
-![Clone URL]({{ "/assets/clone-url.png" | prepend: site.baseurl }})
+![Clone URL]({{ "/assets/posts/gh-pages/clone-url.png" | prepend: site.baseurl }})
 
 {% highlight python %}
 {% raw %}{% highlight python %}

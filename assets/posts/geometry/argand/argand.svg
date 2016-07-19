@@ -57,29 +57,29 @@
 <path style="fill:none;stroke-width:0.3985;stroke-linecap:butt;stroke-linejoin:miter;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M 0.00109375 -0.0018125 L 84.715937 84.716938 " transform="matrix(1,0,0,-1,28.745,142.131)"/>
 <path style="fill:none;stroke-width:0.31879;stroke-linecap:round;stroke-linejoin:round;stroke:rgb(0%,0%,0%);stroke-opacity:1;stroke-miterlimit:10;" d="M -1.195911 1.594375 C -1.096459 0.997767 0.000113839 0.100121 0.298422 0.000694321 C 0.000119463 -0.0987491 -1.096403 -0.996458 -1.195821 -1.593071 " transform="matrix(0.70714,-0.7071,-0.7071,-0.70714,113.46134,57.41463)"/>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-1" x="117.304" y="56.616"/>
+  <use xlink:href="#glyph0-1" x="117.304" y="60.136"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-1" x="125.143" y="56.616"/>
+  <use xlink:href="#glyph1-1" x="125.143" y="60.136"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-2" x="135.659" y="56.616"/>
+  <use xlink:href="#glyph0-2" x="135.659" y="60.136"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph1-2" x="143.139" y="56.616"/>
+  <use xlink:href="#glyph1-2" x="143.139" y="60.136"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-3" x="153.101" y="56.616"/>
-  <use xlink:href="#glyph0-4" x="157.376948" y="56.616"/>
+  <use xlink:href="#glyph0-3" x="153.101" y="60.136"/>
+  <use xlink:href="#glyph0-4" x="157.376948" y="60.136"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph2-1" x="65.962" y="90.081"/>
+  <use xlink:href="#glyph2-1" x="65.962" y="93.601"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph0-1" x="68.729" y="90.081"/>
+  <use xlink:href="#glyph0-1" x="68.729" y="93.601"/>
 </g>
 <g style="fill:rgb(0%,0%,0%);fill-opacity:1;">
-  <use xlink:href="#glyph2-1" x="73.8" y="90.081"/>
+  <use xlink:href="#glyph2-1" x="73.8" y="93.601"/>
 </g>
 </g>
 </svg>

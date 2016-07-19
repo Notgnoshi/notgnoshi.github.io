@@ -1,0 +1,50 @@
+\documentclass[tikz]{standalone}
+
+\newcommand{\rotateRPY}[3]% roll, pitch, yaw
+{   \pgfmathsetmacro{\rollangle}{#1}
+    \pgfmathsetmacro{\pitchangle}{#2}
+    \pgfmathsetmacro{\yawangle}{#3}
+
+    % to what vector is the x unit vector transformed, and which 2D vector is this?
+    \pgfmathsetmacro{\newxx}{cos(\yawangle)*cos(\pitchangle)}
+    \pgfmathsetmacro{\newxy}{sin(\yawangle)*cos(\pitchangle)}
+    \pgfmathsetmacro{\newxz}{-sin(\pitchangle)}
+    \path (\newxx,\newxy,\newxz);
+    \pgfgetlastxy{\nxx}{\nxy};
+
+    % to what vector is the y unit vector transformed, and which 2D vector is this?
+    \pgfmathsetmacro{\newyx}{cos(\yawangle)*sin(\pitchangle)*sin(\rollangle)-sin(\yawangle)*cos(\rollangle)}
+    \pgfmathsetmacro{\newyy}{sin(\yawangle)*sin(\pitchangle)*sin(\rollangle)+cos(\yawangle)*cos(\rollangle)}
+    \pgfmathsetmacro{\newyz}{cos(\pitchangle)*sin(\rollangle)}
+    \path (\newyx,\newyy,\newyz);
+    \pgfgetlastxy{\nyx}{\nyy};
+
+    % to what vector is the z unit vector transformed, and which 2D vector is this?
+    \pgfmathsetmacro{\newzx}{cos(\yawangle)*sin(\pitchangle)*cos(\rollangle)+sin(\yawangle)*sin(\rollangle)}
+    \pgfmathsetmacro{\newzy}{sin(\yawangle)*sin(\pitchangle)*cos(\rollangle)-cos(\yawangle)*sin(\rollangle)}
+    \pgfmathsetmacro{\newzz}{cos(\pitchangle)*cos(\rollangle)}
+    \path (\newzx,\newzy,\newzz);
+    \pgfgetlastxy{\nzx}{\nzy};
+}
+
+\tikzset{RPY/.style={x={(\nxx,\nxy)},y={(\nyx,\nyy)},z={(\nzx,\nzy)}}}
+
+\begin{document}
+    \begin{tikzpicture}[x=1cm, y=1cm, z=0.6cm]
+        %\draw[-latex] (xyz cs:x=0) -- (xyz cs:x=5) node[above]{$x$};
+        %\draw[-latex] (xyz cs:y=0) -- (xyz cs:y=5) node[above]{$y$};
+        %\draw[-latex] (xyz cs:z=0) -- (xyz cs:z=5) node[right]{$z$};
+
+        \rotateRPY{-25}{-10}{0} % roll, pitch, yaw
+        \begin{scope}[RPY]
+            \draw[-latex, purple] (xyz cs:x=0) -- (xyz cs:x=5) node[above]{$\vec{x'}$};
+            \draw[-latex, purple] (xyz cs:y=0) -- (xyz cs:y=5) node[above]{$\vec{y'}$};
+            \draw[-latex, purple] (xyz cs:z=0) -- (xyz cs:z=5) node[right]{$\vec{z'}$};
+
+            \coordinate (O) at (0, 0, 0);
+            \coordinate (P) at (1, 4, 1);
+
+            \draw[blue, very thick, -latex] (O) -- (P) node[right]{$\vec{v'}$};
+        \end{scope}
+    \end{tikzpicture}
+\end{document}

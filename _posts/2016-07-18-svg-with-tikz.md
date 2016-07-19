@@ -37,15 +37,15 @@ First, make a Tikz image:
         \draw [->, thick] (0, -1) -- (0, 5);
 
         \draw (O) -- (z);
-        \draw (O) -- (z) node[midway, label=above:$r$]{};
-        \draw (a) -- (z) node[midway, label=right:$a$]{};
-        \draw (O) -- (a) node[midway, label=below:$b$]{};
+        \draw (O) -- (z) node[above, midway]{$r$};
+        \draw (a) -- (z) node[right, midway]{$a$};
+        \draw (O) -- (a) node[below, midway]{$b$};
 
-        \draw (z) node[circle, fill, inner sep=1pt, label=right:$z$]{};
-        \draw (O) node[label={[xshift=-0.3cm, yshift=-0.7cm]$O$}]{};
-        \draw (O) node[label={[xshift=0.55cm, yshift=-0.15cm]$\phi$}]{};
+        \draw (z) node[circle, fill, inner sep=1pt]{} node[right]{$z$};
+        \draw (O) node[left, yshift=-0.25cm]{$O$};
+        \draw (O) node[xshift=0.55cm, yshift=0.2cm]{$\phi$};
 
-        \tikzMarkAngle{(O)}{(z)}{(a)}
+        \tikzMarkAngle{(O)}{(a)}{(z)}
     \end{tikzpicture}
 \end{document}
 {% endraw %}

@@ -58,7 +58,7 @@ with equality holding *if and only if* the point $$B$$ lies on the segment $$AC$
 
 An *angle* is formed by three ordered points $$A$$, $$O$$, and $$B$$, where $$A \neq O$$ and $$B \neq O$$. The point $$O$$ is the *vertex* of the angle. The segments $$m = OA$$ and $$n = OB$$, through any point $$O$$ can be put into 1-to-1 correspondence with the real numbers such that if $$a_m$$ corresponds to $$m$$ and $$a_n$$ to $$n$$, then the *measure* of $$AOB$$, denoted $$\sphericalangle AOB$$ is $$a_n - a_m$$ (mod $$2 \pi$$). Intuition-wise, this distance $$a_n - a_m$$ is equivalent to the length of the arc from $$a_n$$ to $$a_m$$.
 
-<img class="centered" src="{{ "/assets/posts/geometry/angles/angles.svg" | prepend: site.baseurl }}" alt="number line holes">
+<img class="centered" src="{{ "/assets/posts/geometry/angles/angles.svg" | prepend: site.baseurl }}" alt="Definition of an angle">
 
 Note that with this definition, $$\sphericalangle AOB \neq \sphericalangle BOA$$ and that $$\sphericalangle AOB = - \sphericalangle BOA$$. We call these angles *sensed*, *oriented*, or *signed* angles.
 
@@ -100,7 +100,7 @@ $$\frac{1}{2}\left| \begin{array}{ccc} x_1 & x_2 & 1 \\ y_1 & y_2 & 1 \\ z_1 & z
 
 where $$A = (x_1, x_2)$$, $$B = (y_1, y_2)$$, and $$C = (z_1, z_2)$$. If the triangle is a right triangle, we can dispense with the determinant and use the familiar formula $$\alpha = \frac{1}{2}bh$$ where $$b$$ is the length of the base and $$h$$ is the length of the upright with the triangle oriented appropriately. This determinant is positive if the rotation from the $$x$$ axis to the $$y$$ axis is counterclockwise, and negative otherwise. This allows us to compare the orientation of triangles.
 
-### The affine plane
+### The [affine plane](https://en.wikipedia.org/wiki/Affine_plane_(incidence_geometry))
 
 We can consider a plane in which the points are ordered pairs of real numbers $$(x, y)$$, and the line joining two points $$P = (x_1, y_1)$$ and $$Q = (x_2, y_2)$$ is defined by the set of points $$R$$ given by
 
@@ -112,4 +112,133 @@ $$ax + by + c = 0$$
 
 If we take the values $$(0, 1)$$ and $$(1, 0)$$ of $$9k_1, k_2$$, we find that the set $$R$$ contains both $$P$$ and $$Q$$, and we can call that line *the line $$PQ$$*
 
-There is no general formula for the distances between points under this definition
+There is no general formula for the distances between points under this definition.
+
+The two lines $$ax + by + c = 0$$ and $$ax + by + d$$ with $$c \neq d$$ have *no* point of intersection, and are parallel.
+
+### Complex numbers
+
+We can associate every point $$(a, b)$$ in the Euclidean plane with a complex number $$a + bi$$ where $$i^2 = -1$$.
+
+We can also use complex numbers as ordered pairs $$(a, b)$$ of real numbers with $$a$$ as the real part, and $$b$$ as the imaginary part of the complex number. We say two complex numbers $$(a, b)$$ and $$(c, d)$$ are equal if and only if $$a = c$$ and $$b = d$$. We define addition as
+
+$$(a, b) + (c, d) = (a + c, b + d)$$
+
+and scalar multiplication with a real $$k$$ as
+
+$$k(a, b) = (ka, kb)$$
+
+We define the multiplication of two complex numbers as
+
+$$(a, b) \cdot (c, d) = (ac - bd, ad + bc)$$
+
+---
+
+With these rules, we can begin to examine the usual laws of algebra (associativity, commutativity, etc.). The obvious zero element is $$(0, 0)$$ giving
+
+$$(a, b) + (0, 0) = (a, b)$$
+
+and
+
+$$(a, b) \cdot (0, 0) = (0, 0)$$
+
+If we define $$-(a, b)$$ as $$(-a, -b)$$, we have
+
+$$(a, b ) - (a, b) = (0, 0)$$
+
+If $$(a, b) \neq (0, 0)$$, we can find an *inverse*, or, a number $$(c, d)$$ such that $$(a, b) \cdot (c, d) = (1, 0)$$. We use $$(1, 0)$$ as out identity element because $$(a, b) \cdot (1, 0) = (a, b)$$. The inverse of $$(a, b)$$ is given by
+
+$$\left(\frac{a}{a^2 + b^2}, \quad \frac{-b}{a^2 + b^2}\right)$$
+
+If we consider complex numbers with an imaginary part of 0, we can see that $$(a, 0)$$ is isomorphic to $$a$$. We therefore consider the complex numbers an extension of the field of real numbers.
+
+### [Argand diagrams](https://en.wikipedia.org/wiki/Complex_plane)
+
+If we consider complex numbers to be ordered pairs of real numbers, it makes sense to represent complex numbers as points in $$\mathbb{R}^2$$. This representation is known as an *Argand diagram*.
+
+We often use a single symbol $$z$$ to represent a complex number $$(a, b)$$ with $$z = a + bi = (a, b)$$. We can plot $$z$$ 's Argand diagram like so
+
+<img class="centered" src="{{ "/assets/posts/geometry/argand/argand.svg" | prepend: site.baseurl }}" alt="Argand diagram">
+
+We use the notation $$\mid z \mid$$ to denote the magnitude of the vector from the origin to the point $$(a, b)$$ defined by $$z$$. In this way, we can think of complex numbers as vectors.
+
+---
+
+If $$z = a + bi$$, we define the *complex conjugate* of $$z$$, written as $$\bar z$$ as
+
+$$\bar z = a - bi$$
+
+Intuitively speaking, $$\bar z$$ is the reflection of $$z$$ about the $$x$$ axis. It is clear then, that $$\overline{\overline{z}} = a + bi = z$$.
+
+We can also see that
+
+$$\overline{(z_1 + z_2)} = \overline{z_1} + \overline{z_2}$$
+
+and
+
+$$\overline{(z_1 \cdot z_2)} = \overline{z_1} \cdot \overline{z_2}$$
+
+Note that
+
+$$z \cdot \overline{z} = (a + bi)(a - bi) = a^2 - i^2 b^2 = a^2 + b^2$$
+
+which is the square of the distance from the origin to the point $$(a, b)$$. We then define the magnitude of $$z$$, written as $$\mid z \mid$$ to be $$\sqrt{a^2 + b^2}$$, so we have that
+
+$$z \cdot \overline{z} = \mid z \mid ^2$$
+
+
+Since we have that
+
+$$\mid z_1 \cdot z_2 \mid ^2 = (z_1\cdot z_2) \overline{(z_1 \cdot z_2)} = (z_1 \cdot z_1)(\overline{z_1}) (\overline{z_2}) = (z_1 \cdot \overline{z_1})(z_2 \cdot \overline{z_2}) = \mid z_1 \mid ^2 \mid z_2 \mid ^2$$
+
+we arrive at the relation
+
+$$\mid z_1 \cdot z_2 \mid = \mid z_1 \mid \mid z_2 \mid$$
+
+Note that $$\mid z \mid > 0$$ if $$z \neq (0, 0)$$. We can therefore find the inverse of a complex number easily:
+
+$$z ^{-1} = \frac{\overline{z}}{\mid z \mid ^2} = \frac{a}{a^2 + b^2} - \frac{ib}{a^2 + b^2}$$
+
+### The triangle inequality with complex numbers
+
+We have the basic inequality
+
+$$\mid z_1 + z_2 \mid \ \leq \ \mid z_1 \mid + \mid z_2 \mid$$
+
+which can be written as
+
+$$\mid z_2 \mid \ \geq \ \mid z_1 + z_2 \mid - \mid z_1 \mid$$
+
+which can be written as
+
+$$\mid z_1 + z_2 - z_1 \mid \ \geq \ \mid z_1 + z_2 \mid - \mid z_1 \mid$$
+
+If we rename our complex numbers, we can achieve some trickery. Let $$p = z_1 + z_2$$ and $$q = z_1$$. Then we have
+
+$$\mid p - q \mid \ \geq \ \mid p \mid - \mid q \mid$$
+
+Since $$\mid p - q \mid = \mid q - p \mid$$ we also must necessarily have
+
+$$\mid p - q \mid \ \geq \ \mid q \mid - \mid p \mid$$
+
+All of this information together can be assimilated into the inequality
+
+$$\mid p - q \mid \ \geq \ \mid \mid p \mid - \mid q \mid \mid$$
+
+Remember that if $$z_1 = (a, b)$$ and $$z_2 = (c, d)$$, then the distance between the points $$(a, b)$$ and $$(c, d)$$ is simply $$\mid z_2 - z_1 \mid$$.
+
+### De Moivre's theorem
+
+Above, when I discussed the Argand diagram, I stated that it was natural to interpret complex numbers as vectors. We can represent vectors in polar coordinates. Let $$z = a + bi$$, and let the length of $$z$$ be denoted by $$r$$. Then if the vector from the origin to the point $$(a, b)$$ makes the angle $$\phi$$ with the positive $$x$$ axis, we have
+
+$$a = r \cos \phi$$
+
+and
+
+$$b = r \sin \phi$$
+
+such that
+
+$$z = a + bi = r (\cos \phi + i \sin \phi)$$
+
+<img class="centered" src="{{ "/assets/posts/geometry/polar/polar.svg" | prepend: site.baseurl }}" alt="polar coordinates">

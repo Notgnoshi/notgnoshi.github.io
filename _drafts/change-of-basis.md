@@ -52,4 +52,4 @@ $$\vec{v'} = U^{-1} V \cdot \vec v$$
 
 ---
 
-In particular, we can use [rotation matrices](https://en.wikipedia.org/wiki/Rotation_matrix) as transition matrices to rotate our basis by some angle(s).
+In particular, we can use [rotation matrices](https://en.wikipedia.org/wiki/Rotation_matrix) as transition matrices to rotate our basis by some angle(s). The real trick is to find an appropriate transition matrix, the actual change of basis isn't too bad.

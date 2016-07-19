@@ -275,4 +275,26 @@ This is De Moivre's Theorem. This also holds for negative integers $$n$$.
 
 If $$z = r(\cos \varphi + i \sin \varphi)$$, the magnitude of $$z^{-1}$$ is $$r^{-1}$$, and it's angle in polar coordinates is $$-\varphi$$, unless $$\varphi = \pi$$ in which case the angle of $$z^{-1}$$ is still $$\pi$$.
 
-### Real and imaginary numbers in geometry
+### Equivalence relations
+
+In a set $$S$$, let there be defined a relation $$\sim$$ between any two members of $$S$$. This relation is either true or false. If the relation satisfies the following conditions, it is called an *equivalence relation*
+
+* The relation is reflexive, that is, $$x \sim x$$ for all $$x$$ in $$S$$
+* The relation is symmetric, that is, $$x \sim y$$ implies $$y \sim x$$
+* The relation is transitive, that is, if $$x \sim y$$ and $$y \sim z$$ then $$ x \sim z$$
+
+Equivalence relations are an extension of equality.
+
+---
+
+Let us pick from $$S$$ a subset of all elements that are *equivalent* to a representative element $$x$$. This subset is called an *equivalence class*, and any member of the equivalence class can act as a representative. We write the equivalence class as $$[x]$$. If we can find a $$z \not \sim x$$, that is, $$z \notin [x]$$, then $$[z]$$ and $$[x]$$ are *disjoint*. If we continue along this line of thought, we find that the equivalence relation $$\sim$$ divides (or [partitions](https://en.wikipedia.org/wiki/Partition_of_a_set)) the set $$S$$ into disjoint subsets with every element of $$S$$ lying in exactly one such subset.
+
+Similarly, if a set $$S$$ can be covered with mutually disjoint subsets, we can define an equivalence relation to partition the subsets.
+
+### Mappings and transformations
+
+Let $$S$$ and $$T$$ be two sets. If for every $$s \in S$$ there is assigned a unique $$t \in T$$, we say that the set $$S$$ is *mapped* or *transformed* into $$T$$. Equivalently, we say there is a function defined on $$S$$ with values in $$T$$. If $$f$$ represents the function, we can use $$f:S \to T$$ for the sets and $$f: s \to t$$ for the points in the sets.
+
+Note that the elements of the sets need not be numbers, vectors, matrices, etc., but rather can be any arbitrary object.
+
+The set $$S$$ is called the *domain* of $$f$$, and the set of all $$f(s) = t$$ is called the *range* of $$f$$ sometimes denoted $$f(S)$$. If $$f(S) = T$$, the function $$f$$ is called *sujective* or *onto*. If $$f(p) = f(q)$$ implies $$p = q$$, we call $$f$$ one-to-one. If a function is both one-to-one and onto, we call it a *bijection*.

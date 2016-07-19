@@ -14,7 +14,7 @@ For example, if we wish to work with a vector $$\vec v$$ with respect to the sta
 
 <img class="centered" src="{{ "/assets/posts/change-of-basis/standard-basis.svg" | prepend: site.baseurl }}" alt="vector v wrt the standard basis">
 
-What if we want to rotate our coordinate system by some [Euler angles](https://en.wikipedia.org/wiki/Euler_angles) $$\alpha$$, $$\beta$$, and $$\gamma$$? This is what changing the basis really is. To rotate a vector $$\vec v$$ given some Euler angles, multiply $$\vec v$$ by the following transition matrix $$P$$ taken from the $$Z_1 Y_2 X_3$$ entry of [this](https://en.wikipedia.org/wiki/Euler_angles#Rotation_matrix) table.
+What if we want to rotate our coordinate system by some [Euler angles](https://en.wikipedia.org/wiki/Euler_angles) $$\alpha$$, $$\beta$$, and $$\gamma$$? This is what changing the basis really is. To rotate a vector $$\vec v$$ given some Euler angles, multiply $$\vec v$$ by the following transition matrix $$P$$ taken from the $$Z_1 Y_2 X_3$$ entry of [this](https://en.wikipedia.org/wiki/Euler_angles#Rotation_matrix) table. [Source](http://tex.stackexchange.com/questions/67573/tikz-shift-and-rotate-in-3d).
 
 $$P = \begin{pmatrix}
     \cos \alpha \cos \beta & \cos \alpha \sin \beta \sin \gamma - \sin \alpha \cos \gamma & \cos \alpha \sin \beta \cos \gamma + \sin \alpha \sin \gamma \\

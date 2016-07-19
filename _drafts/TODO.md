@@ -17,8 +17,6 @@ title: To-do list
 * `tikz` and/or `pgfplots`
 * Big-O notation
 * `sin`/`cos` implementations in C
-* The Polya method
-* Strunk & White?
 * **Python tutorial**
 * Design Patterns
 * `#pragma once`
@@ -26,5 +24,6 @@ title: To-do list
 * Abstract/Modern Algebra:
   - definition, motivation
   - Groups, Rings, Fields
+* Algebraic graph theory
 
 The idea that "Continuous functions are ones that can be drawn without picking up your pen" leads us to the idea that the identity function $$x$$ is discontinuous because it takes two strokes of the pen to write.

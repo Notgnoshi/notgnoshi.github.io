@@ -15,24 +15,23 @@
 }
 
 \begin{document}
-    \begin{tikzpicture}[scale=1]
+    \begin{tikzpicture}
         \coordinate (O) at (0, 0);
         \coordinate (z) at (3, 3);
         \coordinate (a) at (3, 0);
-        %axes
+
         \draw [->, thick] (-1, 0) -- (5, 0);
         \draw [->, thick] (0, -1) -- (0, 5);
-        
-        \draw (O) -- (z) node[circle, fill, inner sep=1pt, label={[right]$z$}](z){};
-        \draw (O) -- (z) node[midway, label={[above]$r$}](r){};
-        \draw (a) -- (z);
-        
-        
-        \draw (O) node[label={[xshift=-0.3cm, yshift=-0.7cm]$O$}](O){};
-        \draw (O) node[label={[xshift=0.6cm, yshift=-0.2cm]$\phi$}](O){};
+
+        \draw (O) -- (z);
+        \draw (O) -- (z) node[midway, label=above:$r$]{};
+        \draw (a) -- (z) node[midway, label=right:$a$]{};
+        \draw (O) -- (a) node[midway, label=below:$b$]{};
+
+        \draw (z) node[circle, fill, inner sep=1pt, label=right:$z$]{};
+        \draw (O) node[label={[xshift=-0.3cm, yshift=-0.7cm]$O$}]{};
+        \draw (O) node[label={[xshift=0.55cm, yshift=-0.15cm]$\phi$}]{};
+
         \tikzMarkAngle{(O)}{(z)}{(a)}
-        \draw (3, 1.5) node[label=right:$b$](a){};
-        \draw (1.5, 0) node[label=below:$a$](b){};
-                
     \end{tikzpicture}
 \end{document}

@@ -10,6 +10,7 @@ It's a fairly simple process as long as you're using Linux. This process require
 First, make a Tikz image:
 
 {% highlight latex %}
+{% raw %}
 \documentclass[tikz]{standalone}
 
 \newcommand{\tikzAngleOfLine}{\tikz@AngleOfLine}
@@ -47,10 +48,10 @@ First, make a Tikz image:
         \tikzMarkAngle{(O)}{(z)}{(a)}
     \end{tikzpicture}
 \end{document}
-
+{% endraw %}
 {% endhighlight %}
 
-Then compile it with `pdflatex error.tex`. Then convert the PDF to SVG with `pdf2svg error.pdf error.svg`.
+Then compile it with `pdflatex polar.tex`. Then convert the PDF to SVG with `pdf2svg polar.pdf polar.svg`.
 
 The above code produces the following SVG image:
 

@@ -241,4 +241,38 @@ such that
 
 $$z = a + bi = r (\cos \phi + i \sin \phi)$$
 
+The angle $$\phi$$ is occasionally written as $$\operatorname{am}(z)$$.
+
 <img class="centered" src="{{ "/assets/posts/geometry/polar/polar.svg" | prepend: site.baseurl }}" alt="polar coordinates">
+
+---
+
+Note that while
+
+$$\mid z_1 \cdot z_2 \mid \ = \ \mid z_1 \mid \cdot \mid z_2 \mid$$
+
+is true, we *cannot* say that
+
+$$\operatorname{am}(z_1 \cdot z_2) = \operatorname{am}(z_1) \cdot \operatorname{am}(z_2)$$
+
+---
+
+If $$z_i = r_i(\cos \varphi_i + i \sin \varphi_i)$$, we can show by induction that
+
+$$z_1 \cdot z_2 \cdot \dots \cdot z_n = r_1 r_2 \dots r_n (\cos(A) + i \sin(A))$$
+
+where $$A = \varphi_1 + \varphi_2 + \dots + \varphi_n$$.
+
+If we take all the $$z_i$$ to be equal to $$r( \cos \varphi + i \sin \varphi)$$, we have
+
+$$[r(\cos \varphi + i \sin \varphi)]^n = r^n(\cos n \varphi + i \sin n \varphi)$$
+
+or
+
+$$(\cos \varphi + i \sin \varphi)^n = \cos n \varphi + i \sin n \varphi$$
+
+This is De Moivre's Theorem. This also holds for negative integers $$n$$.
+
+If $$z = r(\cos \varphi + i \sin \varphi)$$, the magnitude of $$z^{-1}$$ is $$r^{-1}$$, and it's angle in polar coordinates is $$-\varphi$$, unless $$\varphi = \pi$$ in which case the angle of $$z^{-1}$$ is still $$\pi$$.
+
+### Real and imaginary numbers in geometry

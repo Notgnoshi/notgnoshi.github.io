@@ -160,7 +160,7 @@ We often use a single symbol $$z$$ to represent a complex number $$(a, b)$$ with
 
 <img class="centered" src="{{ "/assets/posts/geometry/argand/argand.svg" | prepend: site.baseurl }}" alt="Argand diagram">
 
-We use the notation $$\mid z \mid$$ to denote the magnitude of the vector from the origin to the point $$(a, b)$$ defined by $$z$$. In this way, we can think of complex numbers as vectors.
+We use the notation $$\vert z \vert$$ to denote the magnitude of the vector from the origin to the point $$(a, b)$$ defined by $$z$$. In this way, we can think of complex numbers as vectors.
 
 ---
 
@@ -182,50 +182,50 @@ Note that
 
 $$z \cdot \overline{z} = (a + bi)(a - bi) = a^2 - i^2 b^2 = a^2 + b^2$$
 
-which is the square of the distance from the origin to the point $$(a, b)$$. We then define the magnitude of $$z$$, written as $$\mid z \mid$$ to be $$\sqrt{a^2 + b^2}$$, so we have that
+which is the square of the distance from the origin to the point $$(a, b)$$. We then define the magnitude of $$z$$, written as $$\vert z \vert$$ to be $$\sqrt{a^2 + b^2}$$, so we have that
 
-$$z \cdot \overline{z} = \mid z \mid ^2$$
+$$z \cdot \overline{z} = \vert z \vert ^2$$
 
 
 Since we have that
 
-$$\mid z_1 \cdot z_2 \mid ^2 = (z_1\cdot z_2) \overline{(z_1 \cdot z_2)} = (z_1 \cdot z_1)(\overline{z_1}) (\overline{z_2}) = (z_1 \cdot \overline{z_1})(z_2 \cdot \overline{z_2}) = \mid z_1 \mid ^2 \mid z_2 \mid ^2$$
+$$\vert z_1 \cdot z_2 \vert ^2 = (z_1\cdot z_2) \overline{(z_1 \cdot z_2)} = (z_1 \cdot z_1)(\overline{z_1}) (\overline{z_2}) = (z_1 \cdot \overline{z_1})(z_2 \cdot \overline{z_2}) = \vert z_1 \vert ^2 \vert z_2 \vert ^2$$
 
 we arrive at the relation
 
-$$\mid z_1 \cdot z_2 \mid = \mid z_1 \mid \mid z_2 \mid$$
+$$\vert z_1 \cdot z_2 \vert = \vert z_1 \vert \vert z_2 \vert$$
 
-Note that $$\mid z \mid > 0$$ if $$z \neq (0, 0)$$. We can therefore find the inverse of a complex number easily:
+Note that $$\vert z \vert > 0$$ if $$z \neq (0, 0)$$. We can therefore find the inverse of a complex number easily:
 
-$$z ^{-1} = \frac{\overline{z}}{\mid z \mid ^2} = \frac{a}{a^2 + b^2} - \frac{ib}{a^2 + b^2}$$
+$$z ^{-1} = \frac{\overline{z}}{\vert z \vert ^2} = \frac{a}{a^2 + b^2} - \frac{ib}{a^2 + b^2}$$
 
 ### The triangle inequality with complex numbers
 
 We have the basic inequality
 
-$$\mid z_1 + z_2 \mid \ \leq \ \mid z_1 \mid + \mid z_2 \mid$$
+$$\vert z_1 + z_2 \vert \ \leq \ \vert z_1 \vert + \vert z_2 \vert$$
 
 which can be written as
 
-$$\mid z_2 \mid \ \geq \ \mid z_1 + z_2 \mid - \mid z_1 \mid$$
+$$\vert z_2 \vert \ \geq \ \vert z_1 + z_2 \vert - \vert z_1 \vert$$
 
 which can be written as
 
-$$\mid z_1 + z_2 - z_1 \mid \ \geq \ \mid z_1 + z_2 \mid - \mid z_1 \mid$$
+$$\vert z_1 + z_2 - z_1 \vert \ \geq \ \vert z_1 + z_2 \vert - \vert z_1 \vert$$
 
 If we rename our complex numbers, we can achieve some trickery. Let $$p = z_1 + z_2$$ and $$q = z_1$$. Then we have
 
-$$\mid p - q \mid \ \geq \ \mid p \mid - \mid q \mid$$
+$$\vert p - q \vert \ \geq \ \vert p \vert - \vert q \vert$$
 
-Since $$\mid p - q \mid = \mid q - p \mid$$ we also must necessarily have
+Since $$\vert p - q \vert = \vert q - p \vert$$ we also must necessarily have
 
-$$\mid p - q \mid \ \geq \ \mid q \mid - \mid p \mid$$
+$$\vert p - q \vert \ \geq \ \vert q \vert - \vert p \vert$$
 
 All of this information together can be assimilated into the inequality
 
-$$\mid p - q \mid \ \geq \ \mid \mid p \mid - \mid q \mid \mid$$
+$$\vert p - q \vert \ \geq \ \vert \vert p \vert - \vert q \vert \vert$$
 
-Remember that if $$z_1 = (a, b)$$ and $$z_2 = (c, d)$$, then the distance between the points $$(a, b)$$ and $$(c, d)$$ is simply $$\mid z_2 - z_1 \mid$$.
+Remember that if $$z_1 = (a, b)$$ and $$z_2 = (c, d)$$, then the distance between the points $$(a, b)$$ and $$(c, d)$$ is simply $$\vert z_2 - z_1 \vert$$.
 
 ### De Moivre's theorem
 
@@ -249,7 +249,7 @@ The angle $$\phi$$ is occasionally written as $$\operatorname{am}(z)$$.
 
 Note that while
 
-$$\mid z_1 \cdot z_2 \mid \ = \ \mid z_1 \mid \cdot \mid z_2 \mid$$
+$$\vert z_1 \cdot z_2 \vert \ = \ \vert z_1 \vert \cdot \vert z_2 \vert$$
 
 is true, we *cannot* say that
 

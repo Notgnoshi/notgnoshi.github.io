@@ -5,18 +5,16 @@ twitter_username: Notgnoshi
 github_username:  Notgnoshi
 email: "Notgnoshi@gmail.com"
 
-# Build settings
-markdown: kramdown
-syntax-highlighting:
-    enabled : true
-#    css: syntax.css
-permalink: pretty
-kramdown:
-    input: GFM
 analytics:
     provider: google
     google:
         tracking_id: 'UA-63013145-1'
+
+# Build settings
+markdown: kramdown
+syntax-highlighting:
+    enabled : true
+permalink: pretty
+kramdown:
+    input: GFM
 safe: true
-# Disable rendering future posts
-future: false

@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Posts
 ---
-<!-- Index page, list of posts -->
+
 <div class="home">
 <h1 id="post_page" style="margin-bottom:30px; font-size:20pt; border-bottom: solid 1px #e8e8e8">Posts</h1>
     <ul class="posts">
@@ -40,6 +39,6 @@ title: Posts
         {% endfor %}
     </ul>
   <div id="archive_link">
-      <a class="post-link" href="archive/">More Posts</a>
+      <a class="post-link" href="{{ '/archive/' | prepend: site.baseurl }}">More Posts</a>
   </div>
 </div>

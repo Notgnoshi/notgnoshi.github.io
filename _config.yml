@@ -18,3 +18,5 @@ permalink: pretty
 kramdown:
     input: GFM
 safe: true
+
+future: false

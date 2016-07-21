@@ -18,3 +18,5 @@ analytics:
     google:
         tracking_id: 'UA-63013145-1'
 safe: true
+# Disable rendering future posts
+future: false

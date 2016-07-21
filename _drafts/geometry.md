@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Geometry
-subtitle: Preliminary notes
+subtitle: some basic notes
 ---
 
 <!-- Custom styles for the images -->

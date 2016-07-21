@@ -1,6 +1,6 @@
-_site
-archive
+_site/
 .idea/
+.jekyll-metadata
 
 ## Core latex/pdflatex auxiliary files:
 *.aux

@@ -4,7 +4,10 @@ title: The Python Interpreter
 subtitle: An introduction
 ---
 
-#### Introduction:
+<!-- Custom styles for the images -->
+<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
+
+### Introduction:
 
 The Python interpreter is a program distributed along with the Python standard library modules that is used to execute Python code. The Python interpreter works by converting human-readable Python source code into machine-understandable bytecode before executing the bytecode.
 
@@ -16,7 +19,7 @@ When someone mentions "the Python interpreter", they mean all four pieces togeth
 
 If this interests you, Allison Kaptur has written a [series](http://akaptur.com/blog/2013/11/15/introduction-to-the-python-interpreter/) of blog posts explaining the CPython interpreter (the official Python interpreter written in C) in greater detail. She has also given several interesting PyCon [talks](https://www.youtube.com/watch?v=HVUTjQzESeo) about the Python interpreter as well. My intent here is only to give the broadest top level non-expert introduction, if you're looking for detail, you won't find it here.
 
-#### Lexer:
+### Lexer:
 
 The lexer, or lexical analyzer, breaks the source code into tokens. If one were to write a lexer for the English language, it would break up a source text into the individual works and punctuation marks.
 
@@ -50,7 +53,7 @@ the tokenizer would break the code into the following tokens, with the first col
 3 15 Identifier..: a
 ```
 
-#### Parser:
+### Parser:
 
 The parser takes all of the tokens from the source file, and creates what is called an Abstract Syntax Tree (AST) which represents the logical structure of the code. The AST is a tree-like structure with each node representing a language construct.
 
@@ -65,17 +68,18 @@ while b != 0:
 return a
 {% endhighlight %}
 
-![AST](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Abstract_syntax_tree_for_Euclidean_algorithm.svg/400px-Abstract_syntax_tree_for_Euclidean_algorithm.svg.png)
+<img class="centered" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Abstract_syntax_tree_for_Euclidean_algorithm.svg/400px-Abstract_syntax_tree_for_Euclidean_algorithm.svg" alt="Abstract Syntac Tree">
+<!-- ![AST](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Abstract_syntax_tree_for_Euclidean_algorithm.svg/400px-Abstract_syntax_tree_for_Euclidean_algorithm.svg) -->
 
 
-#### Compiler:
+### Compiler:
 
 The compiler takes the AST and converts it into a code object. The code object is a feature unique to Python. The code object contains the bytecode, among other constructs such as a list of all variable names, all function names, any constants, variable values, etc.
 
 The bytecode is just a series of bytes, with different codes corresponding to different commands. Here is the code object for the `foo` example given above.
 
 {% highlight python %}
->>> dir( foo.func_code )
+>>> dir(foo.func_code)
 ['__class__', '__cmp__', '__delattr__', '__doc__', '__eq__',
 '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__',
 '__init__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__',
@@ -99,7 +103,7 @@ There is a lot of things in there that are beyond the scope of this description.
 
 The `co_varnames` field is an object that holds the variable names used in the function. The `co_consts` field is an object that holds all of the constants available inside the function scope. The last field, `co_code` is the actual bytecode.
 
-#### Interpreter:
+### Interpreter:
 
 The bytecode is simply a list of numbers. If we `ord` each byte, we can see what numbers the bytecode actually contains.
 
@@ -124,6 +128,6 @@ To understand the Python bytecode, one would simply look through the Python inte
 
 The left column is the line number in the source code, and the second column is the position in the line. The middle column is where the interesting things are; it is a list of the internal commands that the bytecode instructs the interpreter to execute. The fourth column is the arguments of the commands, and the fifth column are the names of the arguments that `dis` has looked up for us.
 
-#### Conclusion:
+### Conclusion:
 
 The Python interpreter goes through four stages in order to execute Python source code. It tokenizes source code with the lexer, and then attempts to make sense of the tokens by arranging them into an Abstract Syntax Tree. The compiler then takes the AST and turns it into a code object that the interpreter then executes.

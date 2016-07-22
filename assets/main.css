@@ -9,65 +9,65 @@
 html, body { height: 100%; }
 
 @font-face {
-    font-family: 'Conv_cm_serif';
-    src: url('../assets/fonts/cm_serif.eot');
-    src: local('☺'), url('../assets/fonts/cm_serif.woff') format('woff'), url('../assets/fonts/cm_serif.ttf') format('truetype'), url('../assets/fonts/cm_serif.svg') format('svg');
+    font-family: 'cm_serif';
+    src: url('fonts/cm_serif.woff2') format('woff2'),
+         url('fonts/cm_serif.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Conv_cm_serif';
-    src: url('../assets/fonts/cm_bold.eot');
-    src: local('☺'), url('../assets/fonts/cm_bold.woff') format('woff'), url('../assets/fonts/cm_bold.ttf') format('truetype'), url('../assets/fonts/cm_bold.svg') format('svg');
+    font-family: 'cm_serif';
+    src: url('fonts/cm_bold.woff2') format('woff2'),
+         url('fonts/cm_bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Conv_cm_serif';
-    src: url('../assets/fonts/cm_italic.eot');
-    src: local('☺'), url('../assets/fonts/cm_italic.woff') format('woff'), url('../assets/fonts/cm_italic.ttf') format('truetype'), url('../assets/fonts/cm_italic.svg') format('svg');
+    font-family: 'cm_serif';
+    src: url('fonts/cm_italic.woff2') format('woff2'),
+         url('fonts/cm_italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Conv_cm_serif';
-    src: url('../assets/fonts/cm_bold_italic.eot');
-    src: local('☺'), url('../assets/fonts/cm_bold_italic.woff') format('woff'), url('../assets/fonts/cm_bold_italic.ttf') format('truetype'), url('../assets/fonts/cm_bold_italic.svg') format('svg');
+    font-family: 'cm_serif';
+    src: url('fonts/cm_serif_bold_italic.woff2') format('woff2'),
+         url('fonts/cm_serif_bold_italic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Conv_cm_mono';
-    src: url('../assets/fonts/cm_mono.eot');
-    src: local('☺'), url('../assets/fonts/cm_mono.woff') format('woff'), url('../assets/fonts/cm_mono.ttf') format('truetype'), url('../assets/fonts/cm_mono.svg') format('svg');
+    font-family: 'cm_mono';
+    src: url('fonts/cm_mono.woff2') format('woff2'),
+         url('fonts/cm_mono.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Conv_cm_mono';
-    src: url('../assets/fonts/cm_mono_bold.eot');
-    src: local('☺'), url('../assets/fonts/cm_mono_bold.woff') format('woff'), url('../assets/fonts/cm_mono_bold.ttf') format('truetype'), url('../assets/fonts/cm_mono_bold.svg') format('svg');
+    font-family: 'cm_mono';
+    src: url('fonts/cm_mono_bold.woff2') format('woff2'),
+         url('fonts/cm_mono_bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Conv_cm_mono';
-    src: url('../assets/fonts/cm_mono_italic.eot');
-    src: local('☺'), url('../assets/fonts/cm_mono_italic.woff') format('woff'), url('../assets/fonts/cm_mono_italic.ttf') format('truetype'), url('../assets/fonts/cm_mono_italic.svg') format('svg');
+    font-family: 'cm_mono';
+    src: url('fonts/cm_mono_italic.woff2') format('woff2'),
+         url('fonts/cm_mono_italic.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'Conv_cm_mono';
-    src: url('../assets/fonts/cm_mono_bold_italic.eot');
-    src: local('☺'), url('../assets/fonts/cm_mono_bold_italic.woff') format('woff'), url('../assets/fonts/cm_mono_bold_italic.ttf') format('truetype'), url('../assets/fonts/cm_mono_bold_italic.svg') format('svg');
+    font-family: 'cm_mono';
+    src: url('fonts/cm_mono_bold_italic.woff2') format('woff2'),
+         url('fonts/cm_mono_bold_italic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
@@ -83,7 +83,7 @@ html, body { height: 100%; }
 }
 
 body {
-    font-family: Conv_cm_serif, sans-serif, Georgia, "Times New Roman", serif;
+    font-family: cm_serif, sans-serif, Georgia, "Times New Roman", serif;
     font-size: 18px;
     color:#444;
     line-height: 1.5;
@@ -327,7 +327,7 @@ a:visited { color: #2a7ae2; }
     -webkit-border-radius: 3px;
     -moz-border-radius: 3px;
     border-radius: 3px;
-    font-family: Conv_cm_mono;
+    font-family: cm_mono;
     font-size: 15px;
     overflow: auto;
 }

@@ -1,6 +1,6 @@
 ---
 layout: post
-permalink: test
+permalink: /test/
 meta: This is a test page for Jekyll, Liquid, GitHub Pages, or any web-based technology I care to try.
 ---
 

@@ -19,4 +19,6 @@ syntax-highlighting:
     enabled : true
 kramdown:
     input: GFM
-safe: true
+
+gems:
+    - jekyll-sitemap

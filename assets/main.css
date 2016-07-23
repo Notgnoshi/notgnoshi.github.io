@@ -100,6 +100,9 @@ body {
     line-height: 1.5;
     font-weight: 300;
     background-color: #fdfdfd;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Custom bold color */
@@ -171,17 +174,17 @@ a:visited { color: #2a7ae2; }
 
 .site-footer {
     border-top: 1px solid #e8e8e8;
-    padding: 15px 0;
+    padding-top: 15px;
+    padding-bottom: 5px;
 }
 
 .footer-heading {
     font-size: 18px;
     font-weight: 300;
     letter-spacing: -.5px;
-    margin-bottom: 15px;
 }
 
-.site-footer .column { float: left; margin-bottom: 15px; }
+.site-footer .column { float: left; margin-bottom: 0px; }
 
 .footer-col-1 {
     width: 270px; /*fallback*/
@@ -219,8 +222,8 @@ a:visited { color: #2a7ae2; }
 .github-icon-svg,
 .twitter-icon-svg {
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     position: relative;
     top: 3px;
 }
@@ -232,6 +235,7 @@ a:visited { color: #2a7ae2; }
 .page-content {
     padding: 30px 0;
     background-color: #fff;
+    flex: 1;
 }
 
 

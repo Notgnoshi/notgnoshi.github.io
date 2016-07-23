@@ -55,3 +55,16 @@ In [3]: %timeit levenshtein('philosophy', 'mathematics')
 {% endhighlight %}
 
 Note that this does not require that the intermediate words in the transformation be valid, this merely calculates the length of the shortest path between two words under the insertion, deletion, and substitution operations.
+
+The Levenshtein distance forms a [metric space](https://en.wikipedia.org/wiki/Metric_space). A metric space is a set $$M$$ and a distance operator $$\operatorname{d}(x, y)$$, i.e. a function $$d: M \times M \to \mathbb{R}$$. If a set $$M$$ and a distance operator $$\operatorname{d}(x, y)$$ satisfy the following criteria for all $$x, y \in M$$ then the set $$M$$ and the metric $$d$$ form a metric space.
+
+1. The distance cannot be negative
+2. $$\operatorname{d}(x, y) = 0$$ if and only if $$x = y$$
+3. The distance operator is *symmetric*: $$\operatorname{d}(x, y) = \operatorname{d}(y, x)$$
+4. The distance operator follows the triangle inequality: $$\operatorname{d}(x, z) \leq \operatorname{d}(x, y) + \operatorname{d}(y, z)$$
+
+In terms of the Levenshtein distance between two strings, the last item means that the path from $$a$$ to $$c$$ cannot be longer than a path that goes through a point $$b$$ inbetween $$a$$ and $$c$$. ($$a \to b \to c$$)
+
+---
+
+There are other [string metrics](https://en.wikipedia.org/wiki/String_metric) but the Levenshtein distance is the canonical one.

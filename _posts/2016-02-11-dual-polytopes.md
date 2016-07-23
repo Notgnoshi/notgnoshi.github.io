@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Introduction to Graph Theory in the Context of Dual Polytopes
+meta: A writeup of a presentation I gave on multidimensional geometry, planar graphs, and graph and polyhedra dualism.
 ---
 <!-- Custom styles for the images -->
 <link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">

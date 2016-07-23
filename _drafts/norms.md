@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Norms
+meta: Describes what a norm on a vector space is, and gives examples of norms on vectors, matrices, and polynomials.
 ---
 <!-- Custom styles for the images -->
 <link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">

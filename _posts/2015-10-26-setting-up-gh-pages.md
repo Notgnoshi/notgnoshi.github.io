@@ -1,12 +1,7 @@
 ---
 layout: post
 title: How I set up Github User Pages
-tags:
-  -Github pages
-  -Git
-  -Jekyll
-  -Google Analytics
-  -Tutorial
+meta: A description of how I set up my GitHub User page using Jekyll
 ---
 
 I want to give a short and very non-comprehensive tutorial on how I set up my blog. I started with [this](http://24ways.org/2013/get-started-with-github-pages/) tutorial from Anna Debenham. I found it to be quite informative and well-written. However, I did do quite a few things different than Anna; I'm using a User page and not a Project page, and I used slightly different `_includes/` and `_layouts/` (more on that in a bit). [Here's](https://github.com/Notgnoshi/notgnoshi.github.io) a link to the repository my code lives in. Feel free to take a look so you can see how it all fits together. Note though that I'm not a professional, and if you find an example online that differs it might be worth trying that instead.

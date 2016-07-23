@@ -2,8 +2,7 @@
 layout: post
 title: "Asciinema"
 subtitle: "Recording your terminal"
-#author: Notgnoshi
-meta:
+meta: A brief mention of the asciinema terminal recording tool
 ---
 
 A while ago I was looking for a tool to record my terminal as a GIF. What I found instead was a neat little tool called [Asciinema](https://asciinema.org/) that records a terminal session to a JSON file. Asciinema then converts this JSON file into a "video" for lack of a better word. This is cool, because Asciinema's JavaScript playback window lets viewers copy and paste whatever was recorded. You can embed the playback windows anywhere you can use `<script>... </script>` tags.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An Interesting Intermediate Value Theorem Problem
+meta: A description of an interesting calculus problem involving the application of the Intermediate Value Theorem
 ---
 
 I recently joined the math club on campus, and so far there's only been a handful of people attending (at one meeting there were three in total). The meetings have pretty much been focused on generating more interest in the math club, but we've also tried our hand at a few different interesting "Problems of the Week".

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: What is Abstract Algebra?
+meta: A definition of algebraic structures and abstract/modern algebra
 ---
 
 If someone were to ask you what "algebra" was, most people would answer something to the effect of "It's the process of solving equations". Indeed, this is most people's experience with algebra. It's even how the discipline began, but it's not all there is to it.

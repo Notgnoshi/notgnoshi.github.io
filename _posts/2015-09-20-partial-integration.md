@@ -1,14 +1,10 @@
 ---
 title: Partial Integration
 layout: post
-tags:
-  -Multivariable calculus
-  -partial derivatives
-  -calculus
-  -integration
+meta: A development of partial integration applying intuition from single variable calculus to two and three variable calculus
 ---
 
-#### Purpose:
+### Purpose:
 
 Finding a function $$f$$ such that $$\nabla f = \boldsymbol{F}$$ was one of the ideas introduced in Calculus III that was not explained as clearly to me as I would have liked. First off, it wasn't called "partial integration", which I think would have helped clue me in to what it was all about. The instructor went through an example problem and numbered a bunch of equations, then gave us an instruction list of what to do based on those numbered equations. We'd integrate $$1$$ with respect to $$x$$, and call the result $$2$$, then differentiate $$2$$ with respect to $$y$$, and call this $$3$$, then compare $$3$$ with $$4$$. While she was telling us how to do this, when asked, the only explanation we got was something along the lines of "Well, that's just what you do." It turns out that while yes, that is how you do it, there's a reason *why*, and understanding that reason I believe helps me to understand *how* to solve the problem.
 
@@ -18,7 +14,7 @@ Maybe part of the problem was that I took Calculus III before Differential Equat
 
 However, the day before our final exam, some students and I got together to study. We stayed in one our school's study rooms around a conference table for over 8 hours (7:30am - 4:30pm) and pounded out problems. One of the students present had trouble with this problem, and while she was able to blindly follow the instruction list our instructor gave us, she expressed frustration with not understanding the process. Naturally being the knight in shining armor that I am, I jumped to the rescue and attempted to explain the deep insight I had on the matter. While she claimed my attempts helped, in hindsight I believe I only muddied the water. My purpose here will be to explain the matter to the best of my ability as clearly as I can. I will do it twice, once in two variables, and once in three.
 
-#### Two Variables:
+### Two Variables:
 
 **Problem:** *Given a vector function $$\boldsymbol{F}(x, y) = (3+2xy)\boldsymbol{\hat \imath} \, + \, (x^2 - 3y^2) \boldsymbol{\hat \jmath} $$, find a function $$f$$ such that $$\nabla f = \boldsymbol{F}$$.*
 
@@ -46,7 +42,7 @@ Now, we *know* that $$f_y$$ is $$x^2 - 3y^2$$! We can use this to figure out wha
 
 This is the final answer to our problem! If we were given a three variable function $$\boldsymbol{F}$$, could we still find the answer? Yes, and by using the same process! Let's see how this works with a little less commentary. Hopefully it will be a little easier to understand.
 
-#### Three Variables:
+### Three Variables:
 
 **Problem:** *Given a function $$\boldsymbol{F}(x, y, z) = (y^2) \boldsymbol{\hat \imath} + (2xy + e^{3z}) \boldsymbol{\hat \jmath} + (3ye^{3z}) \boldsymbol{\hat k}$$, find a function $$f$$ such that $$\nabla f = \boldsymbol{F}$$.*
 

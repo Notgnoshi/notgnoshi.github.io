@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Syntax Highlighting in LaTeX
+meta: Using Minted and Pygments to properly create syntax-highlighted code blocks in LaTeX
 ---
 
 Here's the basics:

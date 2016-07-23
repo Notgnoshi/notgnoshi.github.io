@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Change of Basis
+meta: Describes what a basis is, and how to change from one vector space to another using a transition matrix. Pays special attention to rotation matrices.
 ---
 
 <!-- Custom styles for the images -->

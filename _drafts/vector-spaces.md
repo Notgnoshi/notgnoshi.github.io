@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Vector Spaces
+meta: A brief collection of notes on vector spaces.
 ---
 
 I'd like to do a little Linear Algebra review to make sure I understand many of the concepts before I go back to school this fall. I'll start with the idea of a *vector space*

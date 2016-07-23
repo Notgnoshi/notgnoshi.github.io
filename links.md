@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: /links/
+meta: A list of links for me to remember.
 ---
 
 <details>

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: C/C++ Preprocessor Macros
+meta: Useful preprocessor macros
 ---
 
 A few days ago, I came across a nifty little [Gist](https://gist.github.com/aras-p/6224951) of things to commit just before leaving your job. As you can imagine, most of the things listed are pretty devious. Some of them caught my eye, particularly  `#define true ((__LINE__&15)!=15)`.

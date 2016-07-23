@@ -2,6 +2,7 @@
 layout: post
 title: The Polya Method
 date: 2015-4-31
+meta: A short description of the Polya problem solving method.
 ---
 
 In 1995, [George Polya](https://en.wikipedia.org/wiki/George_Pólya) wrote a book titled "How to Solve It" detailing his formulation of problem solving strategies. The book was then translated into English in 2004.

@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Completing the Square
-tags:
-  - Algebra
-  - Geometry
+meta: Describes a geometric interpretation of the algebraic method of completing the square as found in Strogatz's "The Joy of X"
 ---
 <link rel="stylesheet" href="{{ "/assets/styles/square.css" | prepend: site.baseurl }}">
 

@@ -2,6 +2,7 @@
 layout: post
 title: Sets and Functions
 subtitle: A brief reminder
+meta: A list of properties of sets and functions to serve as a quick reference for me in the future
 ---
 
 <!-- Custom styles for the images -->

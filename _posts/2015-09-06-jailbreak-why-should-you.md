@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Why Should You Jailbreak?
-
-
+meta: A list of my favorite jailbreak tweaks.
 ---
 
 I made a lot of references to jailbreaking in a [post]({% post_url 2015-07-28-idevices-on-linux %}) about syncing music to my iPhone from Ubuntu. I could spend a lot of time telling you about the freedoms it gives you, but instead I'd like to just show you what tweaks I've installed on my device. The purpose here is twofold; I want to proselytize the [Holy Jailbreak Religion](https://reddit.com/r/jailbreak) while at the same time being a record of what I've done so far, so that if I ever have to restore my device (it's happened) I know exactly what I need to do to get my device back the way it was. Let's get started. I'll go through the tweaks by alphabetical order and ignore the dependencies that will be installed alongside them.

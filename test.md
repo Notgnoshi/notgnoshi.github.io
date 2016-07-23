@@ -1,6 +1,7 @@
 ---
 layout: post
 permalink: test
+meta: This is a test page for Jekyll, Liquid, GitHub Pages, or any web-based technology I care to try.
 ---
 
 This is a test page. Go away.

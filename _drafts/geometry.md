@@ -2,6 +2,7 @@
 layout: post
 title: Geometry
 subtitle: some basic notes
+meta: Some notes on basic geometry, including the affine plane and complex numbers.
 ---
 
 <!-- Custom styles for the images -->

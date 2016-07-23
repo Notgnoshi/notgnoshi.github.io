@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Numerical Root-Finding Methods
+meta: A brief description of open and bracketed numerical root finding methods for single variable functions
 ---
 <!-- Custom styles for the images -->
 <link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">

@@ -2,6 +2,7 @@
 layout: post
 title: The Python Interpreter
 subtitle: An introduction
+meta: A brief description of the four pieces of the Python interpreter; The lexer, parser, compiler, and bytecode interpreter.
 ---
 
 <!-- Custom styles for the images -->

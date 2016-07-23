@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Producing SVG images with Tikz
+meta: A tutorial on producing vector graphics from a Tikz LaTeX image.
 ---
 <!-- Custom styles for the images -->
 <link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">

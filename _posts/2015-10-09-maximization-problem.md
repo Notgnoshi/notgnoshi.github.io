@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Area Maximization Problem
+meta: Maximizing the ration of one area to another.
 ---
 
 At the most recent math club meeting on campus we solved the following problem. It was a group effort, though largely just the work of our president was what was helpful. One of the professors asked me to write up our solution, which I will duplicate here. This is slightly more polished than what I first submitted because both the club president and our faculty advisor proposed changes. Enough rambling.
@@ -51,10 +52,10 @@ $$ A(T) = \frac{1}{2} b h $$
 Substituting these into the ratio $$\Theta$$ we get
 
 $$\Theta = \frac{A(R) + A(S)}{A(T)} \\
-	       = \frac{2 \left(bhs(1-s) + bh(r-s)(1-r)\right) }{b h}\\
-		   = 2\left(s(1-s) + (r-s)(1-r)\right)\\
-		   = 2(s - s^2 + r - s - r^2 + rs)\\
-		   = 2(r + rs - s^2 - r^2)
+	     = \frac{2 \left(bhs(1-s) + bh(r-s)(1-r)\right) }{b h}\\
+		 = 2\left(s(1-s) + (r-s)(1-r)\right)\\
+		 = 2(s - s^2 + r - s - r^2 + rs)\\
+		 = 2(r + rs - s^2 - r^2)
 $$
 
 We want to maximize

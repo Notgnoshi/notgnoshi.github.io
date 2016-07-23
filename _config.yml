@@ -11,12 +11,12 @@ analytics:
         tracking_id: 'UA-63013145-1'
 
 # Build settings
+include: ['_pages']
+permalink: /posts/:title/
+
 markdown: kramdown
 syntax-highlighting:
     enabled : true
-permalink: pretty
 kramdown:
     input: GFM
 safe: true
-
-future: false

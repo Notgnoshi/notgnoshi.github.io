@@ -6,7 +6,9 @@
     padding: 0;
 }
 
-html, body { height: 100%; }
+html {
+    height: 100%;
+}
 
 /*woff2, woff, and ttf have to following coverage:
  *  chrome 3.5+, safari 3+, firefox 3.5+, opera 10.1+, ie 9+,
@@ -100,7 +102,7 @@ body {
     line-height: 1.5;
     font-weight: 300;
     background-color: #fdfdfd;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -187,7 +189,7 @@ a:visited { color: #2a7ae2; }
 .site-footer .column { float: left; margin-bottom: 0px; }
 
 .footer-col-1 {
-    width: 270px; /*fallback*/
+    width: 270px;
     width: -webkit-calc(35% - 10px);
     width: -moz-calc(35% - 10px);
     width: -o-calc(35% - 10px);
@@ -195,7 +197,7 @@ a:visited { color: #2a7ae2; }
     margin-right: 10px
 }
 .footer-col-2 {
-    width: 175px; /*fallback*/
+    width: 175px;
     width: -webkit-calc(23.125% - 10px);
     width: -moz-calc(23.125% - 10px);
     width: -o-calc(23.125% - 10px);
@@ -203,7 +205,7 @@ a:visited { color: #2a7ae2; }
     margin-right: 10px
 }
 .footer-col-3 {
-    width: 335px; /*fallback*/
+    width: 335px;
     width: -webkit-calc(41.875%);
     width: -moz-calc(41.875%);
     width: -o-calc(41.875%);
@@ -235,7 +237,7 @@ a:visited { color: #2a7ae2; }
 .page-content {
     padding: 30px 0;
     background-color: #fff;
-    flex: 1;
+    flex: auto;
 }
 
 
@@ -448,7 +450,7 @@ a:visited { color: #2a7ae2; }
     .footer-col-1 { width: 50%; }
 
     .footer-col-2 {
-        width: 45%; /*fallback*/
+        width: 45%;
         width: -webkit-calc(50% - 10px);
         width: -moz-calc(50% - 10px);
         width: -o-calc(50% - 10px);

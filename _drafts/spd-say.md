@@ -1,0 +1,27 @@
+---
+layout: post
+title: Text-to-Speech on Linux
+meta: Briefly describes how to use and configure spd-say; installed by default on Ubuntu 14.04+
+---
+
+The [`speech-dispatcher`](http://manpages.ubuntu.com/manpages/xenial/man1/speech-dispatcher.1.html) package, installed by default on Ubuntu 14.04+, provides the [`spd-say`](http://manpages.ubuntu.com/manpages/xenial/man1/spd-say.1.html) command. Here's a brief description of how to use it.
+
+`spd-say [options] "text"` will attempt to speak `"text"` from your device's speakers.
+
+Here's an incomplete list of options. See `info spd-say` for the complete list and more.
+
+* `--rate`, sets the speech rate from `-100` to `+100`
+* `--pitch`, sets the speech pitch from `-100` to `+100`
+* `--volume`, sets the speech volume from `-100` to `+100`
+* `--voice-type` sets the preferred voice type. Options are `male1`, `male2`, `male3`, `female1`, `female2`, `female3`, `child_male`, and `child_female`
+* `--punctuation-mode [none | some | all]` will set how much punctuation will be spoken
+* `--pipe-mode` will accept input from `stdin` and will output to both `stdout` and `speech-dispatcher`
+* `--wait` will wait until the message is spoken before exiting
+* `--stop` will stop speaking the current message
+* `--cancel` will cancel all messages
+
+Example usages might be
+
+{% highlight shell %}~ $ for _ in {1..10}; do spd-say --wait "butts butts butts butts"; done{% endhighlight %}
+{% highlight shell %}~ $ shuf -n 1  /usr/share/dict/words | spd-say --pipe-mode{% endhighlight %}
+{% highlight shell %}~ $ curl -s http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt | tail --lines=+246 | spd-say --pipe-mode{% endhighlight %}

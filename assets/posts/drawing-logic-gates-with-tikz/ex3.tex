@@ -1,0 +1,15 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}
+    % axes
+    \draw[->](-3.5, 0) -- (4.2, 0) node[right] {$x$};
+    \draw[->](0, -pi) -- (0, 4.2) node[above] {$y$};
+
+    % graphs
+    \draw[scale=0.5, domain=-3:3, smooth, variable=\x, blue]
+        plot ({\x}, {\x*\x});
+    \draw[domain=-pi:pi, smooth, variable=\x, red]
+        plot ({\x}, {sin(deg(\x))});
+\end{tikzpicture}
+\end{document}

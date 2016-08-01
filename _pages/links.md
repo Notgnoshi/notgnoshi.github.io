@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 permalink: /links/
 meta: A list of links for me to remember.
 ---
@@ -37,6 +37,7 @@ meta: A list of links for me to remember.
         <li><a href="http://arxiv.org/pdf/1112.5331v2.pdf">Solving Polynomial Equations from Complex Numbers</a>. Ricardo S. Vieira</li>
         <li><a href="http://www.math.clemson.edu/~mjs/courses/misc/study.pdf">How to Survive Your College Math Class</a>. Matthew Saltzman and Marie Coffin</li>
         <li><a href="http://www.math.uiuc.edu/~r-ash/Remarks.pdf">Remarks on Expository Writing in Mathematics</a>. Robert B. Ash</li>
+        <li><a href="https://digital.lib.washington.edu/researchworks/bitstream/handle/1773/2276/Graphs%20of%20polyhedra.pdf;jsessionid=873D293FF45F0AC8CF3A87CB737568E2?sequence=1">Graphs of polyhedra; polyhedra as graphs</a>. Branko Grunbaum</li>
     </ul>
 </details>
 

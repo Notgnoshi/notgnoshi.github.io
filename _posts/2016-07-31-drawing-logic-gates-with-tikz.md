@@ -116,12 +116,6 @@ Something more advanced:
 \usetikzlibrary{patterns}
 
 \begin{document}
-\documentclass[tikz]{standalone}
-
-\usepackage{pgfplots}
-\usetikzlibrary{patterns}
-
-\begin{document}
 \begin{tikzpicture}
 % diagonal fill pattern
 \pgfdeclarepatternformonly{north east lines wide}%

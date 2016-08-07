@@ -71,4 +71,4 @@ verbose mode.
 bar = 42.0
 ```
 
-**Don't manually parse `sys.argv`!!** As easy as this is, everyone should be using it, even (especially) if all you need is simple functionality. Reinventing the wheel isn't worth the time you could spend procrastinating on something more valuable.
+**Don't manually parse `sys.argv`!!** As easy as `argparse` is, everyone should be using it, even (especially) if all you need is simple functionality. Reinventing the wheel isn't worth the time you could spend procrastinating on something more valuable.

@@ -191,23 +191,23 @@ One way to calculate the machine epsilon on your system is to find the smallest 
 {% highlight python %}
 import numpy as np
 
-print(np.finfo(float).eps)  # 2.22044604925e-16
+print(np.finfo(float).eps)       # 2.22044604925e-16
 print(np.finfo(np.float32).eps)  # 1.19209e-07
 print(np.finfo(np.float64).eps)  # 2.22044604925e-16
 {% endhighlight %}
 
 You can also calculate the machine epsilon for a given data type using the following Python snippet
 
-{% highlight python %}
+```python
 def machineEpsilon(func=float):
     eps = func(1)
     while func(1) + func(eps) != func(1):
         eps_last = eps
         eps = func(eps) / func(2)
     return eps_last
-{% endhighlight %}
+```
 
-{% highlight python %}
+```python
 >>> import numpy as np
 >>> machineEpsilon(float)
 2.220446049250313e-16
@@ -215,7 +215,7 @@ def machineEpsilon(func=float):
 2.2204460492503131e-16
 >>> machineEpsilon(np.float32)
 1.1920929e-07
-{% endhighlight %}
+```
 
 ## Truncation Error
 

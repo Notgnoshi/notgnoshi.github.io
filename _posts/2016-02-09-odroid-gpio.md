@@ -8,7 +8,7 @@ I'm a part of the Robotics team at [SDSMT](http://www.sdsmt.edu) and one of the 
 
 Here's what the end result looks like.
 
-{% highlight python %}
+```python
 from gpiolib import *
 
 sys_init()
@@ -20,13 +20,13 @@ pinMode(24, INPUT)
 val = digitalRead(24)
 
 sys_clean()
-{% endhighlight %}
+```
 
 I'm not sure how fast/responsive it is, but all we need to do is monitor a single pin to start up the code that handles the state machine and autonomous navigation for our robot, so it doesn't have to be fast.
 
 Here's my wrapper for [mlinuxguy](https://github.com/mlinuxguy)'s code. I've removed all my error checking for clarity.
 
-{% highlight python %}
+```python
 import gpio as g
 
 XU_GPIO_ADDR = 0x13400000  # Odroid-XU base GPIO address
@@ -65,6 +65,6 @@ def digitalWrite(pin, state=OFF):
 def digitalRead(pin):
     """Read ON or OFF from `pin`. Returns integer 0 or 1."""
     return g.digitalRead(gpio_addresses[pin][0], gpio_addresses[pin][1])
-{% endhighlight %}
+```
 
 The downside of this approach is the complexity of my solution. It would have been much better to just rewrite mlinuxguy's library to hide the memory addresses and bit offsets, and require only the pin numbers and modes to function.

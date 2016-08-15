@@ -22,16 +22,17 @@ Other useful macros might include
 
 * `#define SHOW(X) cout << # X " = " << (X) << endl`, useful for debugging.
 * For simplified logging, we can do
-  {% highlight c %}
-#define LOG(log)                                            \
-if (!log.enabled()) {}                                      \
-else log.getStream() << __FILE__ << "@" << __LINE__ << ": "
 
-log_t errorlog;
-...
+  ```c
+  #define LOG(log)                                            \
+  if (!log.enabled()) {}                                      \
+  else log.getStream() << __FILE__ << "@" << __LINE__ << ": "
 
-LOG(errorlog) << "This doesn't look good:" << somedata;
-  {% endhighlight %}
+  log_t errorlog;
+  ...
+
+  LOG(errorlog) << "This doesn't look good:" << somedata;
+  ```
 
 There are many, many more use cases. If you're interested, look [here](http://jhnet.co.uk/articles/cpp_magic) for some more magic.
 

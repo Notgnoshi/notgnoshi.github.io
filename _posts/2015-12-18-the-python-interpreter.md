@@ -30,11 +30,11 @@ The tokenizer is language specific. It groups the characters from the scanner in
 
 Given the following example source code,
 
-{% highlight python %}
+```python
 def foo( a ):
     x = 6
     return x + a
-{% endhighlight %}
+```
 
 the tokenizer would break the code into the following tokens, with the first column being the line number the token is found on, the second column the character in the line the token begins on, and the third column being the token type, with the last column as the actual token value.
 
@@ -60,14 +60,14 @@ The parser takes all of the tokens from the source file, and creates what is cal
 
 The following figure is the corresponding AST for the following code snippet, taken from the Wikipedia article on [ASTs](https://en.wikipedia.org/wiki/Abstract_syntax_tree)
 
-{% highlight python %}
+```python
 while b != 0:
   if a > b:
     a = a - b
   else:
     b = b - a
 return a
-{% endhighlight %}
+```
 
 <img class="centered" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Abstract_syntax_tree_for_Euclidean_algorithm.svg/400px-Abstract_syntax_tree_for_Euclidean_algorithm.svg" alt="Abstract Syntac Tree">
 <!-- ![AST](https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Abstract_syntax_tree_for_Euclidean_algorithm.svg/400px-Abstract_syntax_tree_for_Euclidean_algorithm.svg) -->
@@ -79,7 +79,7 @@ The compiler takes the AST and converts it into a code object. The code object i
 
 The bytecode is just a series of bytes, with different codes corresponding to different commands. Here is the code object for the `foo` example given above.
 
-{% highlight python %}
+```python
 >>> dir(foo.func_code)
 ['__class__', '__cmp__', '__delattr__', '__doc__', '__eq__',
 '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__',
@@ -89,18 +89,18 @@ The bytecode is just a series of bytes, with different codes corresponding to di
 'co_code', 'co_consts', 'co_filename', 'co_firstlineno',
 'co_flags', 'co_freevars', 'co_lnotab', 'co_name', 'co_names',
 'co_nlocals', 'co_stacksize', 'co_varnames']
-{% endhighlight %}
+```
 
 There is a lot of things in there that are beyond the scope of this description. The things that interest us are the `co_varnames`, `co_consts`, and `co_code` fields.
 
-{% highlight python %}
+```python
 >>> foo.func_code.co_varnames
 ('a', 'x')
 >>> foo.func_code.co_consts
 (None, 6)
 >>> foo.func_code.co_code
 'd\x01\x00}\x01\x00|\x01\x00|\x00\x00\x17S'
-{% endhighlight %}
+```
 
 The `co_varnames` field is an object that holds the variable names used in the function. The `co_consts` field is an object that holds all of the constants available inside the function scope. The last field, `co_code` is the actual bytecode.
 
@@ -108,14 +108,14 @@ The `co_varnames` field is an object that holds the variable names used in the f
 
 The bytecode is simply a list of numbers. If we `ord` each byte, we can see what numbers the bytecode actually contains.
 
-{% highlight python %}
+```python
 >>> [ord(b) for b in foo.func_code.co_code]
 [100, 1, 0, 125, 1, 0, 124, 1, 0, 124, 0, 0, 23, 83]
-{% endhighlight %}
+```
 
 To understand the Python bytecode, one would simply look through the Python interpreter's C source code and see what `100` means, and then what `1` means. Or we can use the `dis` module to we can see what each bytecode segment means. What we will do is `dis`assemble our example function's bytecode.
 
-{% highlight python %}
+```python
 >>> import dis
 >>> dis.dis(foo.func_code)
   2           0 LOAD_CONST               1 (6)
@@ -125,7 +125,7 @@ To understand the Python bytecode, one would simply look through the Python inte
               9 LOAD_FAST                0 (a)
              12 BINARY_ADD
              13 RETURN_VALUE
-{% endhighlight %}
+```
 
 The left column is the line number in the source code, and the second column is the position in the line. The middle column is where the interesting things are; it is a list of the internal commands that the bytecode instructs the interpreter to execute. The fourth column is the arguments of the commands, and the fifth column are the names of the arguments that `dis` has looked up for us.
 

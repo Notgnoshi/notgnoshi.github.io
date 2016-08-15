@@ -12,7 +12,7 @@ Tikz is an extremely powerful tool, but it can be hard to get a grasp of. Here's
 ### Basic gates and wiring
 
 <!-- symlink to /assets/posts/drawing-logic-gates-with-tikz/ex1.tex -->
-{% highlight latex %}
+```latex
 \documentclass[tikz, border=1mm]{standalone}
 
 \usetikzlibrary{arrows, shapes.gates.logic.US, calc}
@@ -24,12 +24,10 @@ Tikz is an extremely powerful tool, but it can be hard to get a grasp of. Here's
 
     \node[not gate US, draw] at ($(x) + (0.8, 0)$) (notx) {};
     \node[not gate US, draw] at ($(y) + (0.8, 0)$) (noty) {};
-
-    \draw (x) |- (notx.input);
-    \draw (y) |- (noty.input);
-
-
     \node[or gate US, draw, rotate=0, logic gate inputs=nn] at ($(noty) + (1.5, 0.5)$) (xory) {};
+
+    \draw (x) -- (notx.input);
+    \draw (y) -- (noty.input);
 
     \draw (notx.output) -- ([xshift=0.2cm]notx.output) |- (xory.input 1);
     \draw (noty.output) -- ([xshift=0.2cm]noty.output) |- (xory.input 2);
@@ -37,7 +35,7 @@ Tikz is an extremely powerful tool, but it can be hard to get a grasp of. Here's
     \draw (xory.output) -- node[above]{$\bar x + \bar y$} ($(xory) + (1.5, 0)$);
 \end{tikzpicture}
 \end{document}
-{% endhighlight %}
+```
 
 which produces
 
@@ -45,7 +43,7 @@ which produces
 
 ### More complicated wiring
 
-{% highlight latex %}
+```latex
 \documentclass[tikz, border=1mm]{standalone}
 
 \usetikzlibrary{arrows, shapes.gates.logic.US, calc}
@@ -59,14 +57,13 @@ which produces
 
     \node[not gate US, draw] at ($(x) + (0.8, 0)$) (notx) {};
     \node[not gate US, draw] at ($(y) + (0.8, 0)$) (noty) {};
-
-    \draw (x) |- (notx.input);
-    \draw (y) |- (noty.input);
-
     \node[nor gate US, draw, rotate=0, logic gate inputs=nnnn] at ($(noty) + (2, 0.085)$) (xory) {};
 
+    \draw (x) -- (notx.input);
+    \draw (y) -- (noty.input);
+
     \path ($(notx.input) + (0.2, 0)$) -- coordinate (puntx) (x |- notx);
-    \draw (x) |- (puntx) node[branch] {} |- ($(notx.output) + (0.4, 0.4)$) |- (xory.input 1);
+    \draw (x) -- (puntx) node[branch] {} |- ($(notx.output) + (0.4, 0.4)$) |- (xory.input 1);
 
     \draw (notx.output) -- ([xshift=0.2cm]notx.output) |- (xory.input 2);
     \draw (noty.output) -- ([xshift=0.2cm]noty.output) |- (xory.input 3);
@@ -75,7 +72,7 @@ which produces
     \draw (xory.output) -- node[above]{$\overline{x + \bar x + \bar y + z}$} ($(xory) + (3, 0)$);
 \end{tikzpicture}
 \end{document}
-{% endhighlight %}
+```
 
 which produces
 
@@ -87,7 +84,7 @@ While not a very good circuit to diagram, it shows many of the capabilities of T
 
 Just because it's useful and I have nowhere else to put it, here's how you graph functions with Tikz
 
-{% highlight latex %}
+```latex
 \documentclass[tikz]{standalone}
 
 \begin{document}
@@ -103,13 +100,13 @@ Just because it's useful and I have nowhere else to put it, here's how you graph
         plot ({\x}, {sin(deg(\x))});
 \end{tikzpicture}
 \end{document}
-{% endhighlight %}
+```
 
 <img class="centered-full" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex3.svg" | prepend: site.baseurl }}" alt="graphing functions">
 
 Something more advanced:
 
-{% highlight latex %}
+```latex
 \documentclass[tikz]{standalone}
 
 \usepackage{pgfplots}
@@ -151,7 +148,7 @@ Something more advanced:
     \end{axis}
 \end{tikzpicture}
 \end{document}
-{% endhighlight %}
+```
 
 $$\int_{-1}^{1} (x^2 + 2x - 7) \mathrm{d}x$$
 

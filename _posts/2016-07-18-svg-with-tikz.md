@@ -10,8 +10,7 @@ It's a fairly simple process as long as you're using Linux. This process require
 
 First, make a Tikz image:
 
-{% highlight latex %}
-{% raw %}
+```latex {% raw %}
 \documentclass[tikz]{standalone}
 
 \newcommand{\tikzAngleOfLine}{\tikz@AngleOfLine}
@@ -49,8 +48,7 @@ First, make a Tikz image:
         \tikzMarkAngle{(O)}{(a)}{(z)}
     \end{tikzpicture}
 \end{document}
-{% endraw %}
-{% endhighlight %}
+{% endraw %}```
 
 Then compile it with `pdflatex polar.tex`. Then convert the PDF to SVG with `pdf2svg polar.pdf polar.svg`.
 
@@ -60,8 +58,7 @@ The above code produces the following SVG image:
 
 If you compile with the `-shell-escape` flag as mentioned [here]({% post_url 2016-02-15-latex-code-blocks %}) you can tell $$\LaTeX$$ to compile both a PDF file and an SVG image as so:
 
-{% highlight latex %}
-{% raw %}
+```latex {% raw %}
 \documentclass[tikz, convert={outext=.svg, command=\unexpanded{pdf2svg \infile\space\outfile}}, multi=false]{standalone}
 
 \newcommand{\tikzAngleOfLine}{\tikz@AngleOfLine}
@@ -99,15 +96,14 @@ If you compile with the `-shell-escape` flag as mentioned [here]({% post_url 201
         \tikzMarkAngle{(O)}{(a)}{(z)}
     \end{tikzpicture}
 \end{document}
-{% endraw %}
-{% endhighlight %}
+{% endraw %}```
 
 If you need to do this more often, you can create a `standalone.cfg` file in the same directory with this inside:
 
-{% highlight latex %}
+```latex
 % Local standalone.cfg file
 \input{standalone/standalone.cfg}% Load main standalone.cfg file
 \standaloneconfig{convert={outext=.svg, command={pdf2svg \infile\space\outfile}}}
-{% endhighlight %}
+```
 
 And then use `\documentclass[tikz]{standalone}` for your `documentclass` just like the first example.

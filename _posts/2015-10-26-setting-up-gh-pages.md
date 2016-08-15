@@ -78,10 +78,10 @@ Let's get started.
   - I left the `markdown` and `permalink` options just the way Jekyll created them, I'm not quite sure what they do, but the way I understand it, to use some of the fancier LaTeX math typesetting I must use kramdown.
   - I added the lines
 
-  - ```yaml
-  kramdown:
-      input: GFM
-  ```
+    ```yaml
+    kramdown:
+        input: GFM
+    ```
   to my `_config.yml`. This tells Jekyll to use GitHub's flavor of markdown rendering. Which means that you can use [this](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) guide to help you format your posts.
   - There are two other things I added in order to get Google Analytics to work, but I'll get to those later.
 
@@ -137,10 +137,12 @@ Let's get started.
   This page, as I've mentioned, is our 'home' page, the page that first loads when we open up our site. Many blogs have the most recent post as their home page, but I've decided to leave mine the way Jekyll first generated it with a list of posts on my home page. Let's take a look and see how it ticks!
   - The first thing we notice is the lines at the top encapsulated in `---`.
 
-  - ```yaml
-  layout: default
-  title: posts
-  ```
+    ```yaml
+    ---
+    layout: default
+    title: posts
+    ---
+    ```
 
     The `layout:` part defines what layout we want to use for the page, and the `title:` part in this case defines the text that shows up in your browser tab.
   - The next part we see is `<div class="home">`, this tells Jekyll some information on how to style the page. For our purposes we can leave this the way it is and move on.
@@ -173,11 +175,11 @@ Let's get started.
   If we want to have pretty looking math like $$ \int\int\int f(r,\theta,\phi)\,rdrd\theta d\phi $$, we can include MathJax in `_includes/head.html` so we can use inline LaTeX rendering. This isn't quite as powerful as just plain LaTeX because we can't include any packages, but it does allow some powerful math formatting.
   - All we do is include
 
-  - ```html
-  <script type="text/javascript"
+    ```html
+    <script type="text/javascript"
         src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-  </script>
-  ```
+    </script>
+    ```
   somewhere in `_includes/head.html`.
 
 

@@ -26,5 +26,6 @@ date: 2015-4-31
   - definition, motivation
   - Groups, Rings, Fields
 * Algebraic graph theory
+* Definition/explanation of a limit
 
 The idea that "Continuous functions are ones that can be drawn without picking up your pen" leads us to the idea that the identity function $$x$$ is discontinuous because it takes two strokes of the pen to write.

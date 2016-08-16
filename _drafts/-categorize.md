@@ -62,3 +62,19 @@ Here's the end result of much Googling and keyboard smashing.
     {% endfor %}{% endraw %}
 </ul>
 ```
+
+**NOTE:** This method is overly complicated. You can use something like
+
+```liquid
+{% raw %}{% for post in site.posts limit:8 %}
+    {% if post.categories contains "post" %}
+        ...
+    {% else %}
+        {% unless post.categories contains "notes" %}
+            ...
+        {% endunless %}
+    {% endif %}
+{% endfor %}{% endraw %}
+```
+
+Wait, I'm not able to test this right now, but it's possible that excluding posts with the `post` category will still count towards the `limit:8` in the loop.

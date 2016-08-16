@@ -6,7 +6,7 @@ meta: A brief description of how to install Numba 0.27.0 on Ubuntu 16.04
 
 There are several ways to speed up your Python code, and using Numba's Just-In-Time (JIT) compilation is one of the easiest. However, it can be a pain to install Numba.
 
-Briefly, here's how I installed Numba 0.27.0 on Ubuntu 26.04 LTS for Python 3.
+Briefly, here's how I installed Numba 0.27.0 on Ubuntu 16.04 LTS for Python 3.
 
 ```shell
  $ sudo apt install llvm-3.7 libedit-dev

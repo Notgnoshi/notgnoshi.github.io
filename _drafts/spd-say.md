@@ -22,6 +22,14 @@ Here's an incomplete list of options. See `info spd-say` for the complete list a
 
 Example usages might be
 
-{% highlight shell %}~ $ for _ in {1..10}; do spd-say --wait "butts butts butts butts"; done{% endhighlight %}
-{% highlight shell %}~ $ shuf -n 1  /usr/share/dict/words | spd-say --pipe-mode{% endhighlight %}
-{% highlight shell %}~ $ curl -s http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt | tail --lines=+246 | spd-say --pipe-mode{% endhighlight %}
+```shell
+~ $ for _ in {1..10}; do spd-say --wait "butts butts butts butts"; done
+```
+
+```shell
+~ $ shuf -n 1  /usr/share/dict/words | spd-say --pipe-mode
+```
+
+```shell
+~ $ curl -s http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt | tail --lines=+246 | spd-say --pipe-mode
+```

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Various definitions of mathematics
+title: The definition of mathematics
 meta: A collection of various non-rigorous anecdotal definitions of what mathematics is
 ---
 

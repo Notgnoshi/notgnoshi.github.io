@@ -10,7 +10,7 @@ I dumped Windows a few years ago and I couldn't be happier. Every time it comes 
 
   There are no package managers; you have to browse to the software's web page and manually download and run the installer, all the while hoping that the website you're downloading from is the official site. Even if it is the official site, there's an upsetting trend of packaging suggested software/web browser toolbars with the installer.
 
-  It's worth noting that even with Linux, your experience might vary. Some distros have extensive repositories, but others might be out of date.
+  It's worth noting that even with Linux, your experience might vary. Some distributions have extensive repositories, but others might be out of date.
 
   It's just as difficult to update software, or even to be notified of available updates. Often, a software "update" installs a completely different version of whatever software you're using without removing to outdated version! Even if an updater *does* attempt to remove a previous version, it never does so completely.
 
@@ -52,7 +52,7 @@ I dumped Windows a few years ago and I couldn't be happier. Every time it comes 
 
   - Windows 10 forces some updates, and [some](https://www.google.com/search?q=KB3081424+fail) of them have failed catastrophically.
   - You cannot access Safe Mode unless *you've already booted into the OS* which **defeats the entire purpose** of Safe Mode. Additionally, Safe Mode is difficult to access, requiring multiple steps and dialogs versus a single `F8` key press on every Windows version prior.
-  - It's extremely difficult (impossible for average users) to disable Cortana
+  - It's extremely difficult to disable Cortana.
   - Windows 10 violates basic networking principles. It ignores host files, DNS protocol, firewall rules, and sends telemetry data regardless of your settings.
 
 * *Visual Studio 2015 Update 2 C++ compiler has been [caught](https://www.infoq.com/news/2016/06/visual-cpp-telemetry) injecting telemetry code into both Debug and Release binaries*

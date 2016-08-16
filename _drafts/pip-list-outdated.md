@@ -9,7 +9,7 @@ As of Pip version 1.3 you can check for package updates.
 Here's how you list installed Python packages with Pip:
 
 ```
-$ pip list -h
+~ $ pip list -h
 
 Usage:
   pip list [options]
@@ -32,7 +32,7 @@ List Options:
 This allows us to do
 
 ```
-$ pip list --outdated
+~ $ pip list --outdated
 feedparser (5.1.3) - Latest: 5.2.1 [sdist]
 html5lib (0.999) - Latest: 0.999999999 [sdist]
 httplib2 (0.9.1) - Latest: 0.9.2 [sdist]
@@ -41,11 +41,11 @@ httplib2 (0.9.1) - Latest: 0.9.2 [sdist]
 We can ask for confirmation and update everything with
 
 ```
-pip list --outdated | awk '{print $1}' | xargs -n1 -p sudo -H pip install --upgrade
+~ $ pip list --outdated | awk '{print $1}' | xargs -n1 -p sudo -H pip install --upgrade
 ```
 
 Or if you feel especially brave
 
 ```
-pip list --outdated | awk '{print $1}' | xargs -n1 sudo -H pip install --upgrade
+~ $ pip list --outdated | awk '{print $1}' | xargs -n1 sudo -H pip install --upgrade
 ```

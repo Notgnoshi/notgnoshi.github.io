@@ -16,7 +16,7 @@ where $$\operatorname{1}_{(a_i \neq b_j)}$$ is the indicator function equal to $
 
 We can compute the Levenshtein distance as follows
 
-{% highlight python %}
+```python
 def levenshtein(source, target):
     ''' From Wikipedia article; Iterative with two matrix rows.'''
     if source == target:
@@ -43,17 +43,17 @@ def levenshtein(source, target):
             v0[j] = v1[j]
 
     return v1[len(target)]
-{% endhighlight %}
+```
 
 and use it like so
 
-{% highlight python %}
+```python
 In [2]: levenshtein('philosophy', 'mathematics')
 Out[2]: 11
 
 In [3]: %timeit levenshtein('philosophy', 'mathematics')
 10000 loops, best of 3: 62.1 us per loop
-{% endhighlight %}
+```
 
 Note that this does not require that the intermediate words in the transformation be valid, this merely calculates the length of the shortest path between two words under the insertion, deletion, and substitution operations.
 

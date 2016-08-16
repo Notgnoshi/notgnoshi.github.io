@@ -17,6 +17,7 @@ This is a test page. Go away.
 
 
 <img class="centered" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/False_position_method.svg/351px-False_position_method.svg.png" alt="false position">
+
 <img class="centered-full" src="{{ "/assets/posts/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
 
 <hr>
@@ -28,12 +29,10 @@ This is a test page. Go away.
         <td>$$p$$</td>
         <td>$$\neg p$$</td>
     </tr>
-
     <tr>
         <td>T</td>
         <td>F</td>
     </tr>
-
     <tr>
         <td>F</td>
         <td>T</td>
@@ -84,7 +83,7 @@ This is a test page. Go away.
 Test post. `categories: [post, other]`
 
 
-{% highlight python %}
+```python
 import this
 
 def main():
@@ -92,11 +91,11 @@ def main():
 
 if __name__ == '__main__':
     main()
-{% endhighlight %}
+```
 
 ![Clone URL]({{ "/assets/posts/gh-pages/clone-url.png" | prepend: site.baseurl }})
 
-{% highlight python %}
+```python
 {% raw %}{% highlight python %}
 import this
 
@@ -106,7 +105,7 @@ def main():
 if __name__ == '__main__':
     main()
 {% endhighlight %}{% endraw %}
-{% endhighlight %}
+```
 
 $$ \begin{cases} x_1 + x_2 + x_3 + x_4 + x_5 = 1 \\ x_3 + x_4 + 2x_5 = 0 \\ x_5 = 3\end{cases}$$
 
@@ -119,17 +118,16 @@ $$\begin{cases}a_{11} x_1 + a_{12} x_2 + \dots + a_{1n} x_n = b_1 \\ a_{21} x_1 
     <p>Everybody dies.</p>
 </details>
 
-<p draggable="true">This is draggable (<code>&lt;p draggable="true"&gt;&lt;/p&gt;</code>)</p>
-
 Including file snippets:
-{% highlight liquid %}
+
+```liquid
 {% raw %}{% highlight python %}
 {% include snippets/levenshtein.py %}
 {% endhighlight %}{% endraw %}
-{% endhighlight %}
+```
 
 with `levenshtein.py` in `/_includes/snippets/` gives the following:
 
-{% highlight python %}
+```python
 {% include snippets/levenshtein.py %}
-{% endhighlight %}
+```

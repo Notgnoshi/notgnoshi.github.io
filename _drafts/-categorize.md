@@ -14,7 +14,7 @@ Next, how do you make a list of posts within a specific category? The first thin
 
 Then you loop through all posts in a specific category like so:
 
-{% highlight html %}
+```html
 <ul>
     {% raw %}{% for post in site.categories.notes %}
         <li>
@@ -23,7 +23,7 @@ Then you loop through all posts in a specific category like so:
         </li>
     {% endfor %}{% endraw %}
 </ul>
-{% endhighlight %}
+```
 
 The hard part comes after I decided that the list of posts on the front page should not list the notes as if they were regular blog posts. I may change my mind on this, but for now I think I'll leave it the way it is.
 
@@ -37,7 +37,7 @@ Now what if I make a note post that I want to post be on the main page? I just a
 
 Here's the end result of much Googling and keyboard smashing.
 
-{% highlight html %}
+```html
 <ul class="posts">
     {% raw %}{% assign i = 0 %}
     {% for post in site.posts %}
@@ -61,4 +61,4 @@ Here's the end result of much Googling and keyboard smashing.
         {% endif %}
     {% endfor %}{% endraw %}
 </ul>
-{% endhighlight %}
+```

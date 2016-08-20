@@ -33,3 +33,7 @@ Example usages might be
 ```shell
 ~ $ curl -s http://ocw.mit.edu/ans7870/6/6.006/s08/lecturenotes/files/t8.shakespeare.txt | tail --lines=+246 | spd-say --pipe-mode
 ```
+
+On Ubuntu, you can also change your device's volume from the terminal with `amixer -D pulse sset Master 50%` to set the volume to 50%, or `amixer -D pulse sset Master 5%[+|-]` to set the volume relative to its current level.
+
+All of this works over SSH too ;)

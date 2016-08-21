@@ -131,3 +131,16 @@ with `levenshtein.py` in `/_includes/snippets/` gives the following:
 ```python
 {% include snippets/levenshtein.py %}
 ```
+
+$$\cancel{x}$$
+
+$$\enclose{circle}[mathcolor="red"]{\color{black}{x}}$$
+
+<!-- http://www.w3schools.com/colors/colors_names.asp -->
+$$\color{cornflowerblue}{\sin x}$$
+
+$$\cancelto{1}{\frac{\sin x}{x}}$$
+
+$$\mathtip{\sin x}{\sin x \sim x \text{ for small }x}$$
+
+$$\toggle{\sin x}{\cos x}{\tan x}\endtoggle$$

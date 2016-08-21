@@ -137,6 +137,7 @@ $$\cancel{x}$$
 $$\enclose{circle}[mathcolor="red"]{\color{black}{x}}$$
 
 <!-- http://www.w3schools.com/colors/colors_names.asp -->
+
 $$\color{cornflowerblue}{\sin x}$$
 
 $$\cancelto{1}{\frac{\sin x}{x}}$$

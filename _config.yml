@@ -13,6 +13,7 @@ analytics:
 # Build settings
 include: ['_pages']
 permalink: /posts/:title/
+url: "https://notgnoshi.github.io"
 
 markdown: kramdown
 syntax-highlighting:

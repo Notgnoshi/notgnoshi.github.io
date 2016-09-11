@@ -1,4 +1,6 @@
 {
-    "name": "",
-    "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+    "manifest_version": 2,
+    "name": "Notgnoshi",
+    "version": "0.1",
+    "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
 }

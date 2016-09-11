@@ -15,7 +15,7 @@ Briefly, here's how I installed Numba 0.27.0 on Ubuntu 16.04 LTS for Python 3.
 
 Note that `llvm-3.7` is *not* the latest version. `llvmlite` fails to install when using `llvm-3.8` (the latest `llvm` version as of right now). We also have to set the `LLVM_CONFIG` environment variable for `pip` to successfully install `llvmlite`.
 
-This was all I had to do to install Numba, but if this doesn't work for you, take a look at [this](http://stackoverflow.com/a/28922702) Stack Overflow post for help. Numba's [GitHub](https://github.com/numba/numba) repository states that its dependencies are:
+This was all I had to do to install Numba, but if this doesn't work for you, take a look at [this](https://stackoverflow.com/a/28922702) Stack Overflow post for help. Numba's [GitHub](https://github.com/numba/numba) repository states that its dependencies are:
 
 * `llvmlite`
 * `numpy` (1.7+)
@@ -52,4 +52,4 @@ if __name__ == '__main__':
     main()
 ```
 
-Read the Numba [Docs](http://numba.pydata.org/numba-doc/latest/index.html) for details.
+Read the Numba [Docs](https://numba.pydata.org/numba-doc/latest/index.html) for details.

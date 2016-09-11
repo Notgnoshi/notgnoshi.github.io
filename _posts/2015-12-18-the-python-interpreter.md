@@ -18,7 +18,7 @@ There are four stages the Python interpreter uses to execute Python source code.
 
 When someone mentions "the Python interpreter", they mean all four pieces together, but when someone mentions the *"bytecode interpreter"*, they mean the final stage in the Python interpretation process.
 
-If this interests you, Allison Kaptur has written a [series](http://akaptur.com/blog/2013/11/15/introduction-to-the-python-interpreter/) of blog posts explaining the CPython interpreter (the official Python interpreter written in C) in greater detail. She has also given several interesting PyCon [talks](https://www.youtube.com/watch?v=HVUTjQzESeo) about the Python interpreter as well. My intent here is only to give the broadest top level non-expert introduction, if you're looking for detail, you won't find it here.
+If this interests you, Allison Kaptur has written a [series](https://akaptur.com/blog/2013/11/15/introduction-to-the-python-interpreter/) of blog posts explaining the CPython interpreter (the official Python interpreter written in C) in greater detail. She has also given several interesting PyCon [talks](https://www.youtube.com/watch?v=HVUTjQzESeo) about the Python interpreter as well. My intent here is only to give the broadest top level non-expert introduction, if you're looking for detail, you won't find it here.
 
 ### Lexer:
 

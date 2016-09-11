@@ -136,7 +136,7 @@ $$\cancel{x}$$
 
 $$\enclose{circle}[mathcolor="red"]{\color{black}{x}}$$
 
-<!-- http://www.w3schools.com/colors/colors_names.asp -->
+<!-- https://www.w3schools.com/colors/colors_names.asp -->
 
 $$\color{cornflowerblue}{\sin x}$$
 

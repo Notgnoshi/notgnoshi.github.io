@@ -34,6 +34,6 @@ Other useful macros might include
   LOG(errorlog) << "This doesn't look good:" << somedata;
   ```
 
-There are many, many more use cases. If you're interested, look [here](http://jhnet.co.uk/articles/cpp_magic) for some more magic.
+There are many, many more use cases. If you're interested, look [here](https://jhnet.co.uk/articles/cpp_magic) for some more magic.
 
 I recently had to write a logger for a project I'm involved with, and I found `#define LOG(...) log_print(__FILE__, __LINE__, __FUNCTION__, __VA_ARGS__ )` inside. It's a bit more complicated than the macros above, but much more awesome. With an appropriate `log_print` function defined, you can simply `#define printf LOG` when you want to log `printf` statements in C/C++. I'll have to write up a post on it sometime in the near future.

@@ -40,7 +40,7 @@ Bracketed methods are sometimes slow, and can miss multiple roots, especially wi
 
 ### **Fixed Point** (Successive Substitution):
 
-<img class="centered" src="http://www.physics.arizona.edu/~restrepo/475A/Notes/sourcea-/img570.png" alt="fixed point">
+<img class="centered" src="https://www.physics.arizona.edu/~restrepo/475A/Notes/sourcea-/img570.png" alt="fixed point">
 
 * Solve the function for $$x$$
 * Let $$x = g(x)$$

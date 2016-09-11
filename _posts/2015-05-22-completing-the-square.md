@@ -7,7 +7,7 @@ meta: Describes a geometric interpretation of the algebraic method of completing
 
 I've had a lot of math since the idea of completing the square was first introduced to me, and while comparatively a simple matter, I've always found it a difficult concept to grasp and a difficult process to perform.
 
-I was reading [*The Joy of X*](http://www.amazon.com/Joy-Guided-Tour-Math-Infinity/dp/0544105850/) by Steven Strogatz yesterday when I got to his chapter on algebra and the quadratic formula. He explained geometrically how completing the square works, and for the first time, I feel like I understand not just the process, but how and why it works. At least in its base case.
+I was reading [*The Joy of X*](https://www.amazon.com/Joy-Guided-Tour-Math-Infinity/dp/0544105850/) by Steven Strogatz yesterday when I got to his chapter on algebra and the quadratic formula. He explained geometrically how completing the square works, and for the first time, I feel like I understand not just the process, but how and why it works. At least in its base case.
 
 Suppose we have $$x^2 + 10x = 39$$. We want to find $$x$$, but our equation doesn't factor easily, and we can't really move things around to make it easier to work with. We need to do something else.
 

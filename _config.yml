@@ -12,8 +12,9 @@ analytics:
 
 # Build settings
 include: ['_pages']
-permalink: /posts/:title/
+permalink: /:title/
 url: "https://notgnoshi.github.io"
+baseurl: ""
 
 markdown: kramdown
 syntax-highlighting:

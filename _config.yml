@@ -9,6 +9,7 @@ analytics:
     provider: google
     google:
         tracking_id: 'UA-63013145-1'
+google_verify: zXtkKU9VeEySZsdlmhr1xyv_z6oYnjYyH-rmUTQI_SA
 
 # Build settings
 include: ['_pages']

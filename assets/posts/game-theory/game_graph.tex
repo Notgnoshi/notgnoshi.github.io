@@ -1,0 +1,44 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usetikzlibrary{arrows, calc}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5, ->, >=stealth, node distance=1cm, semithick, outer sep=0.15cm]
+    \node (a) at (5, 8) {$a$};
+    \node (b) at (2, 6) {$b$};
+    \node (c) at (4, 6) {$c$};
+    \node (d) at (6, 6) {$d$};
+    \node (e) at (8, 6) {$e$};
+    \node (f) at (4, 4) {$f$};
+    \node (g) at (6, 4) {$g$};
+    \node (h) at (4, 2) {$h$};
+    \node (i) at (6, 2) {$i$};
+    \node (j) at (0, 0) {$j$};
+    \node (k) at (2, 0) {$k$};
+    \node (l) at (4, 0) {$l$};
+    \node (m) at (6, 0) {$m$};
+    \node (n) at (8, 0) {$n$};
+    \node (o) at (10, 0) {$o$};
+
+	\draw (b) -> (a);
+	\draw (c) -> (b);
+	\draw (c) -> (f);
+	\draw (d) -> (c);
+	\draw (d) -> (g);
+	\draw (e) -> (a);
+	\draw (e) -> (d);
+	\draw (e) -> (n);
+	\draw (f) -> (h);
+	\draw (f) -> (g);
+	\draw (g) -> (i);
+	\draw (h) -> (l);
+	\draw (i) -> (h);
+	\draw (i) -> (m);
+	\draw (k) -> (j);
+	\draw (k) -> (l);
+	\draw (k) -> (b);
+	\draw (l) -> (m);
+	\draw (m) -> (n);
+	\draw (n) -> (o);
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usetikzlibrary{arrows, calc}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}[scale=1.5, ->, >=stealth, node distance=1cm, semithick, outer sep=0.15cm]
+    \node (a) at (5, 8) {$a$};
+    \draw (a) node[above] {$\operatorname{sg}(a) = 0$};
+    \node (b) at (2, 6) {$b$};
+    \draw (b) node[left] {$\operatorname{sg}(b) = 1$};
+    \node (c) at (4, 6) {$c$};
+    \draw (c) node[above] {$\operatorname{sg}(c) = 0$};
+    \node (d) at (6, 6) {$d$};
+    \draw (d) node[above] {$\operatorname{sg}(d) = 1$};
+    \node (e) at (8, 6) {$e$};
+    \draw (e) node[right] {$\operatorname{sg}(e) = 2$};
+    \node (f) at (4, 4) {$f$};
+    \draw (f) node[left] {$\operatorname{sg}(f) = 1$};
+    \node (g) at (6, 4) {$g$};
+    \draw (g) node[right] {$\operatorname{sg}(g) = 0$};
+    \node (h) at (4, 2) {$h$};
+    \draw (h) node[left] {$\operatorname{sg}(h) = 0$};
+    \node (i) at (6, 2) {$i$};
+    \draw (i) node[right] {$\operatorname{sg}(i) = 1$};
+    \node (j) at (0, 0) {$j$};
+    \draw (j) node[below] {$\operatorname{sg}(j) = 0$};
+    \node (k) at (2, 0) {$k$};
+    \draw (k) node[below] {$\operatorname{sg}(k) = 2$};
+    \node (l) at (4, 0) {$l$};
+    \draw (l) node[below] {$\operatorname{sg}(l) = 1$};
+    \node (m) at (6, 0) {$m$};
+    \draw (m) node[below] {$\operatorname{sg}(m) = 0$};
+    \node (n) at (8, 0) {$n$};
+    \draw (n) node[below] {$\operatorname{sg}(n) = 1$};
+    \node (o) at (10, 0) {$o$};
+    \draw (o) node[below] {$\operatorname{sg}(o) = 0$};
+
+	\draw (b) -> (a);
+	\draw (c) -> (b);
+	\draw (c) -> (f);
+	\draw (d) -> (c);
+	\draw (d) -> (g);
+	\draw (e) -> (a);
+	\draw (e) -> (d);
+	\draw (e) -> (n);
+	\draw (f) -> (h);
+	\draw (f) -> (g);
+	\draw (g) -> (i);
+	\draw (h) -> (l);
+	\draw (i) -> (h);
+	\draw (i) -> (m);
+	\draw (k) -> (j);
+	\draw (k) -> (l);
+	\draw (k) -> (b);
+	\draw (l) -> (m);
+	\draw (m) -> (n);
+	\draw (n) -> (o);
+\end{tikzpicture}
+\end{document}

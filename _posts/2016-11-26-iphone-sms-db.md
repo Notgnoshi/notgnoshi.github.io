@@ -51,8 +51,7 @@ Next, change your password for both `mobile` and `root` accounts. Seriously. Do 
 
 ```
 root@abaddon ~ # passwd
-Changing password for mobile.
-Old password:
+Changing password for root.
 New password:
 Retype new password:
 root@abaddon ~ # passwd mobile

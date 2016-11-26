@@ -8,10 +8,12 @@ table, tr, th, td {
     border-collapse: collapse;
     text-align: center;
     padding:3px;
-    margin-left:auto;
-    margin-right:auto;
     min-width: 31px;
     min-height: 31px;
+}
+
+table {
+    margin: 0 auto !important;
 }
 
 tbody {
@@ -19,6 +21,6 @@ tbody {
 }
 
 td:hover {
-    border:1px solid #2a7ae2;
+    /*border:1px solid #2a7ae2;*/
     background-color: #f5f5ff;
 }

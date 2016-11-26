@@ -19,6 +19,34 @@ root@192.168.0.101's password:
 root@abaddon ~ #
 ```
 
+---
+
+If you're not connected to the same network as your phone, or are disappointed in the speed of your connection, you can SSH into your iPhone over a USB connection.
+
+First, install the following:
+
+```
+nots@abyss ~ $ sudo apt install libimobiledevice6 libusbmuxd-tools
+```
+
+Then connect your iPhone to your computer with the USB cable and run
+
+```
+nots@abyss ~ $ iproxy 2222 22 &
+```
+
+You can then SSH using port `2222`
+
+```
+nots@abyss ~ $ ssh root@localhost -p 2222
+root@localhost's password:
+root@abaddon ~ #
+```
+
+Depending on your network, this can be *much* faster than SSHing over WiFi.
+
+---
+
 Next, change your password for both `mobile` and `root` accounts. Seriously. Do it.
 
 ```

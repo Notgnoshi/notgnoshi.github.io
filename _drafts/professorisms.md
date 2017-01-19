@@ -25,3 +25,4 @@ meta: Some memorable quotes from my professors
 * "You can't use 'proof left to the reader' on the exam. It doesn't work like that."
 * "We're going to put all the 'bad hombres' of $$R$$ into $$I$$ and mod $$I$$ out."
 * *after snarky comments from class* "Is this revenge for the exam?"
+* "As soon as I step foot on campus my day is over."

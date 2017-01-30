@@ -1,0 +1,38 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usetikzlibrary{patterns, decorations.pathreplacing, calc}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}[scale=0.9]
+    \draw[->, thick] (-1, 0)--(6, 0) node[right]{$x$};
+	\draw[->, thick] (0, -1)--(0, 6) node[above]{$y$};
+
+    \coordinate (O) at (0, 0);
+    \coordinate (zc) at ($(O) + (3, 3)$);
+    \coordinate (z) at ($(zc) + (-1.4, 0.9)$);
+    \coordinate (e) at ($(zc) + (2, 0)$);
+
+    \draw (O) node[below left]{$O$};
+    \draw (zc) node[circle, fill, inner sep=1pt]{} node[below]{$z_0$};
+    \draw (z) node[circle, fill, inner sep=1pt]{} node[below]{$z$};
+    \draw[dashed] (zc) circle (2);
+	\draw (zc) -- (z);
+	\draw (zc) -- (e);
+
+    \draw[
+        decorate,
+        decoration={
+            brace,
+            amplitude=8pt
+        }
+    ] (z) -- (zc) node[midway, xshift=0.3cm, yshift=0.4cm, rotate=-31]{$\vert z - z_0 \vert$};
+
+    \draw[
+        decorate,
+        decoration={
+            brace,
+            amplitude=8pt
+        }
+    ] (zc) -- (e) node[midway, yshift=0.4cm]{$\varepsilon$};
+\end{tikzpicture}
+\end{document}

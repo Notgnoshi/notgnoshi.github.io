@@ -1,0 +1,21 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usetikzlibrary{calc}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}
+    \coordinate (O) at (0, 0);
+    \coordinate (z1) at ($(O) + (-2, 1.5)$);
+    \coordinate (z2) at ($(O) + (2, -1.5)$);
+    \coordinate (mid) at ($(O) + (-1, -2)$);
+
+    \draw[dashed] (O) circle (1);
+    \draw[dashed] (O) circle (3);
+
+    \draw (z1) -- (mid);
+    \draw (z2) -- (mid);
+
+    \draw (z1) node[fill, circle, inner sep=1pt]{} node[above]{$z_1$};
+    \draw (z2) node[fill, circle, inner sep=1pt]{} node[above]{$z_2$};
+\end{tikzpicture}
+\end{document}

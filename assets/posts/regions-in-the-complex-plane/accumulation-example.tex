@@ -1,0 +1,19 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usetikzlibrary{patterns, decorations.pathreplacing, calc}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}[scale=3.5]
+    \draw[<->, thick] (-0.6, 0)--(0.6, 0) node[right]{$\mathbb R$};
+	\draw[<->, thick] (0, -0.1)--(0, 1.5) node[left]{$i \mathbb R$};
+
+	\draw (0, 1) node[fill, circle, inner sep=1pt]{} node[left]{$i$};
+	\draw (0, 0.5) node[fill, circle, inner sep=1pt]{} node[left]{$\frac{i}{2}$};
+	\draw (0, 0.333) node[fill, circle, inner sep=1pt]{} node[left]{$\frac{i}{3}$};
+
+	\foreach \x in {4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 18, 20, 25,  30}
+	{
+		\draw (0, 1/\x) node[fill, circle, inner sep=1pt]{};
+	}
+\end{tikzpicture}
+\end{document}

@@ -58,6 +58,7 @@ Note that not being open *does not imply* being closed! E.g. if a set contains a
 **Defn.** An *accumulation point* of a set $$S$$ is a point $$z_0$$ such that every deleted neighborhood of $$z_0$$ contains at least one point of $$S$$. Note that closed sets contain all of their accumulation points.
 
 ---
+
 ### Examples
 
 Is the set $$S = \{z \in \mathbb C : \operatorname{Re}z \geq 1, \text{ and } \operatorname{Im}z > 2\}$$ illustrated below, open, closed, or neither? How can a set be neither open or closed??

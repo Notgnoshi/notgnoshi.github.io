@@ -1,0 +1,21 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usepackage{amsmath, amssymb}
+\usetikzlibrary{calc}
+
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[<->] (-1.2, 0) -- (1.2, 0) node[right]{$\mathbb R$};
+	\draw[<->] (0, -1.2) -- (0, 1.2) node[left]{$i \mathbb R$};
+
+	\draw (0, 0) node[fill, circle, inner sep=1pt]{};
+	\draw (45:1) node[fill, circle, inner sep=1pt]{} node[above right]{$1 + i$};
+	\draw (225:1) node[fill, circle, inner sep=1pt]{} node[below left]{$-(1 + i)$};
+
+	\foreach \x [evaluate=\x as \r using (\x-1)/\x] in {1, 2, ..., 25}
+	{
+		\pgfmathparse{45 + (180 * \x)};
+		\edef\n{\pgfmathresult};
+		\draw (\n:\r) node[fill=black!60, circle, inner sep=0.6pt]{};
+	}
+\end{tikzpicture}
+\end{document}

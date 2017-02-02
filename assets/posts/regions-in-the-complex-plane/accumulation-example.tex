@@ -1,11 +1,10 @@
 \documentclass[tikz, border=1mm]{standalone}
-\usetikzlibrary{patterns, decorations.pathreplacing, calc}
 \usepackage{amsmath, amssymb}
 
 \begin{document}
 \begin{tikzpicture}[scale=3.5]
-    \draw[<->, thick] (-0.6, 0)--(0.6, 0) node[right]{$\mathbb R$};
-	\draw[<->, thick] (0, -0.1)--(0, 1.5) node[left]{$i \mathbb R$};
+    \draw[<->] (-0.6, 0) -- (0.6, 0) node[right]{$\mathbb R$};
+	\draw[<->] (0, -0.1) -- (0, 1.5) node[left]{$i \mathbb R$};
 
 	\draw (0, 1) node[fill, circle, inner sep=1pt]{} node[left]{$i$};
 	\draw (0, 0.5) node[fill, circle, inner sep=1pt]{} node[left]{$\frac{i}{2}$};

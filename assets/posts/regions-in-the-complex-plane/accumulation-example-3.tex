@@ -1,0 +1,19 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}[scale=2]
+    \draw[<->] (-1.2, 0) -- (1.2, 0) node[right]{$\mathbb R$};
+	\draw[<->] (0, -1.2) -- (0, 1.2) node[left]{$i \mathbb R$};
+
+	\draw (0, 1) node[fill, circle, inner sep=1pt]{} node[left]{$i$};
+	\draw (180:0.5) node[fill, circle, inner sep=1pt]{} node[above]{$-\frac{1}{2}$};
+	\draw (270:0.333) node[fill, circle, inner sep=1pt]{} node[left]{$\frac{-i}{3}$};
+	\draw (0:0.25) node[fill, circle, inner sep=1pt]{}{} node[above]{$\frac{1}{4}$};
+
+	\foreach \t/\x in {90/1, 180/2, 270/3, 0/4, 90/5, 180/6, 270/7, 0/8, 90/9, 180/10, 270/11, 0/12, 90/13, 180/14, 270/15, 0/16}
+	{
+		\draw (\t:1/\x) node[fill, circle, inner sep=1pt]{};
+	}
+\end{tikzpicture}
+\end{document}

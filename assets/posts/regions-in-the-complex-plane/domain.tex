@@ -1,0 +1,13 @@
+\documentclass[tikz, border=1mm]{standalone}
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+\begin{tikzpicture}[scale=1]
+	\fill[gray!35] (-2, 1) rectangle (2, 3.5);
+    \draw[<->] (-2.1, 0) -- (2.1, 0) node[right]{$\mathbb R$};
+	\draw[<->] (0, -0.6) -- (0, 3) node[left]{$i \mathbb R$};
+
+	\draw[<->, dashed] (-2.1, 1) -- (2.1, 1);
+	\draw (0, 1) node[below left]{$1$};
+\end{tikzpicture}
+\end{document}

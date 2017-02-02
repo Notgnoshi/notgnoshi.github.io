@@ -58,6 +58,118 @@ Note that not being open *does not imply* being closed! E.g. if a set contains a
 **Defn.** An *accumulation point* of a set $$S$$ is a point $$z_0$$ such that every deleted neighborhood of $$z_0$$ contains at least one point of $$S$$. Note that closed sets contain all of their accumulation points.
 
 ---
+### Examples
+
+Is the set $$S = \{z \in \mathbb C : \operatorname{Re}z \geq 1, \text{ and } \operatorname{Im}z > 2\}$$ illustrated below, open, closed, or neither? How can a set be neither open or closed??
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/not-open-closed.svg" | prepend: site.baseurl }}" alt="A set that is neither open nor closed">
+
+We ask ourselves, does $$S$$ contain any of its boundary points (is it open?) No, $$S$$ contains at least one of its boundary points, so it is therefore *not* open.
+
+Does $$S$$ contain *all* of its boundary points (is it closed?) No, $$S$$ is missing a part of its boundary -- namely the $$\operatorname{Im}z = 2$$ boundary. So therefore $$S$$ is *not* closed.
+
+We can then see that the definitions of open and closed are *not* opposites -- A set can be neither open nor closed.
+
+---
+
+Now consider the set $$\mathbb C$$. First, we ask if $$\mathbb C$$ has any boundary points. It doesn't. Does $$\mathbb C$$ contain all of its 0 boundary points? Yes. Also, $$\mathbb C$$ *doesn't* contain its 0 boundary points -- because they don't exist!
+
+$$\mathbb C$$ is therefore *both* open *and* closed!
+
+What about $$\emptyset$$? It certainly does not contain any of its boundary points -- namely because it contains absolutely nothing! However, as there are no boundary points to contain, it contains all of them. So the empty set is *both* empty *and* closed!
+
+---
+
+Now what about $$S = \{z \in \mathbb C : \operatorname{Re}z \geq 1, \text{ and } \operatorname{Im}z \geq 2, z \neq 0\}$$ illustrated below?
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/not-open-closed-2.svg" | prepend: site.baseurl }}" alt="Another set that is neither open nor closed">
+
+Again, there's *a* boundary point that is not in $$S$$, so $$S$$ is not closed, but it's also not open, as $$S$$ does contain *some* of its boundary points.
+
+---
+
+Now what if we take $$T = S \cup \{0\}$$, or rather, include 0 in the above set?
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/closed-set.svg" | prepend: site.baseurl }}" alt="Finally a set that's closed">
+
+Now, $$T$$ *does* contain *all* of its boundary points, so $$T$$ is closed! We also ask ourselves again if $$T$$ is open, but because it contains at least one of its boundary points, $$T$$ is not open.
+
+---
+
+Finally, consider the set $$S = \{z \in \mathbb C : \operatorname{Re}z > 1, \text{ and } \operatorname{Im}z > 2\}$$.
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/open-set.svg" | prepend: site.baseurl }}" alt="An open set for completeness sake">
+
+This set is *open* because it does not contain *any* of its boundary points.
+
+---
+
+Now consider the set $$S = \{z \in \mathbb C : \operatorname{Im}z > 1\}$$ drawn below
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/domain.svg" | prepend: site.baseurl }}" alt="An example of a simple domain">
+
+We ask ourselves a series of questions about $$S$$.
+
+* Is it open? Yes. It contains none of its boundary points.
+* Is it bounded? No. The set goes on forever in the positive $$y$$ direction and along the real axis.
+* Is it connected? Yes. Every pair of points in $$S$$ can be joined by a polygonal line.
+* Is it a domain? Yes, it's nonempty, open, and connected.
+
+---
+
+Now consider the region bounded by the inequality
+
+$$\vert z - 4 \vert \geq \vert z \vert$$
+
+Graphing certainly makes interpreting regions in the complex plane easier, so we work on simplifying the above inequality into something we can work with.
+
+First, we use the definition of the modulus of complex numbers
+
+$$\sqrt{(x - 4)^2 + y^2} \geq \sqrt{x^2 + y^2}$$
+
+Since the modulus is by definition positive, we can square both sides without committing a mathematical sin
+
+$$\begin{align*}
+(x - 4)^2 + y^2 &\geq x^2 + y^2\\
+(x - 4)^2 + \cancel{y^2} &\geq x^2 + \cancel{y^2}\\
+x^2 - 8x + 16 &\geq x^2\\
+\cancel{x^2} - 8x + 16 &\geq \cancel{x^2}\\
+16 &\geq 8x\\
+2 &\geq x\\
+\end{align*}$$
+
+In other words, we are dealing with the set $$S = \{z \in \mathbb C : \operatorname{Re}z \leq 2\}$$
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/region-1.svg" | prepend: site.baseurl }}" alt="An example of a simple region">
+
+This set is closed, not open, not a domain, and not bounded.
+
+---
+
+What about $$\displaystyle S = \left\{z \in \mathbb C : z \neq 0, 0 \leq \operatorname{arg}z \leq \frac{\pi}{4}\right\}$$?
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/region-2.svg" | prepend: site.baseurl }}" alt="An example of a simple region">
+
+This set is not open, not closed ($$z \not\in S$$), not a domain, not bounded, but is connected.
+
+---
+
+Now consider the region of the complex plane defined by the inequality $$\vert \operatorname{Re}z \vert < \vert z \vert$$. Using our brains (gasp) we might be able to convince ourselves that this inequality is true unless $$z \in \mathbb R$$. However, to make sure we perform the algebra.
+
+$$\begin{align*}
+\vert \operatorname{Re}z \vert &< \vert z \vert\\
+\vert x \vert &< \sqrt{x^2 + y^2}\\
+\vert x \vert^2 &< x^2 + y^2\\
+\cancel{\vert x \vert^2} &< \cancel{x^2} + y^2\\
+0 &< y^2\\
+0 &< \pm y\\
+\end{align*}$$
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/unbounded.svg" | prepend: site.baseurl }}" alt="An example of an unbounded set">
+
+Another way of defining this region might be $$S = \left\{z \in \mathbb C : \operatorname{Im}z \neq 0\right\}$$. Note that $$\operatorname{Cl}(S) = \mathbb C$$
+
+---
 
 Consider the set $$\displaystyle{Z_n = \left\{\frac{i}{n} : n \in \mathbb N\right\}}$$ illustrated below
 
@@ -70,3 +182,31 @@ Also note that every point is not an interior point, as any neighborhood of any 
 Let us now consider the deleted neighborhood of 0. No matter what $$\varepsilon$$ we pick, we can *always* find an element of $$Z_n$$ that is within the deleted neighborhood. This means that *every* deleted neighborhood of 0 contains at least one point of $$Z_n$$, so 0 is an accumulation point of $$Z_n$$. We can also see that 0 is the *only* accumulation point of $$Z_n$$, because no matter what point we pick, there will always be some distance between the point we pick and its neighbors that is not in $$Z_n$$.
 
 Also note that 0 is $$Z_n$$'s only boundary point, so $$\operatorname{Cl}(Z_n) = \{Z_n, 0\}$$
+
+---
+
+Now consider the set $$Z_n = \{i^n : n \in \mathbb N\} = \{i, -1, i , 1\}$$ illustrated below.
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/accumulation-example-2.svg" | prepend: site.baseurl }}" alt="accumulation point example 2">
+
+This set has *no* accumulation points.
+
+---
+
+Consider the set $$\displaystyle Z_n = \left\{\frac{i^n}{n} : n \in \mathbb N\right\}$$
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/accumulation-example-3.svg" | prepend: site.baseurl }}" alt="accumulation point example 3">
+
+Note how the sequence spirals closer and closer to 0, but never actually hits it. It's very similar to the first accumulation point example. $$0 \not\in Z_n$$, but no matter what $$\varepsilon$$ we pick around 0, we can *always* find a point within that $$\varepsilon$$. Therefore 0 is an accumulation point, and is actually the *only* accumulation point of this set.
+
+---
+
+Lastly, consider the set
+
+$$\displaystyle Z_n = \left\{(-1)^n(1 + i)\frac{n - 1}{n} : n \in \mathbb N\right\} = \left\{-0,\, \frac{1}{2}(1 + i),\, \frac{-2}{3}(1 + i),\, \frac{3}{4}(1 + i),\, \frac{-4}{5}(1 + i),\, \dots\right\}$$
+
+<img class="centered" src="{{ "/assets/posts/regions-in-the-complex-plane/accumulation-example-4.svg" | prepend: site.baseurl }}" alt="accumulation point example 4">
+
+$$1 + i$$ and $$-(1 + i)$$ are the only accumulation points of $$Z_n$$, but are *not in* $$Z_n$$.
+
+Also note that for a little bit of intuition, points *accumulate* at the *accumulation* points -- though not necessarily from one direction.

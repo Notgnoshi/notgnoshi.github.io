@@ -16,7 +16,11 @@ meta: A collection of LaTeX and Tikz tips and examples.
 * `\skull`
 * Digital circuitry
 * Go through Abstract HW, Game Theory Project, CENG Report, etc.
-* Syntax highlighting with `minted`
+* Syntax highlighting with `minted` **AND** `listings`
 * machine precision diagram
 * Different types of matrices, game theory, `pmatrix`, `bmatrix`, etc.
 * LaTeX tables
+* Tikz with loops
+* Tikz in general
+* `\left`, `\right`, and `\displaystyle`
+* `\underbrace` and tikz brace decorations

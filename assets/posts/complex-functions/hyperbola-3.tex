@@ -1,0 +1,38 @@
+\documentclass[varwidth=40cm, border=5pt]{standalone}
+\usepackage{tikz, pgfplots, amsmath, amssymb}
+\pgfplotsset{compat=1.13}
+
+\begin{document}
+\begin{tikzpicture}[scale=2]
+	\begin{axis}[
+		axis equal,
+		axis x line = middle,
+		axis y line = middle,
+		ticks = none,
+		xlabel = {$x$},
+		ylabel = {$y$},
+		xmin=-10,
+		xmax=10,
+		ymin=-10,
+        ymax=10,
+		domain=-10:10,
+		restrict y to domain=-10:10
+	]
+		\addplot[very thick, samples=400] (x, {4/x});
+		\draw (2, 2) node[above right]{$\displaystyle y = \frac{c}{2x}$};
+	\end{axis}
+	\begin{scope}[xshift=8cm]
+		\begin{axis}[
+			axis equal,
+			axis x line = middle,
+			axis y line = middle,
+			ticks = none,
+			xlabel = {$u$},
+			ylabel = {$v$}
+		]
+			\addplot[color=black, very thick] coordinates {(-2, 1) (2, 1)};
+			\draw (1, 1) node[above]{$v = c$};
+		\end{axis}
+	\end{scope}
+\end{tikzpicture}
+\end{document}

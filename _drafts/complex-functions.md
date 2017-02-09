@@ -85,6 +85,8 @@ Note that how we have defined the range of a function causes every function to b
 
 **TODO:** Example images of domain, range, and all that jazz here.
 
+<img class="centered" src="{{ "/assets/posts/complex-functions/domain-of-definition.svg" | prepend: site.baseurl }}" alt="Hyperbola">
+
 ---
 
 **Ex.** $$w = f(z) = z + 1 = (x + 1) + iy$$ is a function that *shifts*, or *translates* points one unit to the right.

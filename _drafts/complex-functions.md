@@ -9,7 +9,7 @@ meta: Functions of complex variables, covering topics such as injective, surject
 
 **Defn.** A *function* $$f$$ defined on a set $$S \subseteq \mathbb C$$ is a *rule* that assigns to each $$z \in S$$ a complex number $$w$$, called the *value* of $$f$$ at $$z$$ and is denote by $$f(z)$$.
 
-**Defn.** We call the set $$S$$ the *domain of definition* of $$f$$.
+**Defn.** We call the set $$S$$ the *domain of definition* of $$f$$. Note we can't use the term "domain" because we've already defined it previously to mean an open, nonempty, and connected set.
 
 Note that both the domain of definition and the rule should be specified for a complete definition of a function. If the domain of definition is *not* given, it is assumed to be the largest possible set.
 
@@ -75,7 +75,7 @@ We can also take images of *sets*. Let $$T \subseteq S$$, then the *image* of $$
 
 **Defn.** The *range* of a function $$f$$ is the image of the domain of definition $$S$$. We denote this by $$f(S)$$.
 
-**Defn.** The *inverse image*, or *preimage* of a point $$w$$ is the set of all $$z \in S$$ that have an image of $$w$$. Note that the preimage can have no, one, or many points in $$S$$. My professor denotes this as $$f^{-1}(\{w\})$$ to emphasize that this is *not* the inverse function of $$f$$, it's just a set.
+**Defn.** The *inverse image*, or *preimage* of a point $$w$$ is the set of all $$z \in S$$ that have an image of $$w$$. Note that the preimage can have one, or many points in $$S$$. My professor denotes this as $$f^{-1}(\{w\})$$ to emphasize that this is *not* the inverse function of $$f$$, it's just a set. Because the range is defined as the image of the domain of definition, the preimage is guaranteed to be nonempty.
 
 **Defn.** A function $$f$$ is called *injective*, or *one-to-one* if whenever $$f(z_1) = f(z_2)$$, then $$z_1 = z_2$$.
 
@@ -83,9 +83,23 @@ We can also take images of *sets*. Let $$T \subseteq S$$, then the *image* of $$
 
 Note that how we have defined the range of a function causes every function to be surjective. This is in conflict with most textbooks that also define something called a *codomain*, or which the range of $$f$$ is a subset. However, this is what my particular textbook uses, so it's what I will stick with here.
 
-**TODO:** Example images of domain, range, and all that jazz here.
+---
 
-<img class="centered" src="{{ "/assets/posts/complex-functions/domain-of-definition.svg" | prepend: site.baseurl }}" alt="Hyperbola">
+**Ex.** The image $$w$$ of a point $$z$$ in the domain of definition $$S$$ of a function $$f$$ with range $$f(S)$$.
+
+<img class="centered" src="{{ "/assets/posts/complex-functions/domain-of-definition.svg" | prepend: site.baseurl }}" alt="The domain of a function">
+
+**TODO:** image of a set
+
+**Ex.** The following is an example of a function that is *not* one-to-one (injective). Note that $$f(z_1) = f(z_2)$$ yet $$z_1 \neq z_2$$.
+
+<img class="centered" src="{{ "/assets/posts/complex-functions/noninjective-function.svg" | prepend: site.baseurl }}" alt="A noninjective function">
+
+**Ex.** When we take the inverse image (preimage) of a point in the range of a function, we *don't change the direction of the arrows* we aren't finding an inverse function, only tracing the line(s) back to where they came from.
+
+<img class="centered" src="{{ "/assets/posts/complex-functions/preimage.svg" | prepend: site.baseurl }}" alt="The preimage of a point">
+
+Note that the preimage is a *set* that could possibly contain one or more points in the domain of definition.
 
 ---
 
@@ -127,4 +141,4 @@ We asked ourselves what maps to a constant, now we ask, what does a constant map
 
 <img class="centered-full" src="{{ "/assets/posts/complex-functions/hyperbola-5.svg" | prepend: site.baseurl }}" alt="Hyperbola">
 
-**TODO:** look at how regions map.
+**TODO:** mapping regions

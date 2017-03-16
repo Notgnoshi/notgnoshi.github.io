@@ -37,7 +37,7 @@ We can then solve for $$s_w$$. We repeat the same for $$r_w$$, getting the follo
 
 $$ s_w = b(1-s) $$
 
-$$ r_w = b(1-r)	$$
+$$ r_w = b(1-r) $$
 
 Then we use these values to find the areas of the rectangles.
 
@@ -52,29 +52,29 @@ $$ A(T) = \frac{1}{2} b h $$
 Substituting these into the ratio $$\Theta$$ we get
 
 $$\Theta = \frac{A(R) + A(S)}{A(T)} \\
-	     = \frac{2 \left(bhs(1-s) + bh(r-s)(1-r)\right) }{b h}\\
-		 = 2\left(s(1-s) + (r-s)(1-r)\right)\\
-		 = 2(s - s^2 + r - s - r^2 + rs)\\
-		 = 2(r + rs - s^2 - r^2)
+         = \frac{2 \left(bhs(1-s) + bh(r-s)(1-r)\right) }{b h}\\
+         = 2\left(s(1-s) + (r-s)(1-r)\right)\\
+         = 2(s - s^2 + r - s - r^2 + rs)\\
+         = 2(r + rs - s^2 - r^2)
 $$
 
 We want to maximize
 
-$$ \Theta = -2s^2 - 2r^2 + 2r + 2rs	$$
+$$ \Theta = -2s^2 - 2r^2 + 2r + 2rs $$
 
 Taking the partial derivatives of $$\Theta$$
 
 $$ \Theta_s  = -2s + r ~,~~~ \Theta_{ss} = -2\\
-	\Theta_r  = -2r + 1 + s ~,~~~ \Theta_{rr} = -2\\
-	\Theta_{rs} = \Theta_{sr} = 1
+    \Theta_r  = -2r + 1 + s ~,~~~ \Theta_{rr} = -2\\
+    \Theta_{rs} = \Theta_{sr} = 1
 $$
 
 Since $$\Theta_{ss} < 0$$ and $$\Theta_{ss}\Theta_{rr} - \Theta_{rs}^2 = (-2)(-2) - 1 = 3 > 0$$, a maximum value exists at the point obtained by setting the first partial derivatives to zero and solving for $$r$$ and $$s$$ (Second-Derivative Test in two dimensions).
 
 $$ \begin{cases}
-	r-2s &= 0 \\
-	s+1-2r &= 0
-	\end{cases}
+    r-2s &= 0 \\
+    s+1-2r &= 0
+    \end{cases}
 $$
 
 $$ r = 2s\\

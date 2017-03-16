@@ -5,7 +5,7 @@
 \begin{document}
 \begin{tikzpicture}[scale=0.9]
     \draw[<->] (-1, 0)--(6, 0) node[right]{$x$};
-	\draw[<->] (0, -1)--(0, 6) node[above]{$y$};
+    \draw[<->] (0, -1)--(0, 6) node[above]{$y$};
 
     \coordinate (O) at (0, 0);
     \coordinate (zc) at ($(O) + (3, 3)$);
@@ -16,8 +16,8 @@
     \draw (zc) node[circle, fill, inner sep=1pt]{} node[below]{$z_0$};
     \draw (z) node[circle, fill, inner sep=1pt]{} node[below]{$z$};
     \draw[dashed] (zc) circle (2);
-	\draw (zc) -- (z);
-	\draw (zc) -- (e);
+    \draw (zc) -- (z);
+    \draw (zc) -- (e);
 
     \draw[
         decorate,

@@ -4,29 +4,29 @@
 
 \begin{document}
 \begin{tikzpicture}[scale=2]
-	\begin{axis}[
-		axis equal,
-		axis x line = middle,
-		axis y line = middle,
-		ticks = none,
-		xlabel = {$x$},
-		ylabel = {$y$}
-	]
-		\addplot[color=black, very thick] coordinates {(1, -2) (1, 2)};
-		\draw (1, 1) node[right]{$x = c$};
-	\end{axis}
-	\begin{scope}[xshift=8cm]
-		\begin{axis}[
-			axis equal,
-			axis x line = middle,
-			axis y line = middle,
-			ticks = none,
-			xlabel = {$u$},
-			ylabel = {$v$}
-		]
-			\addplot[very thick, domain=-6:6] ({1 - x^2 / 4}, {x});
-			\draw (-4, -2) node[]{$\displaystyle u = c^2 - \frac{v^2}{4c^2}$};
-		\end{axis}
-	\end{scope}
+    \begin{axis}[
+        axis equal,
+        axis x line = middle,
+        axis y line = middle,
+        ticks = none,
+        xlabel = {$x$},
+        ylabel = {$y$}
+    ]
+        \addplot[color=black, very thick] coordinates {(1, -2) (1, 2)};
+        \draw (1, 1) node[right]{$x = c$};
+    \end{axis}
+    \begin{scope}[xshift=8cm]
+        \begin{axis}[
+            axis equal,
+            axis x line = middle,
+            axis y line = middle,
+            ticks = none,
+            xlabel = {$u$},
+            ylabel = {$v$}
+        ]
+            \addplot[very thick, domain=-6:6] ({1 - x^2 / 4}, {x});
+            \draw (-4, -2) node[]{$\displaystyle u = c^2 - \frac{v^2}{4c^2}$};
+        \end{axis}
+    \end{scope}
 \end{tikzpicture}
 \end{document}

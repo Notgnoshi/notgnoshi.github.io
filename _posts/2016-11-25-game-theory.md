@@ -11,11 +11,11 @@ Game Theory is the mathematical modeling of conflict, cooperation, and the analy
 
 1. A set $$N$$ of $$n$$ players. $$n = 1$$ is decision theory, and not a part of typical game theory. $$n = 2$$ is the classic von Neumann-Morgenstern game theory. $$n > 2$$ is coalition gaming, which can be modeled as multiple $$n = 2$$ games, with coalitions as players.
 
-	We make two assumptions, which are not necessarily valid in the real world:
+    We make two assumptions, which are not necessarily valid in the real world:
 
-	- **Intelligence** -- the players know the rules of the game
+    - **Intelligence** -- the players know the rules of the game
 
-	- **Rationality** -- the players play to win as much as possible
+    - **Rationality** -- the players play to win as much as possible
 2. **Rules** -- how the players agree to play.
 3. **Payoff** -- a numerical value assigned to players or subsets of players.
 
@@ -78,19 +78,19 @@ In the mid 30s, two mathematicians R. Sprague and M. Grundy independently genera
 1. All terminal states $$S$$ get $$\operatorname{sg}(S) = 0$$
 2. Non-termial states $$S$$ are assigned the *minimum excluded value* of $$\{\operatorname{sg}(T)\}$$ for all states $$T$$ one move away from $$S$$.
 
-	$$\operatorname{sg}(S) = \min\{k \geq 0 \vert k \neq \operatorname{sg}(T) \text{ where $T$ is one move away from $S$}\}$$
+    $$\operatorname{sg}(S) = \min\{k \geq 0 \vert k \neq \operatorname{sg}(T) \text{ where $T$ is one move away from $S$}\}$$
 
-	or equivalently,
+    or equivalently,
 
-	$$\operatorname{sg}(S) = \begin{cases}\text{the minimum nonnegative integer not equal to $\operatorname{sg}(T)$}\\\text{for any state $T$ attainable from $S$ in a single move}\end{cases}$$
+    $$\operatorname{sg}(S) = \begin{cases}\text{the minimum nonnegative integer not equal to $\operatorname{sg}(T)$}\\\text{for any state $T$ attainable from $S$ in a single move}\end{cases}$$
 
 Further, we can define the **disjoint sum** or a **direct sum** of games $$G_1$$ and $$G_2$$, denoted as $$G_1 + G_2$$, provided that $$G_1$$ and $$G_2$$ are both impartial classic combinatorial games, as follows
 
 1. its states of play are $$(S, T)$$ where $$S$$ is a state of $$G_1$$ and $$T$$ is a state of $$G_2$$
 2. a move to another state $$(S', T')$$ is valid if and only if either
 
-	* $$T = T'$$ and $$S'$$ is one move away from $$S$$.
-	* $$S = S'$$ and $$T'$$ is one move away from $$T$$.
+    * $$T = T'$$ and $$S'$$ is one move away from $$S$$.
+    * $$S = S'$$ and $$T'$$ is one move away from $$T$$.
 
 ---
 

@@ -17,31 +17,31 @@ We cleaned out the robotics lab here a few weeks ago, and I came across a stack 
 * [Euclidean Algorithm for GCD](#euclidean-algorithm-for-gcd)
 * [Chinese Remainder Theorem and Multiplicative Inverse](#chinese-remainder-theorem-and-multiplicative-inverse)
 * [Graph Algorithms](#graph-algorithms)
-	* [Depth-First Search](#depth-first-search)
-	* [Breadth-First Search](#breadth-first-search)
-	* [Dijkstra's Shortest Path Algorithm](#dijkstras-shortest-path-algorithm)
-	* [Minimal Spanning Tree (Kruskal's)](#minimal-spanning-tree-kruskals)
-	* [Max Flow/Min Cut Algorithm](#max-flowmin-cut-algorithm)
-	* [All Pairs Shortest Path](#all-pairs-shortest-path)
-	* [Bipartite Matching](#bipartite-matching)
-	* [Topological Sort](#topological-sort)
+    * [Depth-First Search](#depth-first-search)
+    * [Breadth-First Search](#breadth-first-search)
+    * [Dijkstra's Shortest Path Algorithm](#dijkstras-shortest-path-algorithm)
+    * [Minimal Spanning Tree (Kruskal's)](#minimal-spanning-tree-kruskals)
+    * [Max Flow/Min Cut Algorithm](#max-flowmin-cut-algorithm)
+    * [All Pairs Shortest Path](#all-pairs-shortest-path)
+    * [Bipartite Matching](#bipartite-matching)
+    * [Topological Sort](#topological-sort)
 * [Computational Geometry](#computation-geometry)
-	* [Structs](#structs)
-	* [Utility Functions](#utility-functions)
-	* [Segement Intersection](#segment-intersection)
-	* [Line-Point Distance](#line-point-distance)
-	* [Convex Hull](#convex-hull)
-	* [Polygon Area](#polygon-area)
-	* [Point Inside Polygon](#point-inside-polygon)
+    * [Structs](#structs)
+    * [Utility Functions](#utility-functions)
+    * [Segement Intersection](#segment-intersection)
+    * [Line-Point Distance](#line-point-distance)
+    * [Convex Hull](#convex-hull)
+    * [Polygon Area](#polygon-area)
+    * [Point Inside Polygon](#point-inside-polygon)
 * [Data Structures](#data-structures)
-	* [Disjoint Set](#disjoint-set)
-	* [Fenwick Tree](#fenwick-tree)
-	* [Segment Tree](#segment-tree)
+    * [Disjoint Set](#disjoint-set)
+    * [Fenwick Tree](#fenwick-tree)
+    * [Segment Tree](#segment-tree)
 * [String Algorithms](#string-algorithms)
-	* [String Edit Distance](#string-edit-distance)
-	* [Suffix Array and LCP Array](#suffix-array-and-lcp-array)
-	* [KMP String Matching](#kmp-string-matching)
-	* [Aho-Corasick FSM String Multimatching](#aho-corasick-fsm-string-multimatching)
+    * [String Edit Distance](#string-edit-distance)
+    * [Suffix Array and LCP Array](#suffix-array-and-lcp-array)
+    * [KMP String Matching](#kmp-string-matching)
+    * [Aho-Corasick FSM String Multimatching](#aho-corasick-fsm-string-multimatching)
 
 ---
 
@@ -51,7 +51,7 @@ We cleaned out the robotics lab here a few weeks ago, and I came across a stack 
 
 Area of triangle:
 
-$$A = \sqrt{s(s - a)(s - b)(s - c)}, \text{	where } s = \frac{(a + b + c)}{2}$$
+$$A = \sqrt{s(s - a)(s - b)(s - c)}, \text{ where } s = \frac{(a + b + c)}{2}$$
 
 Law of sines:
 
@@ -108,18 +108,18 @@ We can use Pascal's identity to compute $$C(n, k)$$ for large $$n$$ and $$k$$
 long long table[100][100] = { 0 };
 long long rec(long long n, long long k)
 {
-	if (table[n][k] > 0)
-		return table[n][k];
-	if (k == 0 || k == n)
-	{
-		table[n][k] = 1;
-		return 1;
-	}
-	else
-	{
-		table[n][k] = rec(n - 1, k - 1) + rec(n - 1, k);
-		return table[n][k];
-	}
+    if (table[n][k] > 0)
+        return table[n][k];
+    if (k == 0 || k == n)
+    {
+        table[n][k] = 1;
+        return 1;
+    }
+    else
+    {
+        table[n][k] = rec(n - 1, k - 1) + rec(n - 1, k);
+        return table[n][k];
+    }
 }
 ```
 
@@ -128,25 +128,25 @@ We can carefully compute $$\binom{n}{k} = \frac{n!}{(n - k)! k!}$$ in order to a
 ```c++
 long long binomial(long long n, long long k)
 {
-	long long top_limit = (k > n - k ? k : n - k); // limit for multiplication on top
-	long long res = 1, div = n - top_limit; // result, maximum number to divide
+    long long top_limit = (k > n - k ? k : n - k); // limit for multiplication on top
+    long long res = 1, div = n - top_limit; // result, maximum number to divide
 
-	// compute by dividing whenever possible to prevent overflow
-	for (long long i = n; i >= top_limit; i--)
-	{
-		if (i > top_limit)
-		{
-			// multiply from n to top_limit - 1
-			res *= i;
-		}
-		while (div > 1 && res % div == 0)
-		{
-			// divide by div - 2 when no remainder
-			res /= div;
-			div--;
-		}
-	}
-	return res;
+    // compute by dividing whenever possible to prevent overflow
+    for (long long i = n; i >= top_limit; i--)
+    {
+        if (i > top_limit)
+        {
+            // multiply from n to top_limit - 1
+            res *= i;
+        }
+        while (div > 1 && res % div == 0)
+        {
+            // divide by div - 2 when no remainder
+            res /= div;
+            div--;
+        }
+    }
+    return res;
 }
 ```
 
@@ -163,14 +163,14 @@ long long binomial(long long n, long long k)
 ```c++
 bool isPrime(int n)
 {
-	if (n == 2) return true;
-	if (n <= 1 || n % 2 == 0) return false;
-	for (int i = 3; i <= sqrt(n); i += 2)
-	{
-		if (n % i == 0)
-			return false;
-	}
-	return true;
+    if (n == 2) return true;
+    if (n <= 1 || n % 2 == 0) return false;
+    for (int i = 3; i <= sqrt(n); i += 2)
+    {
+        if (n % i == 0)
+            return false;
+    }
+    return true;
 }
 ```
 
@@ -184,18 +184,18 @@ std::vector<bool> primes(100000000, true);
 // remove all references to count, including the second for loop to just run the sieve
 int sieve(int n)
 {
-	primes[0] = primes[1] = false;
-	int count = 0, m = sqrt(n);
-	for (int i = 2; i <= m; i++)
-	{
-		if (primes[i])
-		{
-			count++;
-			for (int k = 2*i; k <= n; k += 1) primes[k] = false;
-		}
-	}
-	for (int i = m + 1; i <= n; i++) if (primes[i]) count++;
-	return count;
+    primes[0] = primes[1] = false;
+    int count = 0, m = sqrt(n);
+    for (int i = 2; i <= m; i++)
+    {
+        if (primes[i])
+        {
+            count++;
+            for (int k = 2*i; k <= n; k += 1) primes[k] = false;
+        }
+    }
+    for (int i = m + 1; i <= n; i++) if (primes[i]) count++;
+    return count;
 }
 ```
 
@@ -212,8 +212,8 @@ Collection of functions to convert from any base to decimal, and vice versa. Lim
 // returns integer value of a char, assuming all bases use {0..9} and {A..Z}
 int val(char c)
 {
-	if (c >= '0' && c <= '9') return (int)c - '0';
-	return (int)c - 'A' + 10;
+    if (c >= '0' && c <= '9') return (int)c - '0';
+    return (int)c - 'A' + 10;
 }
 ```
 
@@ -221,8 +221,8 @@ int val(char c)
 // returns char for integer value, assuming all bases use {0..9} and {A..Z}
 char reVal(int num)
 {
-	if (num >= 0 && num <= 9) return (char)(num + '0');
-	return (char)(num - 10 + 'A');
+    if (num >= 0 && num <= 9) return (char)(num + '0');
+    return (char)(num - 10 + 'A');
 }
 ```
 
@@ -230,14 +230,14 @@ char reVal(int num)
 // converts number stored in string s with specified base to decimal (-1 if invalid)
 int toDeci(std::string s, int base)
 {
-	int power = 1, num = 0; // init power of base and result
-	for ( int i = s.length() - 1; i >= 0; i--)
-	{
-		if (val(s[i]) >= base) return -1; // digit too high for base, invalid
-		num += val(s[i]) * power;
-		power = power * base;
-	}
-	return num;
+    int power = 1, num = 0; // init power of base and result
+    for ( int i = s.length() - 1; i >= 0; i--)
+    {
+        if (val(s[i]) >= base) return -1; // digit too high for base, invalid
+        num += val(s[i]) * power;
+        power = power * base;
+    }
+    return num;
 }
 ```
 
@@ -245,14 +245,14 @@ int toDeci(std::string s, int base)
 // converts from decimal to a specified base
 std::string fromDeci(int input, int base)
 {
-	std::string res = "";
-	while (input > 0)
-	{
-		res += reVal(input % base);
-		input /= base;
-	}
-	reverse(res.begin(), res.end());
-	return res;
+    std::string res = "";
+    while (input > 0)
+    {
+        res += reVal(input % base);
+        input /= base;
+    }
+    reverse(res.begin(), res.end());
+    return res;
 }
 ```
 
@@ -268,10 +268,10 @@ Computes $$x^n$$ using exponentiation by squaring. Does not handle overflow.
 // computes x^n using successive squares. Does not check for overflow.
 long long fastExp(long long x, long long n)
 {
-	if (n == 0) return 1;
-	if (n == 1) return x;
-	if (n % 2 == 0) return fastExp(x * x, n / 2);
-	return x * fastExp(x * x, (n - 1) / 2);
+    if (n == 0) return 1;
+    if (n == 1) return x;
+    if (n % 2 == 0) return fastExp(x * x, n / 2);
+    return x * fastExp(x * x, (n - 1) / 2);
 }
 ```
 
@@ -285,7 +285,7 @@ Computes the Greatest Common Divisor using Euclid's algorithm. $$\operatorname{g
 ```c++
 long long gcd(long long a, long long b)
 {
-	return (b == 0 ? a : gcd(b, a % b));
+    return (b == 0 ? a : gcd(b, a % b));
 }
 ```
 
@@ -303,21 +303,21 @@ Implementation of the Chinese Remainder Theorem, including modular multiplicativ
 // inverse only exists if a and b are relatively prime: gcd(a, b) = 1
 long long modInverse(long long a, long long b)
 {
-	long long b0 = b, x0 = 0, x1 = 1, q, temp;
-	if (b == 1) return 1;
+    long long b0 = b, x0 = 0, x1 = 1, q, temp;
+    if (b == 1) return 1;
 
-	while(a > 1)
-	{
-		q = a / b; // quotient
-		temp = a;
-		a = b;
-		b = temp % b; // remainder
-		temp = x0;
-		x0 = x1 - q * x0;
-		x1 = temp;
-	}
-	if ( x1 < 0) x1 += b0;
-	return x1;
+    while(a > 1)
+    {
+        q = a / b; // quotient
+        temp = a;
+        a = b;
+        b = temp % b; // remainder
+        temp = x0;
+        x0 = x1 - q * x0;
+        x1 = temp;
+    }
+    if ( x1 < 0) x1 += b0;
+    return x1;
 }
 ```
 
@@ -325,23 +325,23 @@ long long modInverse(long long a, long long b)
 // returns smallest integer x such that x % n[1] = a[i] for all i
 long long chineseRemainder(std::vector<long long> n, std::vector<long long> a)
 {
-	long long p, prod = 1, sm = 0;
-	for (size_t i = 0; i < n.size(); i++) prod *= n[i];
-	for (size_t i = 0; i < n.size(); i++)
-	{
-		p = prod / n[i];
-		sm += a[i] * modInverse(p, n[i]) * p;
-	}
-	return sm % prod;
+    long long p, prod = 1, sm = 0;
+    for (size_t i = 0; i < n.size(); i++) prod *= n[i];
+    for (size_t i = 0; i < n.size(); i++)
+    {
+        p = prod / n[i];
+        sm += a[i] * modInverse(p, n[i]) * p;
+    }
+    return sm % prod;
 }
 ```
 
 ```c++
 int main()
 {
-	std::cout << modInverse(3, 7) << " " << modInverse(3, 11) << std::endl; // 5, 4
-	// mod = 3, 4, 5; rem = 2, 3, 1 => 11 mod 60; mod = 5, 7; rem = 1, 3 => 31 mod 35
-	res = chineseRemainder(mod, rem);
+    std::cout << modInverse(3, 7) << " " << modInverse(3, 11) << std::endl; // 5, 4
+    // mod = 3, 4, 5; rem = 2, 3, 1 => 11 mod 60; mod = 5, 7; rem = 1, 3 => 31 mod 35
+    res = chineseRemainder(mod, rem);
 }
 ```
 
@@ -369,12 +369,12 @@ std::vector<bool> visited;
 // perform a dfs on graph starting at node v
 void dfs(int v)
 {
-	if ( !visited[v])
-	{
-		visited[v] = true;
-		for (size_t i = 0; i < graph[v].size(); i++)
-			dfs(graph[v][i]);
-	}
+    if ( !visited[v])
+    {
+        visited[v] = true;
+        for (size_t i = 0; i < graph[v].size(); i++)
+            dfs(graph[v][i]);
+    }
 }
 ```
 
@@ -404,26 +404,26 @@ std::vector<int> previous;
 // perform a bfs on graph starting at node s
 void bfs(int s)
 {
-	std::queue<int> q;
-	q.push(s);
-	visited[s] = true;
-	distance[s] = 0;
+    std::queue<int> q;
+    q.push(s);
+    visited[s] = true;
+    distance[s] = 0;
 
-	while( !q.empty())
-	{
-		int v = q.front(); q.pop();
-		// for each node adjacent to v
-		for (int w : graph[v])
-		{
-			if (!visited[w])
-			{
-				q.push(w);
-				visited[w] = true;
-				previous[w] = v;
-				distance[w] = distance[v] + 1;
-			}
-		}
-	}
+    while( !q.empty())
+    {
+        int v = q.front(); q.pop();
+        // for each node adjacent to v
+        for (int w : graph[v])
+        {
+            if (!visited[w])
+            {
+                q.push(w);
+                visited[w] = true;
+                previous[w] = v;
+                distance[w] = distance[v] + 1;
+            }
+        }
+    }
 }
 ```
 
@@ -456,39 +456,39 @@ bool visited[MAX];
 // assumes adjacency matrix and nodes are numbered {0..n_nodes-1}
 void dijkstra(int s)
 {
-	// negative distance, node
-	std::priority_queue<std::pair<int, int> > q;
+    // negative distance, node
+    std::priority_queue<std::pair<int, int> > q;
 
-	// initialize arrays
-	for (int i = 0; i < n_nodes; i++)
-	{
-		distance[i] = MAXINT; // initialize all the distances to infinity
-		previous[i] = -1;
-		visited[i] = false;
-	}
+    // initialize arrays
+    for (int i = 0; i < n_nodes; i++)
+    {
+        distance[i] = MAXINT; // initialize all the distances to infinity
+        previous[i] = -1;
+        visited[i] = false;
+    }
 
-	distance[s] = 0;
-	q.push(std::pair<int, int>(distance[s], s));
+    distance[s] = 0;
+    q.push(std::pair<int, int>(distance[s], s));
 
-	while (!q.empty())
-	{
-		// grab next node number
-		int i = q.top().second; q.pop();
-		if (!visited[i])
-		{
-			visited[i] = true;
-			for (int j = 0; j < n_nodes; j++)
-			{
-				// if can reach unvisited node in shorter distance, push to queue
-				if (!visited[j] && graph[i][j] != -1 && distance[i] + graph[i][j] < distance[j])
-				{
-					distance[j] = distance[i] + graph[i][j];
-					previous[j] = i;
-					q.push(std::pair<int, int>(-distance[j], j));
-				}
-			}
-		}
-	}
+    while (!q.empty())
+    {
+        // grab next node number
+        int i = q.top().second; q.pop();
+        if (!visited[i])
+        {
+            visited[i] = true;
+            for (int j = 0; j < n_nodes; j++)
+            {
+                // if can reach unvisited node in shorter distance, push to queue
+                if (!visited[j] && graph[i][j] != -1 && distance[i] + graph[i][j] < distance[j])
+                {
+                    distance[j] = distance[i] + graph[i][j];
+                    previous[j] = i;
+                    q.push(std::pair<int, int>(-distance[j], j));
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -496,13 +496,13 @@ void dijkstra(int s)
 // after running Dijkstra, retrieve the path from node `end` to start node
 void getPath(int end)
 {
-	std::cout << end << " ";
-	while (previos[end] != -1)
-	{
-		std::cout << previos[end] << " ";
-		end = previos[end];
-	}
-	std::cout << std::endl;
+    std::cout << end << " ";
+    while (previos[end] != -1)
+    {
+        std::cout << previos[end] << " ";
+        end = previos[end];
+    }
+    std::cout << std::endl;
 }
 ```
 
@@ -528,24 +528,24 @@ bool weightSort(Edge const t1, Edge const t2) {return (t1.w < t2.w);}
 // V = number vertices, E = number edges; edges contains all undirected edges of graph
 std::vector<Edge> minSpanTree(int V, int E, std::vector<Edge> edges, int &W, bool &connected)
 {
-	std::vector<Edge> mst;
-	union_find comp = union_find(V); // initially, each vertex is in its own disjoint set
+    std::vector<Edge> mst;
+    union_find comp = union_find(V); // initially, each vertex is in its own disjoint set
 
-	std::sort(edges.begin(), edges.end(), weightSort); // sort edges by ascending weight
+    std::sort(edges.begin(), edges.end(), weightSort); // sort edges by ascending weight
 
-	// add edges small to large that do not cause cycles
-	W = 0;
-	for (size_t i = 0; i < edges.size() && mst.size() < (V - 1); i++)
-	{
-		if (!comp.share_set(edges[i].u, edges[i].v))
-		{
-			comp.unite(edges[i].u, edges[i].v);
-			mst.push_back(edges[i]);
-			W += edges[i].w;
-		}
-	}
-	connected = (comp.count == 1); // connected tree if all nodes in same set
-	return mst;
+    // add edges small to large that do not cause cycles
+    W = 0;
+    for (size_t i = 0; i < edges.size() && mst.size() < (V - 1); i++)
+    {
+        if (!comp.share_set(edges[i].u, edges[i].v))
+        {
+            comp.unite(edges[i].u, edges[i].v);
+            mst.push_back(edges[i]);
+            W += edges[i].w;
+        }
+    }
+    connected = (comp.count == 1); // connected tree if all nodes in same set
+    return mst;
 }
 ```
 
@@ -572,54 +572,54 @@ int prevs[N];
 // number of vertices, source, sink
 long long fordFulkerson(int n, int s, int t)
 {
-	int q[N], qf, qb;
-	long long flow = 0;
+    int q[N], qf, qb;
+    long long flow = 0;
 
-	while (true)
-	{
-		// find augmenting path
-		memset(prevs, -1, sizeof(prevs));
-		qf = qb = 0;
-		prevs[q[qb++] = s] = -2;
+    while (true)
+    {
+        // find augmenting path
+        memset(prevs, -1, sizeof(prevs));
+        qf = qb = 0;
+        prevs[q[qb++] = s] = -2;
 
-		// bfs to get path
-		while (qb > qf && prevs[t] == -1)
-		{
-			for (int u = q[qf++], v = 0; v < n; v++)
-			{
-				if (prevs[v] == -1 && fnet[u][v] - fnet[v][u] < cap[u][v])
-					prevs[q[qb++] = v] = u;
-			}
-		}
+        // bfs to get path
+        while (qb > qf && prevs[t] == -1)
+        {
+            for (int u = q[qf++], v = 0; v < n; v++)
+            {
+                if (prevs[v] == -1 && fnet[u][v] - fnet[v][u] < cap[u][v])
+                    prevs[q[qb++] = v] = u;
+            }
+        }
 
-		// no new path, done.
-		if (prevs[t] == -1) break;
-		// get bottleneck capacity for augmenting path (minimum capacity edge on path)
-		long long bot = LLONG_MAX, temp;
-		for (int v = t, u = prevs[v]; u >= 0; v = u, u = prevs[v])
-			bot = (temp = cap[u][v] - fnet[u][v] + fnet[v][u]) < bot ? temp : bot;
+        // no new path, done.
+        if (prevs[t] == -1) break;
+        // get bottleneck capacity for augmenting path (minimum capacity edge on path)
+        long long bot = LLONG_MAX, temp;
+        for (int v = t, u = prevs[v]; u >= 0; v = u, u = prevs[v])
+            bot = (temp = cap[u][v] - fnet[u][v] + fnet[v][u]) < bot ? temp : bot;
 
-		// update flow network and overall flow count
-		for (int v = t, u = prevs[v]; u >= 0; v = u, u = prevs[v])
-			fnet[u][v] += bot;
-		flow += bot;
-	}
-	return flow;
+        // update flow network and overall flow count
+        for (int v = t, u = prevs[v]; u >= 0; v = u, u = prevs[v])
+            fnet[u][v] += bot;
+        flow += bot;
+    }
+    return flow;
 }
 ```
 
 ```c++
 int main()
 {
-	// fill cap with existing edges, all other spots 0, init fnet 0
-	memset(cap, 0, sizeof(cap)); memset(fnet, 0, sizeof(fnet));
-	// if edge u->v has capacity x, set cap[u][v] = fnet[u][v] = x;
+    // fill cap with existing edges, all other spots 0, init fnet 0
+    memset(cap, 0, sizeof(cap)); memset(fnet, 0, sizeof(fnet));
+    // if edge u->v has capacity x, set cap[u][v] = fnet[u][v] = x;
 
-	long long flow = fordFulkerson(n, s, t);
-	// egde u->v is used for flow if (fnet[u][v] - fnet[v][u] > 0)
-	// prevs contains min cut: if prevs[v] == -1, v not reachable from s; otherwise is
-	// or, use nfs from s: use edge u->v if (cap[u][v] - (fnet[u][v] - fnet[v][u]) != 0)
-	// egdes in min cut are edges from vertices in source set to vertices in sink set
+    long long flow = fordFulkerson(n, s, t);
+    // egde u->v is used for flow if (fnet[u][v] - fnet[v][u] > 0)
+    // prevs contains min cut: if prevs[v] == -1, v not reachable from s; otherwise is
+    // or, use nfs from s: use edge u->v if (cap[u][v] - (fnet[u][v] - fnet[v][u]) != 0)
+    // egdes in min cut are edges from vertices in source set to vertices in sink set
 }
 ```
 
@@ -653,21 +653,21 @@ int nextNode[MAX][MAX];
 // nodes = number of nodes
 void floyd_warshall(int nodes)
 {
-	for (int k = 0; k < nodes; k++)
-	{
-		for (int i = 0; i < nodes; i++)
-		{
-			for (int j = 0; j < nodes; j++)
-			{
-				if (edges[i][k] != INF && edges[k][j] != INF &&
-					edges[i][k] + edges[k][j] < edges[i][j])
-				{
-					edges[i][j] = edges[i][k] + edges[k][j];
-					nextNode[i][j] = nextNode[i][k];
-				}
-			}
-		}
-	}
+    for (int k = 0; k < nodes; k++)
+    {
+        for (int i = 0; i < nodes; i++)
+        {
+            for (int j = 0; j < nodes; j++)
+            {
+                if (edges[i][k] != INF && edges[k][j] != INF &&
+                    edges[i][k] + edges[k][j] < edges[i][j])
+                {
+                    edges[i][j] = edges[i][k] + edges[k][j];
+                    nextNode[i][j] = nextNode[i][k];
+                }
+            }
+        }
+    }
 }
 ```
 
@@ -675,17 +675,17 @@ void floyd_warshall(int nodes)
 // after running Floyd-Warshall, extracts shortest path from u, to v, if it exists
 std::vector<int> getPath(int u, int v)
 {
-	std::vector<int> path;
-	// no such path
-	if (nextNode[u][v] == -1) return path;
+    std::vector<int> path;
+    // no such path
+    if (nextNode[u][v] == -1) return path;
 
-	path.push_back(u);
-	while(u != v)
-	{
-		u = nextNode[u][v];
-		path.push_back(u);
-	}
-	return path;
+    path.push_back(u);
+    while(u != v)
+    {
+        u = nextNode[u][v];
+        path.push_back(u);
+    }
+    return path;
 }
 ```
 
@@ -714,40 +714,40 @@ int n, m;
 ```c++
 bool bpm(int u)
 {
-	for (int v = 0; v < n; v++)
-	{
-		if (graph[u][v])
-		{
-			if (visited[v]) continue;
-			visited[v] = true;
-			if (matchR[v] < 0 || bpm(matchR[v]))
-			{
-				matchL[u] = v;
-				matchR[v] = u;
-				return true;
-			}
-		}
-	}
-	return false;
+    for (int v = 0; v < n; v++)
+    {
+        if (graph[u][v])
+        {
+            if (visited[v]) continue;
+            visited[v] = true;
+            if (matchR[v] < 0 || bpm(matchR[v]))
+            {
+                matchL[u] = v;
+                matchR[v] = u;
+                return true;
+            }
+        }
+    }
+    return false;
 }
 ```
 
 ```c++
 int main()
 {
-	// set m and n, initialize matchL and matchR to -1
-	memset(matchL, -1, sizeof(matchL)); memset(matchR, -1, sizeof(matchR));
-	int cnt = 0; // flow counter starts at 0
+    // set m and n, initialize matchL and matchR to -1
+    memset(matchL, -1, sizeof(matchL)); memset(matchR, -1, sizeof(matchR));
+    int cnt = 0; // flow counter starts at 0
 
-	for (int i = 0; i < m; i++)
-	{
-		memset(visited, 0, sizeof(visited));
-		if (bpm(i)) cnt++; // if found pigeonhole for i, increment cnt
-	}
+    for (int i = 0; i < m; i++)
+    {
+        memset(visited, 0, sizeof(visited));
+        if (bpm(i)) cnt++; // if found pigeonhole for i, increment cnt
+    }
 
-	// cnt is the number of happy pigeons (nodes with matches)
-	// matchL[i] is hole for pigeon i, or -1 if no hole
-	// matchR[j] is pigeon for hole j, or -1 if hole is empty
+    // cnt is the number of happy pigeons (nodes with matches)
+    // matchL[i] is hole for pigeon i, or -1 if no hole
+    // matchR[j] is pigeon for hole j, or -1 if hole is empty
 }
 ```
 
@@ -776,11 +776,11 @@ int V, E;
 // computer indegrees of all nodes, save in table
 void computeInDegrees()
 {
-	memset(indegree, 0, sizeof(indegree));
-	for (int i = 0; i < V; i++)
-		for (int j = 0; j < V; j++)
-			if (graph[j][i])
-				indegree[i]++;
+    memset(indegree, 0, sizeof(indegree));
+    for (int i = 0; i < V; i++)
+        for (int j = 0; j < V; j++)
+            if (graph[j][i])
+                indegree[i]++;
 }
 ```
 
@@ -789,43 +789,43 @@ void computeInDegrees()
 // returns false if graph is not a DASG, or if need strict ordering, ordering not possible
 bool toposort(bool strict=false)
 {
-	// vertices with indegree 0
-	std::queue<int> zeroin;
-	int current, cnt = 0;
+    // vertices with indegree 0
+    std::queue<int> zeroin;
+    int current, cnt = 0;
 
-	computeInDegrees();
+    computeInDegrees();
 
-	for (int i = 0; i < V; i++)
-	{
-		if (indegree[i] == 0) zeroin.push(i);
-	}
+    for (int i = 0; i < V; i++)
+    {
+        if (indegree[i] == 0) zeroin.push(i);
+    }
 
-	while (!zeroin.empty())
-	{
-		// if need strictly defined ordering and queue size > 1, return false
-		if (strict && zeroin.size() > 1) return false;
+    while (!zeroin.empty())
+    {
+        // if need strictly defined ordering and queue size > 1, return false
+        if (strict && zeroin.size() > 1) return false;
 
-		current = zeroin.front(); zeroin.pop();
-		sorted[cnt] = current;
-		for (int i = 0; i < V; i++)
-		{
-			if (graph[current][i])
-			{
-				indegree[i]--;
-				if (indegree[i] == 0) zeroin.push(i);
-			}
-		}
-		cnt += 1;
-	}
+        current = zeroin.front(); zeroin.pop();
+        sorted[cnt] = current;
+        for (int i = 0; i < V; i++)
+        {
+            if (graph[current][i])
+            {
+                indegree[i]--;
+                if (indegree[i] == 0) zeroin.push(i);
+            }
+        }
+        cnt += 1;
+    }
 
-	// not a DAG, return false
-	if (cnt != V) return false;
-	for (int i = 0; i < V; i++)
-	{
-		std::cout << sorted[i] << " ";
-	}
-	std::cout << std::endl;
-	return true;
+    // not a DAG, return false
+    if (cnt != V) return false;
+    for (int i = 0; i < V; i++)
+    {
+        std::cout << sorted[i] << " ";
+    }
+    std::cout << std::endl;
+    return true;
 }
 ```
 
@@ -838,35 +838,35 @@ bool toposort(bool strict=false)
 ```c++
 struct point
 {
-	long double x, y;
-	point(long double xloc, long double yloc): x(xloc), y(yloc) {}
-	point() {}
-	point& operator=(const point& other)
-	{
-		x = other.x, y = other.y;
-		return *this;
-	}
-	int operator==(const point& other)
-	{
-		return (other.x == x && other.y == y);
-	}
-	int operator!=(const point& other)
-	{
-		return !(other.x == x && other.y == y);
-	}
-	bool operator<(const point& other) const
-	{
-		return (x < other.x ? true: (x == other.x && y < other.y));
-	}
+    long double x, y;
+    point(long double xloc, long double yloc): x(xloc), y(yloc) {}
+    point() {}
+    point& operator=(const point& other)
+    {
+        x = other.x, y = other.y;
+        return *this;
+    }
+    int operator==(const point& other)
+    {
+        return (other.x == x && other.y == y);
+    }
+    int operator!=(const point& other)
+    {
+        return !(other.x == x && other.y == y);
+    }
+    bool operator<(const point& other) const
+    {
+        return (x < other.x ? true: (x == other.x && y < other.y));
+    }
 };
 ```
 
 ```c++
 struct segment
 {
-	point p1, p2;
-	segment(point a, point b): p1(a), p2(b) {}
-	segment () {}
+    point p1, p2;
+    segment(point a, point b): p1(a), p2(b) {}
+    segment () {}
 };
 ```
 
@@ -895,12 +895,12 @@ Various utility function required by computational geometry algorithms. Uses the
 // computes the cross product from AB to AC
 long double crossProduct(point A, point B, point C)
 {
-	vect AB, AC;
-	AB.i = B.x - A.x;
-	AB.j = B.y - A.y;
-	AC.i = C.x - A.x;
-	AC.j = C.y - A.y;
-	return (AB.i * AC.j - AB.j * AC.i);
+    vect AB, AC;
+    AB.i = B.x - A.x;
+    AB.j = B.y - A.y;
+    AC.i = C.x - A.x;
+    AC.j = C.y - A.y;
+    return (AB.i * AC.j - AB.j * AC.i);
 }
 ```
 
@@ -908,12 +908,12 @@ long double crossProduct(point A, point B, point C)
 // computes the dot product AB . BC
 long double dotProduct(point A, point B, point C)
 {
-	vect AB, BC;
-	AB.i = B.x - A.x;
-	AB.j = B.y - A.y;
-	BC.i = C.x - B.x;
-	BC.j = C.y - B.y;
-	return (AB.i * BC.i + AB.j * BC.j);
+    vect AB, BC;
+    AB.i = B.x - A.x;
+    AB.j = B.y - A.y;
+    BC.i = C.x - B.x;
+    BC.j = C.y - B.y;
+    return (AB.i * BC.i + AB.j * BC.j);
 }
 ```
 
@@ -922,9 +922,9 @@ long double dotProduct(point A, point B, point C)
 // returns 0 if points are colinear, 1 for clockwise orientation, and 2 for counter-clockwise orientation
 int orientation(point p, point q, point r)
 {
-	int val = (int)crossProduct(p, q, r);
-	if (val == 0) return COLINEAR;
-	return (val > 0) ? CW : CCW;
+    int val = (int)crossProduct(p, q, r);
+    if (val == 0) return COLINEAR;
+    return (val > 0) ? CW : CCW;
 }
 ```
 
@@ -932,8 +932,8 @@ int orientation(point p, point q, point r)
 // returns true if point p lies on segment s (assumes points are colinear)
 bool onSegment(point p, segment s)
 {
-	return (p.x <= std::max(s.p1.x, s.p2.x) && p.x >= std::min(s.p1.x, s.p2.x) &&
-		p.y <= std::max(s.p1.y, s.p2.y) && p.y >= std::min(s.p1.y, s.p2.y));
+    return (p.x <= std::max(s.p1.x, s.p2.x) && p.x >= std::min(s.p1.x, s.p2.x) &&
+        p.y <= std::max(s.p1.y, s.p2.y) && p.y >= std::min(s.p1.y, s.p2.y));
 }
 ```
 
@@ -941,7 +941,7 @@ bool onSegment(point p, segment s)
 // computes squared distance between points A and B
 long double pointSquaredDist(point A, point B)
 {
-	return SQR(A.x - B.x) + SQR(A.y - B.y);
+    return SQR(A.x - B.x) + SQR(A.y - B.y);
 }
 ```
 
@@ -949,7 +949,7 @@ long double pointSquaredDist(point A, point B)
 // computes the distance between points A and B
 long double pointDist(point A, point B)
 {
-	return sqrtl(SQR(A.x - B.x) + SQR(A.y - B.y));
+    return sqrtl(SQR(A.x - B.x) + SQR(A.y - B.y));
 }
 ```
 
@@ -957,16 +957,16 @@ long double pointDist(point A, point B)
 // returns true if segment s1 is straddles by segment s2
 bool straddle(segment s1, segment s2)
 {
-	long double cross1 = crossProduct(s1.p1, s1.p2, s2.p1);
-	long double cross2 = crossProduct(s1.p1, s1.p2, s2.p2);
+    long double cross1 = crossProduct(s1.p1, s1.p2, s2.p1);
+    long double cross2 = crossProduct(s1.p1, s1.p2, s2.p2);
 
-	// if both cross products have the same sign, there is no straddle
-	if ((cross1 > 0 && cross2 > 0) || (cross1 < 0 && cross2 < 0))
-		return false;
-	// return true if points are colinear, false if not
-	if (cross1 == 0 && cross2 == 0 && orientation(s1.p2, s2.p1, s2.p2) != COLINEAR)
-		return false;
-	return true;
+    // if both cross products have the same sign, there is no straddle
+    if ((cross1 > 0 && cross2 > 0) || (cross1 < 0 && cross2 < 0))
+        return false;
+    // return true if points are colinear, false if not
+    if (cross1 == 0 && cross2 == 0 && orientation(s1.p2, s2.p1, s2.p2) != COLINEAR)
+        return false;
+    return true;
 }
 ```
 
@@ -987,60 +987,60 @@ Given two line segments, returns a list of intersection points. Can be modified 
 // to modify to return a boolean, perform the indicated replacements
 std::vector<point> intersect(segment s1, segment s2)
 {
-	std::vector<point> res;
-	point a = s1.p1, b = s1.p2, c = s2.p1, d = s2.p2;
+    std::vector<point> res;
+    point a = s1.p1, b = s1.p2, c = s2.p1, d = s2.p2;
 
-	// if all points are colinear
-	if (orientation(a, b, c) == 0 && orientation(a, b, d) == 0 &&
-	    orientation(c, d, a) == 0 && orientation(c, d, b) == 0)
-	{
-		// order the points: leftmost, lowest point is min
-		point min_s1 = std::min(a, b), max_s1 = std::max(a, b);
-		point min_s2 = std::min(c, d), max_s2 = std::max(c, d);
+    // if all points are colinear
+    if (orientation(a, b, c) == 0 && orientation(a, b, d) == 0 &&
+        orientation(c, d, a) == 0 && orientation(c, d, b) == 0)
+    {
+        // order the points: leftmost, lowest point is min
+        point min_s1 = std::min(a, b), max_s1 = std::max(a, b);
+        point min_s2 = std::min(c, d), max_s2 = std::max(c, d);
 
-		// no intersection, return empty vector
-		if (min_s1 < min_s2)
-		{
-			if (max_s1 < min_s2)
-			{
-				// return false;
-				return res;
-			}
-		}
-		else if (min_s2 < min_s1 && max_s2 < min_s1)
-		{
-			//return false;
-			return res;
-		}
+        // no intersection, return empty vector
+        if (min_s1 < min_s2)
+        {
+            if (max_s1 < min_s2)
+            {
+                // return false;
+                return res;
+            }
+        }
+        else if (min_s2 < min_s1 && max_s2 < min_s1)
+        {
+            //return false;
+            return res;
+        }
 
-		point start = std::max(min_s1, min_s2), end = std::min(max_s1, max_s2);
-		if (start == end)
-		{
-			// overlap is one point
-			res.push_back(start);
-		}
-		else
-		{
-			res.push_back(std::min(start, end));
-			res.push_back(std::max(start, end));
-		}
-		// return true; // and remove above overlap code block
-		return res;
-	}
+        point start = std::max(min_s1, min_s2), end = std::min(max_s1, max_s2);
+        if (start == end)
+        {
+            // overlap is one point
+            res.push_back(start);
+        }
+        else
+        {
+            res.push_back(std::min(start, end));
+            res.push_back(std::max(start, end));
+        }
+        // return true; // and remove above overlap code block
+        return res;
+    }
 
-	// lines do not overlap, compute intersection point and test for existence
-	double x1 = (b.x - a.x), y1 = (b.y - a.y), x2 = (d.x - c.x), y2 = (d.y - c.y);
-	double u1 = (-y1 * (a.x - c.x) + x1 * (a.y - c.y)) / (-x2 * y1 + x1 * y2);
-	double u2 = (x2 * (a.y - c.y) - y2 * (a.x - c.x)) / (-x2 * y1 + x1 * y2);
+    // lines do not overlap, compute intersection point and test for existence
+    double x1 = (b.x - a.x), y1 = (b.y - a.y), x2 = (d.x - c.x), y2 = (d.y - c.y);
+    double u1 = (-y1 * (a.x - c.x) + x1 * (a.y - c.y)) / (-x2 * y1 + x1 * y2);
+    double u2 = (x2 * (a.y - c.y) - y2 * (a.x - c.x)) / (-x2 * y1 + x1 * y2);
 
-	// lines intersect
-	if (u1 >= 0 && u1 <= 1 && u2 >= 0 && u2 <= 1)
-	{
-		// return true;
-		res.push_back(point((a.x + u2 * x1), (a.y + u2 * y1)));
-	}
-	//return false;
-	return res;
+    // lines intersect
+    if (u1 >= 0 && u1 <= 1 && u2 >= 0 && u2 <= 1)
+    {
+        // return true;
+        res.push_back(point((a.x + u2 * x1), (a.y + u2 * y1)));
+    }
+    //return false;
+    return res;
 }
 ```
 
@@ -1059,22 +1059,22 @@ Calculates the minimum distance between a given point and a line. Works for infi
 // computes the distance from  line AB to point C; isSegment = True => AB is a segment
 long double linePointDist(segment s, point p, bool isSegment)
 {
-	// degenerate case
-	if (s.p1 == s.p2)
-	{
-		if (p == s.p1)
-			return 0;
-		else
-			return pointDist(p, s.p1);
-	}
-	if (isSegment)
-	{
-		if (dotProduct(s.p1, s.p2, p) > 0)
-			return pointDist(s.p2, p);
-		if (dotProduct(s.p2, s.p1, p) > 0)
-			return pointDist(s.p1, p);
-	}
-	return abs(crossProduct(s.p1, s.p2, p) / pointDist(s.p1, s.p2));
+    // degenerate case
+    if (s.p1 == s.p2)
+    {
+        if (p == s.p1)
+            return 0;
+        else
+            return pointDist(p, s.p1);
+    }
+    if (isSegment)
+    {
+        if (dotProduct(s.p1, s.p2, p) > 0)
+            return pointDist(s.p2, p);
+        if (dotProduct(s.p2, s.p1, p) > 0)
+            return pointDist(s.p1, p);
+    }
+    return abs(crossProduct(s.p1, s.p2, p) / pointDist(s.p1, s.p2));
 }
 ```
 
@@ -1098,51 +1098,51 @@ Returns a list of points used in convex hull of set based on Graham's scan. `onE
 // if onEdge true, function will use as many points as possible for hull
 std::vector<point> convexHull(std::vector<point> X, bool onEdge=false)
 {
-	std::vector<point> hull;
-	// number of points in polygon
-	long long N = X.size();
-	// used array for points, initialized to false
-	std::vector<bool> used(N, false);
+    std::vector<point> hull;
+    // number of points in polygon
+    long long N = X.size();
+    // used array for points, initialized to false
+    std::vector<bool> used(N, false);
 
-	// index of previous point
-	int p = 0;
-	for (int i = 1; i < N; i++)
-	{
-		// find leftmost point
-		if (X[i].x < X[p].x)
-			p = i;
-	}
+    // index of previous point
+    int p = 0;
+    for (int i = 1; i < N; i++)
+    {
+        // find leftmost point
+        if (X[i].x < X[p].x)
+            p = i;
+    }
 
-	// start at leftmost point
-	int start = p;
+    // start at leftmost point
+    int start = p;
 
-	do
-	{
-		// index of next point
-		int n = -1;
-		long double dist = onEdge ? INF : 0;
+    do
+    {
+        // index of next point
+        int n = -1;
+        long double dist = onEdge ? INF : 0;
 
-		for (int i = 0; i < N; i++)
-		{
-			// skip point used / added last round
-			if (i == p || used[i]) continue;
-			// first loop, n = i
-			if (n == -1) n = 1;
-			long double cross = crossProduct(X[p], X[i], X[n]);
-			long double d = pointSquaredDist(X[i], X[p]);
+        for (int i = 0; i < N; i++)
+        {
+            // skip point used / added last round
+            if (i == p || used[i]) continue;
+            // first loop, n = i
+            if (n == -1) n = 1;
+            long double cross = crossProduct(X[p], X[i], X[n]);
+            long double d = pointSquaredDist(X[i], X[p]);
 
-			if (cross < 0 || (cross == 0 && ((onEdge && d < dist) || (!onEdge && d > dist))))
-			{
-				n = i;
-				dist = d;
-			}
-		}
-		p = n;
-		used[p] = true;
-		hull.push_back(X[p]);
-	}
-	while (start != p);
-	return hull;
+            if (cross < 0 || (cross == 0 && ((onEdge && d < dist) || (!onEdge && d > dist))))
+            {
+                n = i;
+                dist = d;
+            }
+        }
+        p = n;
+        used[p] = true;
+        hull.push_back(X[p]);
+    }
+    while (start != p);
+    return hull;
 }
 ```
 
@@ -1159,12 +1159,12 @@ Computes area of a polygon from a list of ordered vertices; sign of reslut indic
 // computes polygon area, may be positive/negative based on CW/CCW ordering of points
 long double polyArea(std::vector<point> p)
 {
-	long double result = 0;
-	for (int i = 0, j = 0, n = p.size(); i < n; i++, j = (i + 1) % n)
-	{
-		result += (p[i].x * p[j].y) - (p[i].y * p[j].x);
-	}
-	return result / 2.0;
+    long double result = 0;
+    for (int i = 0, j = 0, n = p.size(); i < n; i++, j = (i + 1) % n)
+    {
+        result += (p[i].x * p[j].y) - (p[i].y * p[j].x);
+    }
+    return result / 2.0;
 }
 ```
 
@@ -1191,30 +1191,30 @@ Determines where a point lies in relation to a polygon: inside, outside, or on t
 // returns INSIDE, OUTSIDE, or ONEDGE
 int insidePoly(std::vector<point> poly, point p)
 {
-	bool inside = false;
-	point outside(INF, p.y);
-	std::vector<point> intersection;
+    bool inside = false;
+    point outside(INF, p.y);
+    std::vector<point> intersection;
 
-	for (size_t i = 0, j = poly.size() - 1; i < poly.size(); i++, j = i - 1)
-	{
-		// p is a vertex
-		if (p == poly[i] || p == poly[j])
-			return ONEDGE;
-		// p on egde
-		if (orientation(p, poly[i], poly[j]) == COLINEAR && onSegment(p, segment(poly[i], poly[j])))
-			return ONEDGE;
-		intersection = intersect(segment(p, outside), segment(poly[i], poly[j]));
-		// intersection on vertex outside poly, continue
-		if (intersection.size() == 1)
-		{
-			if (poly[i] == intersection[0] && poly[j].y <= p.y)
-				continue;
-			if (poly[j] == intersection[0] && poly[i].y <= p.y)
-				continue;
-			inside = !inside;
-		}
-	}
-	return inside ? INSIDE : OUTSIDE;
+    for (size_t i = 0, j = poly.size() - 1; i < poly.size(); i++, j = i - 1)
+    {
+        // p is a vertex
+        if (p == poly[i] || p == poly[j])
+            return ONEDGE;
+        // p on egde
+        if (orientation(p, poly[i], poly[j]) == COLINEAR && onSegment(p, segment(poly[i], poly[j])))
+            return ONEDGE;
+        intersection = intersect(segment(p, outside), segment(poly[i], poly[j]));
+        // intersection on vertex outside poly, continue
+        if (intersection.size() == 1)
+        {
+            if (poly[i] == intersection[0] && poly[j].y <= p.y)
+                continue;
+            if (poly[j] == intersection[0] && poly[i].y <= p.y)
+                continue;
+            inside = !inside;
+        }
+    }
+    return inside ? INSIDE : OUTSIDE;
 }
 ```
 
@@ -1232,56 +1232,56 @@ Maintains disjoint sets of integers with path compression. Performs `unite`, `fi
 ```c++
 struct union_find
 {
-	// parent is representative element from set
-	std::vector<int> parent;
-	std::vector<int> sizes;
-	// number of distinct sets
-	int count;
+    // parent is representative element from set
+    std::vector<int> parent;
+    std::vector<int> sizes;
+    // number of distinct sets
+    int count;
 
-	// constructor
-	union_find(int n): parent(n), count(n), sizes(n)
-	{
-		for (int i = 0; i < n; i++)
-		{
-			parent[i] = [i];
-			sizes[i] = 1;
-		}
-	}
+    // constructor
+    union_find(int n): parent(n), count(n), sizes(n)
+    {
+        for (int i = 0; i < n; i++)
+        {
+            parent[i] = [i];
+            sizes[i] = 1;
+        }
+    }
 
-	// returns parent of set containing x
-	int find(int x)
-	{
-		if (parent[x] == x)
-			return x;
-		int temp = parent[x];
-		parent[x] = find(parent[x]);
-		if (parent[x] != temp)
-			sizes[temp] -= sizes[x];
-		return parent[x];
-	}
+    // returns parent of set containing x
+    int find(int x)
+    {
+        if (parent[x] == x)
+            return x;
+        int temp = parent[x];
+        parent[x] = find(parent[x]);
+        if (parent[x] != temp)
+            sizes[temp] -= sizes[x];
+        return parent[x];
+    }
 
-	// returns the size of the set containing x
-	int get_size(int x)
-	{
-		return sizes[find(x)];
-	}
+    // returns the size of the set containing x
+    int get_size(int x)
+    {
+        return sizes[find(x)];
+    }
 
-	// unions two sets containing x and y
-	void unite(int x, int y)
-	{
-		int x_par = find(x);
-		int y_par = find(y);
-		parent[x_par] = y_par;
-		sizes[y_par] += sizes[x_par];
+    // unions two sets containing x and y
+    void unite(int x, int y)
+    {
+        int x_par = find(x);
+        int y_par = find(y);
+        parent[x_par] = y_par;
+        sizes[y_par] += sizes[x_par];
 
-		count--;
-	}
+        count--;
+    }
 
-	// returns true if x and y are in the same set
-	bool share_set(int x, int y)
-	{
-		return find(x) == find(y);
-	}
+    // returns true if x and y are in the same set
+    bool share_set(int x, int y)
+    {
+        return find(x) == find(y);
+    }
 };
 ```
 
@@ -1291,11 +1291,11 @@ struct union_find
 int p[MAXN];
 int find(int x)
 {
-	return p[x] == x ? x : p[x] = find(p[x]);
+    return p[x] == x ? x : p[x] = find(p[x]);
 }
 void unite(int x, int y)
 {
-	p[find(x)] = find(y);
+    p[find(x)] = find(y);
 }
 // initialize in main()
 // for (int i = 0; i < MAXN; i++) p[i] = i;
@@ -1313,44 +1313,44 @@ Creates a BIT for prefix sums of collection of items. Logarithmic time updates a
 ```c++
 struct Fenwick
 {
-	std::vector<long long> tree;
+    std::vector<long long> tree;
 
-	// constructors
-	Fenwick(int n)
-	{
-		tree.resize(n, 0);
-	}
+    // constructors
+    Fenwick(int n)
+    {
+        tree.resize(n, 0);
+    }
 
-	Fenwick(int n, std::vector<long long> val)
-	{
-		tree.resize(n, 0);
-		for (int i = 0; i < n; i++)
-		{
-			increase(i, val[i]);
-		}
-	}
+    Fenwick(int n, std::vector<long long> val)
+    {
+        tree.resize(n, 0);
+        for (int i = 0; i < n; i++)
+        {
+            increase(i, val[i]);
+        }
+    }
 
-	// increase item at position i by delta d
-	void increase(int i, long long d)
-	{
-		for (; i < tree.size(); i |= i + 1)
-			tree[i] += d;
-	}
+    // increase item at position i by delta d
+    void increase(int i, long long d)
+    {
+        for (; i < tree.size(); i |= i + 1)
+            tree[i] += d;
+    }
 
-	// find sum from index 0 to i
-	long long sum(int i)
-	{
-		long long sum = 0;
-		for (; i > 0; i &= i - 1)
-			sum += tree[i-1];
-		return sum;
-	}
+    // find sum from index 0 to i
+    long long sum(int i)
+    {
+        long long sum = 0;
+        for (; i > 0; i &= i - 1)
+            sum += tree[i-1];
+        return sum;
+    }
 
-	// get sum from index left to index right (inclusive)
-	long long getsum(int left, int right)
-	{
-		return sum(right) - sum(left - 1);
-	}
+    // get sum from index left to index right (inclusive)
+    long long getsum(int left, int right)
+    {
+        return sum(right) - sum(left - 1);
+    }
 };
 ```
 
@@ -1366,161 +1366,161 @@ Uses a flattened segment tree for range queries of various statistics. This vers
 ```c++
 int max(int a, int b)
 {
-	return (a > b ? a : b);
+    return (a > b ? a : b);
 }
 ```
 
 ```c++
 struct SegmentTree
 {
-	std::vector<int> tree, lazy;
-	int n, root, size;
+    std::vector<int> tree, lazy;
+    int n, root, size;
 
-	// constructor
-	SegmentTree(int n, std::vector<int> arr) : n(n), root(1)
-	{
-		// height
-		int x = (int)(ceil(log2(n)));
-		// size of array
-		size = 2 * (int)pow(2, x);
-		tree.resize(size);
-		lazy.resize(size);
-		build(arr, root, 0, n - 1);
-	}
+    // constructor
+    SegmentTree(int n, std::vector<int> arr) : n(n), root(1)
+    {
+        // height
+        int x = (int)(ceil(log2(n)));
+        // size of array
+        size = 2 * (int)pow(2, x);
+        tree.resize(size);
+        lazy.resize(size);
+        build(arr, root, 0, n - 1);
+    }
 
-	// builds tree from array arr; node = curr index, start->end = node range
-	void build(std::vector<int> arr, int node, int start, int end)
-	{
-		// leaf, copy arr value
-		if (start == end)
-		{
-			tree[node] = arr[start];
-		}
-		else // recurse on children
-		{
-			int mid = (start + end) / 2;
-			build(arr, 2 * node, start, mid);
-			build(arr, 2 * node + 1, mid + 1, end);
-			tree[node] = max(tree[2 * node], tree[2 * node + 1]);
-		}
-	}
+    // builds tree from array arr; node = curr index, start->end = node range
+    void build(std::vector<int> arr, int node, int start, int end)
+    {
+        // leaf, copy arr value
+        if (start == end)
+        {
+            tree[node] = arr[start];
+        }
+        else // recurse on children
+        {
+            int mid = (start + end) / 2;
+            build(arr, 2 * node, start, mid);
+            build(arr, 2 * node + 1, mid + 1, end);
+            tree[node] = max(tree[2 * node], tree[2 * node + 1]);
+        }
+    }
 
-	// performs pending updates on node, used by updateRange and query
-	void pendingUpdate(int node, int start, int end)
-	{
-		if (lazy[node] != 0)
-		{
-			// update node by number of descendant leaf nodes * update value
-			tree[node] += (end - start + 1) * lazy[node];
-			// not leaf node, mark children for update
-			if (start != end)
-			{
-				lazy[2 * node] += lazy[node];
-				lazy[2 * node + 1] += lazy[node];
-			}
-			// mark node as no longer requiring update
-			lazy[node] = 0;
-		}
-	}
+    // performs pending updates on node, used by updateRange and query
+    void pendingUpdate(int node, int start, int end)
+    {
+        if (lazy[node] != 0)
+        {
+            // update node by number of descendant leaf nodes * update value
+            tree[node] += (end - start + 1) * lazy[node];
+            // not leaf node, mark children for update
+            if (start != end)
+            {
+                lazy[2 * node] += lazy[node];
+                lazy[2 * node + 1] += lazy[node];
+            }
+            // mark node as no longer requiring update
+            lazy[node] = 0;
+        }
+    }
 
-	// updates item at index idx by adding diff and updates segment tree to match
-	void update(int idx, int diff)
-	{
-		update(root, 0, n - 1, idx, diff);
-	}
+    // updates item at index idx by adding diff and updates segment tree to match
+    void update(int idx, int diff)
+    {
+        update(root, 0, n - 1, idx, diff);
+    }
 
-	void update(int node, int start, int end, int idx, int diff)
-	{
-		// leaf node: update node
-		if (start == end)
-		{
-			tree[node] += diff;
-		}
-		else // recurse children
-		{
-			int mid = (start + end) / 2;
-			if (start <= idx && idx <= mid)
-			{
-				update(2 * node, start, mid, idx, diff);
-			}
-			else
-			{
-				update(2 * node + 1, mid + 1, end, idx, diff);
-			}
-			tree[node] = max(tree[2 * node], tree[2 * node + 1]);
-		}
-	}
+    void update(int node, int start, int end, int idx, int diff)
+    {
+        // leaf node: update node
+        if (start == end)
+        {
+            tree[node] += diff;
+        }
+        else // recurse children
+        {
+            int mid = (start + end) / 2;
+            if (start <= idx && idx <= mid)
+            {
+                update(2 * node, start, mid, idx, diff);
+            }
+            else
+            {
+                update(2 * node + 1, mid + 1, end, idx, diff);
+            }
+            tree[node] = max(tree[2 * node], tree[2 * node + 1]);
+        }
+    }
 
-	// updates items at in range l to r (inclusive) by adding diff
-	void updateRange(int l, int r, int diff)
-	{
-		updateRange(root, 0, n - 1, l , r, diff);
-	}
+    // updates items at in range l to r (inclusive) by adding diff
+    void updateRange(int l, int r, int diff)
+    {
+        updateRange(root, 0, n - 1, l , r, diff);
+    }
 
-	void updateRange(int node, int start, int end, int l, int r, int diff)
-	{
-		// node not in range
-		if (start > end || start > r || end < l)
-		{
-			return;
-		}
-		// perform pending updates
-		pendingUpdate(node, start, end);
-		// node entirely within update range, update node and mark children
-		if (start >= l && end <= r)
-		{
-			// update node
-			tree[node] += (end - start + 1) * diff;
-			// mark children for update
-			if (start != end)
-			{
-				lazy[2 * node] += diff;
-				lazy[2 * node + 1] += diff;
-			}
-			return;
-		}
-		// node range overlaps update range, recurse on children
-		int mid = (start + end) / 2;
-		updateRange(2 * node, start, mid, l, r, diff);
-		updateRange(2 * node + 1, mid + 1, end, l, r, diff);
-		tree[node] = max(tree[2 * node], tree[2 * node + 1]);
-	}
+    void updateRange(int node, int start, int end, int l, int r, int diff)
+    {
+        // node not in range
+        if (start > end || start > r || end < l)
+        {
+            return;
+        }
+        // perform pending updates
+        pendingUpdate(node, start, end);
+        // node entirely within update range, update node and mark children
+        if (start >= l && end <= r)
+        {
+            // update node
+            tree[node] += (end - start + 1) * diff;
+            // mark children for update
+            if (start != end)
+            {
+                lazy[2 * node] += diff;
+                lazy[2 * node + 1] += diff;
+            }
+            return;
+        }
+        // node range overlaps update range, recurse on children
+        int mid = (start + end) / 2;
+        updateRange(2 * node, start, mid, l, r, diff);
+        updateRange(2 * node + 1, mid + 1, end, l, r, diff);
+        tree[node] = max(tree[2 * node], tree[2 * node + 1]);
+    }
 
-	// returns max array item from inted l to index r (inclusive) using tree
-	int query(int l, int r)
-	{
-		return query(root, 0, n - 1, l, r);
-	}
+    // returns max array item from inted l to index r (inclusive) using tree
+    int query(int l, int r)
+    {
+        return query(root, 0, n - 1, l, r);
+    }
 
-	int query(int node, int start, int end, int l, int r)
-	{
-		// node outside range
-		if (r < start || end < l)
-		{
-			return 0;
-		}
-		pendingUpdate(node, start, end);
+    int query(int node, int start, int end, int l, int r)
+    {
+        // node outside range
+        if (r < start || end < l)
+        {
+            return 0;
+        }
+        pendingUpdate(node, start, end);
 
-		// node completely withing query range, return node value
-		if (l <= start && end <= r)
-		{
-			return tree[node];
-		}
-		int mid = (start + end) / 2;
-		// node overlaps query range, recurse children
-		return max(query(2 * node, start, mid, l, r), query(2 * node + 1, mid + 1, end, l, r));
-	}
+        // node completely withing query range, return node value
+        if (l <= start && end <= r)
+        {
+            return tree[node];
+        }
+        int mid = (start + end) / 2;
+        // node overlaps query range, recurse children
+        return max(query(2 * node, start, mid, l, r), query(2 * node + 1, mid + 1, end, l, r));
+    }
 };
 ```
 
 ```c++
 int main()
 {
-	std::vector arr(10, 0);
-	SegmentTree tree(arr.size(), arr);
-	tree.query(1, 3);
-	tree.update(1, 7);
-	tree.updateRange(2, 3, 4);
+    std::vector arr(10, 0);
+    SegmentTree tree(arr.size(), arr);
+    tree.query(1, 3);
+    tree.update(1, 7);
+    tree.updateRange(2, 3, 4);
 }
 ```
 
@@ -1546,21 +1546,21 @@ int d[MAX_LEN][MAX_LEN];
 // initializes array, call before edit_dist
 void init_table(int len1, int len2)
 {
-	for (int i = 0; i <= len1; i++)
-	{
-		for (int j = 0; j <= len2; j++)
-		{
-			d[i][j] = -1;
-		}
-	}
-	for (int i = 0; i <= len1; i++)
-	{
-		d[i][0] = i;
-	}
-	for (int j = 0; j <= len2; j++)
-	{
-		d[0][j] = j;
-	}
+    for (int i = 0; i <= len1; i++)
+    {
+        for (int j = 0; j <= len2; j++)
+        {
+            d[i][j] = -1;
+        }
+    }
+    for (int i = 0; i <= len1; i++)
+    {
+        d[i][0] = i;
+    }
+    for (int j = 0; j <= len2; j++)
+    {
+        d[0][j] = j;
+    }
 }
 ```
 
@@ -1568,7 +1568,7 @@ void init_table(int len1, int len2)
 // returns the minimum of two integers
 int min(int a, int b)
 {
-	return (a < b ? a : b);
+    return (a < b ? a : b);
 }
 ```
 
@@ -1576,20 +1576,20 @@ int min(int a, int b)
 // finds edit distance of s1 and s2; first call: end_s1 = s1.length(), end_s2 = s2.length()
 int edit_dist(std::string s1, std::string s2, int end_s1, int end_s2)
 {
-	int try_delete, try_insert, try_match;
+    int try_delete, try_insert, try_match;
 
-	if (d[end_s1][end_s2] >= 0)
-		return d[end_s1][end_s2];
+    if (d[end_s1][end_s2] >= 0)
+        return d[end_s1][end_s2];
 
-	try_match = edit_dist(s1, s2, end_s1 - 1, end_s2 - 1);
-	if (s1[end_s1 - 1] != s2[end_s2 - 1])
-		try_match++;
+    try_match = edit_dist(s1, s2, end_s1 - 1, end_s2 - 1);
+    if (s1[end_s1 - 1] != s2[end_s2 - 1])
+        try_match++;
 
-	try_delete = edit_dist(s1, s2, end_s1 - 1, end_s2) + 1;
-	try_insert = edit_dist(s1, s2, end_s1, end_s2 - 1) + 1;
+    try_delete = edit_dist(s1, s2, end_s1 - 1, end_s2) + 1;
+    try_insert = edit_dist(s1, s2, end_s1, end_s2 - 1) + 1;
 
-	d[end_s1][end_s2] = min(try_insert, min(try_delete, try_match));
-	return d[end_s1][end_s2];
+    d[end_s1][end_s2] = min(try_insert, min(try_delete, try_match));
+    return d[end_s1][end_s2];
 }
 ```
 
@@ -1616,13 +1616,13 @@ int sa[MAXN], pos[MAXN], lcp[MAXN], tmp[MAXN];
 // compare function used by buildSA()
 bool sufCmp(int i, int j)
 {
-	// compare first gap chars
-	if (pos[i] != pos[j])
-		return pos[i] < pos[j];
-	// if identical, compare next gap chars (second half)
-	i += gap;
-	j += gap;
-	return (i < N && j < N) ? pos[i] < pos[j] : i > j;
+    // compare first gap chars
+    if (pos[i] != pos[j])
+        return pos[i] < pos[j];
+    // if identical, compare next gap chars (second half)
+    i += gap;
+    j += gap;
+    return (i < N && j < N) ? pos[i] < pos[j] : i > j;
 }
 ```
 
@@ -1630,34 +1630,34 @@ bool sufCmp(int i, int j)
 // given a string S, compute the suffix array sa
 void buildSA()
 {
-	N = S.length();
-	for (int i = 0; i < N; i++)
-	{
-		// assume order in given string
-		sa[i] = i;
-		// set rank of each character to character val
-		pos[i] = S[i];
-	}
-	// loop m-gram lengths, gap = len / 2
-	for (gap = 1;; gap *= 2)
-	{
-		// sort the (gap*2)-grams
-		std::sort(sa, sa + N, sufCmp);
-		// compute lengths of each m-gram
-		for (int i = 0; i < N - 1; i++)
-		{
-			tmp[i + 1] = tmp[i] + sufCmp(sa[i], sa[i + 1]);
-		}
-		// map tmp into position
-		for (int i = 0; i < N; i++)
-		{
-			if (tmp[N - 1] == N - 1)
-			{
-				// largest name is N - 1, all done
-				break;
-			}
-		}
-	}
+    N = S.length();
+    for (int i = 0; i < N; i++)
+    {
+        // assume order in given string
+        sa[i] = i;
+        // set rank of each character to character val
+        pos[i] = S[i];
+    }
+    // loop m-gram lengths, gap = len / 2
+    for (gap = 1;; gap *= 2)
+    {
+        // sort the (gap*2)-grams
+        std::sort(sa, sa + N, sufCmp);
+        // compute lengths of each m-gram
+        for (int i = 0; i < N - 1; i++)
+        {
+            tmp[i + 1] = tmp[i] + sufCmp(sa[i], sa[i + 1]);
+        }
+        // map tmp into position
+        for (int i = 0; i < N; i++)
+        {
+            if (tmp[N - 1] == N - 1)
+            {
+                // largest name is N - 1, all done
+                break;
+            }
+        }
+    }
 }
 ```
 
@@ -1665,21 +1665,21 @@ void buildSA()
 // given suffix array sa for string S, computes the LCP for all suffixes
 void buildLCP()
 {
-	// loop characters
-	for (int i = 0, k = 0; i < N; i++)
-	{
-		// if not the first-ranked suffix, compute lcp
-		if (pos[i] != 0)
-		{
-			// j is idx of suffix before i; inc k whil chars match
-			for (int j = sa[pos[i] - 1]; S[i + k] == S[j + k];)
-				k++;
-			// k is number of characters that match, gives lcp
-			lcp[pos[i]] = k;
-			// k is not 0, decrement
-			if (k) k--;
-		}
-	}
+    // loop characters
+    for (int i = 0, k = 0; i < N; i++)
+    {
+        // if not the first-ranked suffix, compute lcp
+        if (pos[i] != 0)
+        {
+            // j is idx of suffix before i; inc k whil chars match
+            for (int j = sa[pos[i] - 1]; S[i + k] == S[j + k];)
+                k++;
+            // k is number of characters that match, gives lcp
+            lcp[pos[i]] = k;
+            // k is not 0, decrement
+            if (k) k--;
+        }
+    }
 }
 ```
 
@@ -1695,90 +1695,90 @@ Uses a prefix table based on longest proper suffixes to search text for a single
 ```c++
 struct KMP_Match
 {
-	// prefix table
-	std::vector<int> T;
-	// pattern for current prefix table and for searching
-	std::string pat;
+    // prefix table
+    std::vector<int> T;
+    // pattern for current prefix table and for searching
+    std::string pat;
 
-	// constructors: empty and with pattern, which builds the prefix table
-	KMP_Match() {};
-	KMP_Match(std::string pattern) : pat(pattern) {this->buildTable(pat);};
+    // constructors: empty and with pattern, which builds the prefix table
+    KMP_Match() {};
+    KMP_Match(std::string pattern) : pat(pattern) {this->buildTable(pat);};
 
-	// build prefix table for KMP algorithm
-	void buildTable(std::string pattern)
-	{
-		pat = pattern;
-		T.clear();
-		T.resize(pat.length() + 1);
-		int i = 0, j = -1;
-		T[i] = j;
-		while (i < pat.size())
-		{
-			while (j >= 0 && pat[i] != pat[j])
-			{
-				j = T[j];
-			}
-			i++, j++;
-			T[i] = j;
-		}
-	}
+    // build prefix table for KMP algorithm
+    void buildTable(std::string pattern)
+    {
+        pat = pattern;
+        T.clear();
+        T.resize(pat.length() + 1);
+        int i = 0, j = -1;
+        T[i] = j;
+        while (i < pat.size())
+        {
+            while (j >= 0 && pat[i] != pat[j])
+            {
+                j = T[j];
+            }
+            i++, j++;
+            T[i] = j;
+        }
+    }
 
-	// returns list of all match positions of pat in txt; no matches, returns empty vector
-	// if all=false, returns vector with single element, position of first match
-	std::vector<int> find(std::string txt, bool all=true)
-	{
-		// start of current match in txt, position in pat
-		int m = 0, i = 0;
-		// list of matches
-		std::vector<int> matches;
+    // returns list of all match positions of pat in txt; no matches, returns empty vector
+    // if all=false, returns vector with single element, position of first match
+    std::vector<int> find(std::string txt, bool all=true)
+    {
+        // start of current match in txt, position in pat
+        int m = 0, i = 0;
+        // list of matches
+        std::vector<int> matches;
 
-		//search to end of txt
-		while (m + 1 < txt.length())
-		{
-			// characters match
-			if (pat[i] == txt[m + i])
-			{
-				// end of pattern, store match loc
-				if (i == pat.length() - 1)
-				{
-					matches.push_back(m);
-					// only want first match, return
-					if (!all) return matches;
-					// move forward to continue searching
-					m = m + 1 - T[i];
-					i = T[i];
-				}
-				// move to next character of pat
-				i++;
-			}
-			else // characters do not match, keep searching
-			{
-				// valid border, skip ahead
-				if (T[i] != -1)
-				{
-					// current pos + length of match - known matched
-					m = m + i - T[i];
-					// start just after known matched
-					i = T[i];
-				}
-				else // no valid border, try next character
-				{
-					i = 0;
-					m++;
-				}
-			}
-		}
-		return matches;
-	}
+        //search to end of txt
+        while (m + 1 < txt.length())
+        {
+            // characters match
+            if (pat[i] == txt[m + i])
+            {
+                // end of pattern, store match loc
+                if (i == pat.length() - 1)
+                {
+                    matches.push_back(m);
+                    // only want first match, return
+                    if (!all) return matches;
+                    // move forward to continue searching
+                    m = m + 1 - T[i];
+                    i = T[i];
+                }
+                // move to next character of pat
+                i++;
+            }
+            else // characters do not match, keep searching
+            {
+                // valid border, skip ahead
+                if (T[i] != -1)
+                {
+                    // current pos + length of match - known matched
+                    m = m + i - T[i];
+                    // start just after known matched
+                    i = T[i];
+                }
+                else // no valid border, try next character
+                {
+                    i = 0;
+                    m++;
+                }
+            }
+        }
+        return matches;
+    }
 };
 ```
 
 ```c++
 int main()
 {
-	string pattern, text;
-	KMP_Match kmp(pattern);
-	std::vector<int> matches = kmp.find(text);
+    string pattern, text;
+    KMP_Match kmp(pattern);
+    std::vector<int> matches = kmp.find(text);
 }
 ```
 
@@ -1797,143 +1797,143 @@ const int ALPHA = 96;
 // maps alpha char to int on range {0..ALPHA-1}
 int cmap(char c)
 {
-	return (c) - ' ';
+    return (c) - ' ';
 }
 ```
 
 ```c++
 struct Aho_Corasick
 {
-	// FSM Node struct: includes index node pointers and list of matches
-	struct Node
-	{
-		int child[ALPHA], failure, match_parent;
-		std::vector<int> match;
-		Node() : failure(0), match_parent(-1)
-		{
-			memset(child, -1, sizeof(child));
-		}
-	};
+    // FSM Node struct: includes index node pointers and list of matches
+    struct Node
+    {
+        int child[ALPHA], failure, match_parent;
+        std::vector<int> match;
+        Node() : failure(0), match_parent(-1)
+        {
+            memset(child, -1, sizeof(child));
+        }
+    };
 
-	std::vector<Node> fsm;
+    std::vector<Node> fsm;
 
-	// constructor, initialize FSM with empty node
-	Aho_Corasick()
-	{
-		fsm.push_back(Node());
-	}
+    // constructor, initialize FSM with empty node
+    Aho_Corasick()
+    {
+        fsm.push_back(Node());
+    }
 
-	// build automaton from word dictionary
-	void build(std::vector<std::string> &words)
-	{
-		for (int w = 0, n = 0; w < words.size(); w++, n = 0)
-		{
-			for (int i = 0; i < words[w].size(); i++)
-			{
-				if (fsm[n].child[cmap(words[w][i])] == -1)
-				{
-					fsm[n].child[cmap(words[w][i])] = fsm.size();
-					// insert new node
-					fsm.push_back(Node());
-				}
-				// move to next node
-				n = fsm[n].child[cmap(words[w][i])];
-			}
-			// end of word, save index as match
-			fsm[n].match.push_back(w);
-		}
-		// complete goto function for root, queue up nodes reached by root
-		std::queue<int> q;
-		for (int k = 0; k < ALPHA; k++)
-		{
-			// point to root
-			if (fsm[0].child[k] == -1)
-			{
-				fsm[0].child[k] = 0;
-			}
-			// if edge k from root
-			else if (fsm[0].child[k] > 0)
-			{
-				// set failure to root
-				fsm[fsm[0].child[k]].failure = 0;
-				// push node to queue
-				q.push(fsm[0].child[k]);
-			}
-		}
-		while (!q.empty())
-		{
-			// get node id from queue
-			int curr = q.front(); q.pop();
-			for (int k = 0; k < ALPHA; k++)
-			{
-				// dest of edge k from curr
-				int dest = fsm[curr].child[k];
-				// valid edge for curr and k, push dest
-				if (dest != -1)
-				{
-					q.push(dest);
-					// node id for traversal
-					int v = fsm[curr].failure;
-					while (fsm[v].child[k] == -1)
-					{
-						v = fsm[v].failure;
-					}
-					fsm[dest].failure = fsm[v].child[k];
-					// save all matches for retrieval during search
-					fsm[dest].match_parent = fsm[v].child[k];
-					while (fsm[dest].match_parent != -1 && fsm[fsm[dest].match_parent].match.empty())
-					{
-						fsm[dest].match_parent = fsm[fsm[dest].match_parent].match_parent;
-					}
-				}
-			}
-		}
-	}
+    // build automaton from word dictionary
+    void build(std::vector<std::string> &words)
+    {
+        for (int w = 0, n = 0; w < words.size(); w++, n = 0)
+        {
+            for (int i = 0; i < words[w].size(); i++)
+            {
+                if (fsm[n].child[cmap(words[w][i])] == -1)
+                {
+                    fsm[n].child[cmap(words[w][i])] = fsm.size();
+                    // insert new node
+                    fsm.push_back(Node());
+                }
+                // move to next node
+                n = fsm[n].child[cmap(words[w][i])];
+            }
+            // end of word, save index as match
+            fsm[n].match.push_back(w);
+        }
+        // complete goto function for root, queue up nodes reached by root
+        std::queue<int> q;
+        for (int k = 0; k < ALPHA; k++)
+        {
+            // point to root
+            if (fsm[0].child[k] == -1)
+            {
+                fsm[0].child[k] = 0;
+            }
+            // if edge k from root
+            else if (fsm[0].child[k] > 0)
+            {
+                // set failure to root
+                fsm[fsm[0].child[k]].failure = 0;
+                // push node to queue
+                q.push(fsm[0].child[k]);
+            }
+        }
+        while (!q.empty())
+        {
+            // get node id from queue
+            int curr = q.front(); q.pop();
+            for (int k = 0; k < ALPHA; k++)
+            {
+                // dest of edge k from curr
+                int dest = fsm[curr].child[k];
+                // valid edge for curr and k, push dest
+                if (dest != -1)
+                {
+                    q.push(dest);
+                    // node id for traversal
+                    int v = fsm[curr].failure;
+                    while (fsm[v].child[k] == -1)
+                    {
+                        v = fsm[v].failure;
+                    }
+                    fsm[dest].failure = fsm[v].child[k];
+                    // save all matches for retrieval during search
+                    fsm[dest].match_parent = fsm[v].child[k];
+                    while (fsm[dest].match_parent != -1 && fsm[fsm[dest].match_parent].match.empty())
+                    {
+                        fsm[dest].match_parent = fsm[fsm[dest].match_parent].match_parent;
+                    }
+                }
+            }
+        }
+    }
 
-	// runs search for words in sentence, returns locations of all matches
-	// matches[i] contains indexes of start of matches of words[i] in text (not sorted)
-	std::vector<std::vector<int> > search(std::string &sentence, std::vector<std::string> &words)
-	{
-		std::vector<std::vector<int> > matches(words.size());
-		// overall current and temp node index
-		int state = 0, ss = 0;
+    // runs search for words in sentence, returns locations of all matches
+    // matches[i] contains indexes of start of matches of words[i] in text (not sorted)
+    std::vector<std::vector<int> > search(std::string &sentence, std::vector<std::string> &words)
+    {
+        std::vector<std::vector<int> > matches(words.size());
+        // overall current and temp node index
+        int state = 0, ss = 0;
 
-		for (int i = 0, ss = state; i < sentence.length(); i++, ss = state)
-		{
-			// while no matching, follow fail edges
-			while (fsm[ss].child[cmap(sentence[i])] == -1)
-			{
-				ss = fsm[ss].failure;
-			}
-			// follow valid edge, update current state
-			state = fsm[state].child[cmap(sentence[i])] = fsm[ss].child[cmap(sentence[i])];
-			for (ss = state; ss != -1; ss = fsm[ss].match_parent)
-			{
-				for (int j = 0; j < fsm[ss].match.size(); j++)
-				{
-					// word match at curr node
-					int w = fsm[ss].match[j];
-					matches[w].push_back(i + 1 - words[w].length());
-				}
-			}
-		}
-		return matches;
-	}
+        for (int i = 0, ss = state; i < sentence.length(); i++, ss = state)
+        {
+            // while no matching, follow fail edges
+            while (fsm[ss].child[cmap(sentence[i])] == -1)
+            {
+                ss = fsm[ss].failure;
+            }
+            // follow valid edge, update current state
+            state = fsm[state].child[cmap(sentence[i])] = fsm[ss].child[cmap(sentence[i])];
+            for (ss = state; ss != -1; ss = fsm[ss].match_parent)
+            {
+                for (int j = 0; j < fsm[ss].match.size(); j++)
+                {
+                    // word match at curr node
+                    int w = fsm[ss].match[j];
+                    matches[w].push_back(i + 1 - words[w].length());
+                }
+            }
+        }
+        return matches;
+    }
 };
 ```
 
 ```c++
 int main()
 {
-	// list of strings to match
-	std::vector<string> words;
-	string text;
-	// finite state machine for searching
-	Aho_Corasick fsm;
-	// build fsm for dictionary of patterns
-	fsm.build(words);
-	// run search
-	std::vector<std::vector<int> > matches = fsm.search(text, words);
+    // list of strings to match
+    std::vector<string> words;
+    string text;
+    // finite state machine for searching
+    Aho_Corasick fsm;
+    // build fsm for dictionary of patterns
+    fsm.build(words);
+    // run search
+    std::vector<std::vector<int> > matches = fsm.search(text, words);
 }
 ```
 

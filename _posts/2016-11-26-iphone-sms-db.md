@@ -90,7 +90,7 @@ mobile@abaddon ~/Library/SMS $ scp sms.db nots@192.168.0.104:~/
 The authenticity of host '192.168.0.104 (192.168.0.104)' can't be established.
 Are you sure you want to continue connecting (yes/no)? yes
 nots@192.168.0.104's password:
-sms.db                                                          100% 2404KB   2.4MB/s   00:01    
+sms.db                                                          100% 2404KB   2.4MB/s   00:01
 mobile@abaddon ~/Library/SMS $ scp -r Attachments nots@192.168.0.104:~/
 nots@192.168.0.104's password:
 .

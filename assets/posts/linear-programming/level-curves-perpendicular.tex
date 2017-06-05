@@ -38,13 +38,9 @@
             \draw (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
             \draw (D) node[circle, fill, inner sep=1pt]{};
 
-            % \foreach \c in {0, 40, 180}
-            % {
-            %     \addplot[dashed, red, restrict y to domain=-18:105] {0.5*(\c - 3*x)} node[pos=1, below]{};
-            % }
-            \addplot[dashed, red, restrict y to domain=-18:105] {0.5*(0 - 3*x)} node[pos=1, below]{\footnotesize{$z = 0$}};
-            \addplot[dashed, red, restrict y to domain=-18:105] {0.5*(40 - 3*x)} node[pos=1, below right]{\footnotesize{$z = 40$}};
-            \addplot[dashed, red, restrict y to domain=-18:105] {0.5*(180 - 3*x)} node[pos=1, below right]{\footnotesize{$z = 180$}};
+            \addplot[dashed, restrict y to domain=-18:105] {0.5*(0 - 3*x)} node[pos=1, below right]{\footnotesize{$z = 0$}};
+            \addplot[red, dashed, restrict y to domain=-18:105] {0.5*(120 - 3*x)} node[pos=1, below right]{\footnotesize{$z = 120$}};
+            \draw[->, red, thick] (A) -- (20, 30);
         \end{axis}
     \end{tikzpicture}
 \end{document}

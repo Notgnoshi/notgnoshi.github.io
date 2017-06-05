@@ -1,0 +1,44 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+
+\begin{document}
+    \tdplotsetmaincoords{60}{120}
+    \begin{tikzpicture}[scale=1, tdplot_main_coords]
+        \draw[->] (0,0,0) -- (9,0,0) node[below] {$x_1$};
+        \draw[->] (0,0,0) -- (0,9,0) node[right] {$x_2$};
+        \draw[->] (0,0,0) -- (0,0,9) node[above] {$x_3$};
+
+        \coordinate (O) at (0, 0, 0);
+        \coordinate (x1) at (8, 0, 0);
+        \coordinate (x2) at (0, 8, 0);
+        \coordinate (x3) at (0, 0, 8);
+        \coordinate (c) at (1, 2, 0);
+        \coordinate (x) at (1, 1, 6);
+
+        \coordinate (xnew0) at (1.9722222222222223, 3.0277777777777777, 3.0);
+        \coordinate (xnew1) at (1.9673381457535646, 4.532661854246436, 1.5);
+        \coordinate (xnew2) at (1.4423627677682613, 5.807637232231739, 0.75);
+        \coordinate (xnew3) at (0.7808588487459408, 6.844141151254062, 0.375);
+        \coordinate (xnew4) at (0.3904294243729704, 7.416378654113115, 0.19319192151391928);
+        \coordinate (xnew5) at (0.1952147121864852, 7.707385880209729, 0.09739940760380349);
+        \coordinate (xnew6) at (0.0976073560932426, 7.8536125394215, 0.04878010448530101);
+        \coordinate (xnew7) at (0.0488036780466213, 7.926797311989818, 0.02439900996359248);
+        \coordinate (xnew8) at (0.02440183902331065, 7.96339758839255, 0.012200572584248346);
+        \coordinate (xnew9) at (0.012200919511655325, 7.98169866369505, 0.006100416793272983);
+        \coordinate (xnew10) at (0.0061004597558276625, 7.990849315711729, 0.0030502245323601935);
+        \coordinate (xnew11) at (0.0030502298779138313, 7.995424655850649, 0.0015251142722972585);
+        \coordinate (xnew12) at (0.0015251149389569156, 7.997712327678007, 0.0007625573862415028);
+        \coordinate (xnew13) at (0.0007625574694784578, 7.998856163814401, 0.00038127872434056575);
+        \coordinate (xnew14) at (0.0003812787347392289, 7.999428081901794, 0.00019063936607015345);
+        \coordinate (xnew15) at (0.00019063936736961445, 7.9997140409556255, 9.53196835223978e-05);
+        \coordinate (xnew16) at (9.531968368480723e-05, 7.999857020552783, 4.765984182210387e-05);
+        \coordinate (xnew17) at (4.7659841842403613e-05, 7.999928510436206, 2.382992091866443e-05);
+        \coordinate (xnew18) at (2.3829920921201807e-05, 7.999964255212743, 1.1914960460283735e-05);
+        \coordinate (xnew19) at (1.1914960460600903e-05, 7.999982127419944, 5.957480230260807e-06);
+        \coordinate (xnew20) at (5.957480230300452e-06, 7.999991064186433, 2.9787401151452703e-06);
+        \coordinate (xnew21) at (2.978740115150226e-06, 7.999995533779003, 1.4893700575744933e-06);
+        \filldraw[gray!15, opacity=0.5, draw=gray] (x1) -- (x2) -- (x3) -- cycle;
+        \draw[red] (x) node[circle, fill, inner sep=1pt]{{}} -- (xnew0) node[circle, fill, inner sep=1pt]{} -- (xnew1) node[circle, fill, inner sep=1pt]{} -- (xnew2) node[circle, fill, inner sep=1pt]{} -- (xnew3) node[circle, fill, inner sep=1pt]{} -- (xnew4) node[circle, fill, inner sep=1pt]{} -- (xnew5) node[circle, fill, inner sep=1pt]{} -- (xnew6) node[circle, fill, inner sep=1pt]{} -- (xnew7) node[circle, fill, inner sep=1pt]{} -- (xnew8) node[circle, fill, inner sep=1pt]{} -- (xnew9) node[circle, fill, inner sep=1pt]{} -- (xnew10) node[circle, fill, inner sep=1pt]{} -- (xnew11) node[circle, fill, inner sep=1pt]{} -- (xnew12) node[circle, fill, inner sep=1pt]{} -- (xnew13) node[circle, fill, inner sep=1pt]{} -- (xnew14) node[circle, fill, inner sep=1pt]{} -- (xnew15) node[circle, fill, inner sep=1pt]{} -- (xnew16) node[circle, fill, inner sep=1pt]{} -- (xnew17) node[circle, fill, inner sep=1pt]{} -- (xnew18) node[circle, fill, inner sep=1pt]{} -- (xnew19) node[circle, fill, inner sep=1pt]{} -- (xnew20) node[circle, fill, inner sep=1pt]{} -- (xnew21) node[circle, fill, inner sep=1pt]{};
+    \end{tikzpicture}
+\end{document}

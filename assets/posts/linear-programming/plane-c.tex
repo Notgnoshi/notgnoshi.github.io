@@ -1,0 +1,21 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz-3dplot}
+
+\begin{document}
+    \tdplotsetmaincoords{60}{120}
+    \begin{tikzpicture}[scale=0.8, tdplot_main_coords]
+        \draw[->] (0,0,0) -- (9,0,0) node[below] {$x_1$};
+        \draw[->] (0,0,0) -- (0,9,0) node[right] {$x_2$};
+        \draw[->] (0,0,0) -- (0,0,9) node[above] {$x_3$};
+
+        \coordinate (O) at (0, 0, 0);
+        \coordinate (x1) at (8, 0, 0);
+        \coordinate (x2) at (0, 8, 0);
+        \coordinate (x3) at (0, 0, 8);
+        \coordinate (c) at (1, 2, 0);
+
+        \filldraw[gray!15, opacity=0.5, draw=gray] (x1) -- (x2) -- (x3) -- cycle;
+        \draw[->, red] (O) -- (c) node[right]{$\vec c$};
+        \draw (x2) node[fill, circle, inner sep=1.5pt]{};
+    \end{tikzpicture}
+\end{document}

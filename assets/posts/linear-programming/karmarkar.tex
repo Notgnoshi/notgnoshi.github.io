@@ -1,0 +1,29 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz-3dplot}
+\usepackage{amsmath}
+
+\begin{document}
+    \tdplotsetmaincoords{60}{120}
+    \begin{tikzpicture}[scale=0.8, tdplot_main_coords]
+        \draw[->] (0,0,0) -- (9,0,0) node[below] {$x_1$};
+        \draw[->] (0,0,0) -- (0,9,0) node[right] {$x_2$};
+        \draw[->] (0,0,0) -- (0,0,9) node[above] {$x_3$};
+
+        \coordinate (O) at (0, 0, 0);
+        \coordinate (x1) at (8, 0, 0);
+        \coordinate (x2) at (0, 8, 0);
+        \coordinate (x3) at (0, 0, 8);
+        \coordinate (c) at (1, 2, 0);
+        \coordinate (x) at (1, 1, 6);
+        \coordinate (xnew1) at (1.9722222222, 3.0277777778, 3);
+        \coordinate (xnew2) at (1.9673381458, 4.5326618542, 1.5);
+        \coordinate (xnew3) at (1.4423627678, 5.8076372322, 0.75);
+        \coordinate (xnew4) at (0.7808588487, 6.8441411513, 0.375);
+        \coordinate (xnew5) at (0.3904294244, 7.4163786541, 0.1931919215);
+        \coordinate (xnew6) at (0.1952147122, 7.7073858802, 0.0973994076);
+
+        \filldraw[gray!15, opacity=0.5, draw=gray] (x1) -- (x2) -- (x3) -- cycle;
+        \draw[red] (x) node[circle, fill, inner sep=1pt]{} -- (xnew1) node[circle, fill, inner sep=1pt]{} -- (xnew2) node[circle, fill, inner sep=1pt]{} -- (xnew3) node[circle, fill, inner sep=1pt]{} -- (xnew4) node[circle, fill, inner sep=1pt]{} -- (xnew5) node[circle, fill, inner sep=1pt]{} -- (xnew6) node[circle, fill, inner sep=1pt]{};
+        \draw (x2) node[fill, circle, inner sep=1.5pt]{};
+    \end{tikzpicture}
+\end{document}

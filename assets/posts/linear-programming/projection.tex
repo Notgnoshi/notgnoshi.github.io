@@ -1,0 +1,20 @@
+\documentclass[tikz]{standalone}
+\usepackage{tikz-3dplot}
+
+\begin{document}
+    \tdplotsetmaincoords{60}{100}
+    \begin{tikzpicture}[scale=2, tdplot_main_coords]
+        \draw[->] (0,0,0) -- (3,0,0) node[below] {$x_1$};
+        \draw[->] (0,0,0) -- (0,3,0) node[right] {$x_2$};
+        \draw[->] (0,0,0) -- (0,0,3) node[above] {$x_3$};
+
+        \coordinate (O) at (0, 0, 0);
+        \coordinate (c) at (3, 2, 3);
+        \coordinate (cp) at (3, 2, 0);
+
+        \draw[->] (O) -- (c) node[above right]{$\vec c$};
+        \draw[->, red] (O) -- (cp) node[right]{$\vec c_p$};
+        \draw[dashed] (cp) -- (c);
+
+    \end{tikzpicture}
+\end{document}

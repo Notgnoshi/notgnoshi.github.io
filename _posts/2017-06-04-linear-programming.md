@@ -301,7 +301,7 @@ Karmarkar's Algorithm is still not *the* standard LP solver algorithm, that titl
 
 ### Python Implementation
 
-One of the benefits of Karmarkar's Algorithm, is that it is easy to implement. Here's a first crack at a Python implementation. These files can be found in my blog [GitHub repository](https://github.com/Notgnoshi/notgnoshi.github.io/tree/master/assets/posts/linear-programming) if you'd like to submit a pull request or use them.
+One of the benefits of Karmarkar's Algorithm, is that it is easy to implement. Here's a first crack at a Python implementation.
 
 Note all vectors must be row vectors for the matrix multiplication dimensions to work out. This is different than the description above, but was necessary for simpler programming.
 

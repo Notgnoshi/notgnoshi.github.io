@@ -1,0 +1,45 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+\pgfplotsset{
+    compat=newest,
+}
+
+\begin{document}
+    \begin{tikzpicture}[scale=4]
+        \begin{axis}[
+            axis lines=middle,
+            ylabel=$x_2$,
+            xlabel=$x_1$,
+            every axis x label/.style={
+                at={(ticklabel* cs:1.1)},
+                anchor=east,
+            },
+            every axis y label/.style={
+                at={(ticklabel* cs:1.1)},
+                anchor=north,
+            },
+            xmin=-5, ymin=-15,
+            xmax=90, ymax=110,
+            domain=-10:85,
+            samples=100,
+            xtick={0,20,40},
+            ytick={0,20,60,80},
+            enlargelimits=true,
+        ]
+            \coordinate (A) at (0, 0);
+            \coordinate (B) at (40, 0);
+            \coordinate (C) at (40, 20);
+            \coordinate (D) at (20, 60);
+            \coordinate (E) at (0, 80);
+
+            \fill[gray!20] (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+            \draw (A) -- (B) -- (C) -- (D) -- (E) -- cycle;
+            \draw (C) node[red, circle, fill, inner sep=1pt]{};
+
+            \addplot[dashed, red, restrict y to domain=-20:105] {0.95*(100 - 3*x)} node[pos=1, below]{\footnotesize{$z = 90$}};
+            \addplot[dashed, red, restrict y to domain=-20:105] {0.95*(140.5 - 3*x)} node[pos=1, below right]{\footnotesize{$z = 140$}};
+        \end{axis}
+    \end{tikzpicture}
+\end{document}

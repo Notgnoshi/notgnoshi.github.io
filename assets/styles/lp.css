@@ -8,7 +8,7 @@ table.lp, tr, td {
     border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
-    min-width: 150px;
+    width: 20%;
 }
 
 td:hover {
@@ -25,5 +25,6 @@ tr.text td {
 
 tr.math td {
     padding-top: 5px;
+    padding-bottom: 3px;
     padding-right: 5px;
 }

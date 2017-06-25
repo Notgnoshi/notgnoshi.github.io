@@ -460,6 +460,11 @@ a:visited { color: #2a7ae2; }
         margin: 0 0;
     }
 
+    .post pre,
+    .post code {
+        font-size: 18px;
+    }
+
     .wrap {
         max-width: 90%;
     }
@@ -495,6 +500,11 @@ a:visited { color: #2a7ae2; }
     .posts {
         width: 100%;
         margin: 0 0;
+    }
+
+    .post pre,
+    .post code {
+        font-size: 17px;
     }
 
     .wrap {

@@ -349,7 +349,8 @@ a:visited { color: #2a7ae2; }
     -moz-border-radius: 3px;
     border-radius: 3px;
     font-family: cm_mono;
-    font-size: 20px;
+    font-size: 18px;
+    line-height: 1.2;
     overflow: auto;
 }
 

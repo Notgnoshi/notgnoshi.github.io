@@ -325,16 +325,16 @@ One of the benefits of Karmarkar's Algorithm, is that it is easy to implement. H
 
 Note all vectors must be row vectors for the matrix multiplication dimensions to work out. This is different than the description above, but was necessary for simpler programming.
 
-[`linear_program.py`](https://github.com/Notgnoshi/notgnoshi.github.io/blob/master/_includes/snippets/linear_program.py):
+[`linear_program.py`](https://github.com/Notgnoshi/notgnoshi.github.io/blob/master/_includes/snippets/linear-programming/linear_program.py):
 ```python
-{% include snippets/linear_program.py %}
+{% include snippets/linear-programming/linear_program.py %}
 ```
 
 We use the solver as follows
 
-[`karmarkar.py`](https://github.com/Notgnoshi/notgnoshi.github.io/blob/master/_includes/snippets/karmarkar.py):
+[`karmarkar.py`](https://github.com/Notgnoshi/notgnoshi.github.io/blob/master/_includes/snippets/linear-programming/karmarkar.py):
 ```python
-{% include snippets/karmarkar.py %}
+{% include snippets/linear-programming/karmarkar.py %}
 ```
 
 Running the above script, we get the following output

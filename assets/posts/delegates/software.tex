@@ -11,16 +11,16 @@
         \node[rectangle, draw, right of=D] (E) {$E$};
         \node[rectangle, draw, right of=E] (F) {$F$};
         \node[rectangle, draw, above of=F] (C) {$C$};
-        \node[right of=F] (output1) {$output\ 1$};
-        \node[right of=C] (output2) {$output\ 2$};
+        \node[right of=C] (output1) {$output\ 1$};
+        \node[right of=F] (output2) {$output\ 2$};
         
         \draw[->] (data) -- (A);
-        \draw[->] (A) -- (B);
+        \draw[->] (A.north) -- (B.west);
         \draw[->] (B) -- (C);
         \draw[->] (A) -- (D);
         \draw[->] (D) -- (E);
         \draw[->] (E) -- (F);
-        \draw[->] (C) -- (output2);
-        \draw[->] (F) -- (output1);
+        \draw[->] (F) -- (output2);
+        \draw[->] (C) -- (output1);
     \end{tikzpicture}
 \end{document}

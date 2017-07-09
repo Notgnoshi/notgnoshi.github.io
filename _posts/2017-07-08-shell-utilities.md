@@ -358,7 +358,7 @@ import sys
 
 
 def parse_args():
-    VERSION = 'window version 0.1'
+    VERSION = '0.2'
     DESCRIPTION = 'window - an advanced head/tail.'
     parser = argparse.ArgumentParser(description=DESCRIPTION)
 
@@ -367,15 +367,19 @@ def parse_args():
                         version=VERSION)
     parser.add_argument('--verbose',
                         action='store_true',
-                        help='Print window size and position')
-    parser.add_argument('-t', '--to',
+                        help='Print window dimensions.')
+    parser.add_argument('from',
                         type=int,
-                        help='Ending line number. Positive values are counted from the beginning, negative values from the end. Inclusive.',
-                        default=-1)
-    parser.add_argument('-f', '--from',
-                        type=int,
-                        help='Beginning line number. Positive values are counted from the beginning, negative values from the end. Inclusive.',
+                        nargs='?',
+                        help='Beginning line number. Positive values are counted from the \
+                              beginning, negative values from the end. Inclusive.',
                         default=1)
+    parser.add_argument('to',
+                        type=int,
+                        nargs='?',
+                        help='Ending line number. Positive values are counted from the    \
+                              beginning, negative values from the end. Inclusive.',
+                        default=-1)
     parser.add_argument('file',
                         type=argparse.FileType('r'),
                         default=sys.stdin,
@@ -393,7 +397,7 @@ def main():
     if verbose:
         print('Taking window from line', from_val, 'to line', to_val)
 
-    # Positive values are one-indexed, convert to zero-indexed to use slices.
+    # Convert line number to index
     if from_val > 0:
         from_val -= 1
 
@@ -416,23 +420,21 @@ if __name__ == '__main__':
 This can be called in a number of ways:
 
 ```shell
-~ $ cat seq.txt | ./window.py --from 1 --to 3
+~ $ cat seq.txt | ./window.py 1 3
 1
 2
 3
-~ $ ./window.py --from 1 --to 3 seq.txt
+~ $ ./window.py 1 3 seq.txt
 1
 2
 3
-~ $ cat seq.txt | ./window.py --from -5 --to -1
+~ $ cat seq.txt | ./window.py -5 -1
 6
 7
 8
 9
 10
 ```
-
-There's one more feature I want to add, and that's to make `--from` and `--to` positional arguments. This is because Humans already think of start points and end points in the order *start* to *end* and it would eliminate unnecessary typing I think. I might also allow something like `window --from -1 --to -5` in the future that would start at the end of a file and work backwards, it wouldn't be too hard to add, I just have to figure out if that's functionality I need.
 
 I've wrapped `window.py` in a shell script to make if feel more native:
 
@@ -447,33 +449,31 @@ After sourcing the function, it can be used it like so:
 
 ```
 ~ $ window --help
-usage: window.py [-h] [-v] [--verbose] [-t TO] [-f FROM] [file]
+usage: window.py [-h] [-v] [--verbose] [from] [to] [file]
 
 window - an advanced head/tail.
 
 positional arguments:
-  file                  A file to use. Defaults to stdin.
+  from           Beginning line number. Positive values are counted from the
+                 beginning, negative values from the end. Inclusive.
+  to             Ending line number. Positive values are counted from the
+                 beginning, negative values from the end. Inclusive.
+  file           A file to use. Defaults to stdin.
 
 optional arguments:
-  -h, --help            show this help message and exit
-  -v, --version         show program's version number and exit
-  --verbose             Print window size and position
-  -t TO, --to TO        Ending line number. Positive values are counted from
-                        the beginning, negative values from the end.
-                        Inclusive.
-  -f FROM, --from FROM  Beginning line number. Positive values are counted
-                        from the beginning, negative values from the end.
-                        Inclusive.
+  -h, --help     show this help message and exit
+  -v, --version  show program's version number and exit
+  --verbose      Print window dimensions.
 ```
 
 ## rsync
 
 ---
 
-I've found myself needing to transfer very large amounts of data from one device to another on my local network. I have normally just used a portable SSD hard drive, but it only have 250 GB of storage. Just a few days ago I needed to transfer 300 GB (which could have been avoided with proper planning) and found SCP too slow to use for that much data, so I did some googling and found this:
+I've found myself needing to transfer very large amounts of data from one device to another on my local network. I have normally just used a portable SSD hard drive, but it only has 250 GB of storage. Just a few days ago I needed to transfer 300 GB (which could have been avoided with proper planning) and found SCP too slow to use for that much data, so I did some googling and found this:
 
 ```shell
-~ $ rsync -aAXK --compress --progress /home user@host:/media/backup/
+~ $ rsync -aAXK --compress --progress /home user@host:/media/backup
 ```
 
 Note `rsync` treats trailing slashes differently than you expect, so avoid including them.
@@ -482,10 +482,9 @@ Note `rsync` treats trailing slashes differently than you expect, so avoid inclu
 
 ---
 
-I've exported a series of variables that will change the terminal color for use in larger scripts. There seem to be 256 colors you can use with `tput` in this manner, but there may be more.
+I've exported a series of variables that will change the terminal color for use in larger scripts. For more information on the available color codes, see [this](https://unix.stackexchange.com/a/269085) Unix Stack Exchange answer. It has most everything you might want to know about terminal color codes.
 
 ```shell
-# colored text variables.
 export UNDERLINE=$(tput sgr 0 1)
 export BOLD=$(tput bold)
 export BLACK=$(tput setaf 0)

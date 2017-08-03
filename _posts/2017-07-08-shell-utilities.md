@@ -48,20 +48,19 @@ These two Bash one liners give you the number of additions and removals the give
 # Gives number of additions author has made in current git repo
 additions()
 {
-    git log --author="$*" --pretty=tformat: --numstat | gawk ' { total += $1 } END { print total}
-	
+    git log --author="$*" --pretty=tformat: --numstat | gawk '{ total += $1 } END { print total}'
 }
 
 # Gives number of removals author has made in current git repo
 removals()
 {
-    git log --author="$*" --pretty=tformat: --numstat | gawk ' { total += $2 } END { print total}
+    git log --author="$*" --pretty=tformat: --numstat | gawk '{ total += $2 } END { print total}'
 }
 
 # Gives the value of (additions - removals) of removals author has made in current git repo
 difference()
 {
-    git log --author="$*" --pretty=tformat: --numstat | gawk ' { delta += ($1 - $2) } END { print delta}
+    git log --author="$*" --pretty=tformat: --numstat | gawk '{ delta += ($1 - $2) } END { print delta}'
 }
 ```
 

@@ -42,7 +42,7 @@ Example usage:
 
 ## additions and removals
 
-These two Bash one liners give you the number of additions and removals the given author has made in a Git repository. Awk is damned beautiful and so is zach for writing this for me.
+These two Bash one liners give you the number of additions and removals the given author has made in a Git repository.
 
 ```shell
 # Gives number of additions author has made in current git repo
@@ -57,8 +57,9 @@ removals()
 {
     git log --author="$*" --pretty=tformat: --numstat | gawk ' { total += $2 } END { print total}
 }
-# Gives number of removals author has made in current git repo
-removals()
+
+# Gives the value of (additions - removals) of removals author has made in current git repo
+difference()
 {
     git log --author="$*" --pretty=tformat: --numstat | gawk ' { delta += ($1 - $2) } END { print delta}
 }

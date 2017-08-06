@@ -14,6 +14,14 @@ img.centered-full {
     margin-right: auto;
 }
 
+img.inline {
+    display: inline;
+    vertical-align: middle;
+    margin: 2px;
+    height: 24pt;
+    width: auto;
+}
+
 iframe.centered {
     display: block;
     margin-left: auto;

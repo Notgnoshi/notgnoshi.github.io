@@ -1,0 +1,21 @@
+\documentclass[tikz]{standalone}
+
+\usetikzlibrary{arrows, shapes, positioning}
+
+\begin{document}
+    \begin{tikzpicture}[scale=1, node distance=1.7cm]
+        \input{flowcharts}
+
+        \node[] (input) {$\vdots$};
+        \node[decision, below of=input,  yshift=-0.5cm] (dec1) {Decision $x$};
+
+        \node[below of=dec1, yshift=-0.5cm] (proc2) {$\vdots$};
+        \node[left of=proc2, xshift=-3cm] (proc1) {$\vdots$};
+        \node[right of=proc2, xshift=3cm] (proc3) {$\vdots$};
+
+        \draw[arrow] (input) -- (dec1);
+        \draw[arrow] (dec1.west) node[above left] {$x<0$} -| (proc1);
+        \draw[arrow] (dec1.east) node[above right] {$x>0$} -| (proc3);
+        \draw[arrow] (dec1.south) node[below right] {$x=0$} -- (proc2);
+    \end{tikzpicture}
+\end{document}

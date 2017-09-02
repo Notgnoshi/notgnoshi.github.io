@@ -4,14 +4,10 @@ title: Drawing Logic Gates with Tikz
 meta: A basic tutorial on drawing digital circuit diagrams with Tikz
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 Tikz is an extremely powerful tool, but it can be hard to get a grasp of. Here's a few examples of drawing digital circuit diagrams using the `shapes.gates.logic` Tikz library. Each of these examples uses the <a href="{{ "/assets/posts/drawing-logic-gates-with-tikz/standalone.cfg" | prepend: site.baseurl }}">`standalone.cfg`</a> file introduced in [this]({% post_url 2016-07-18-svg-with-tikz %}) post.
 
 ### Basic gates and wiring
 
-<!-- symlink to /assets/posts/drawing-logic-gates-with-tikz/ex1.tex -->
 ```latex
 \documentclass[tikz, border=1mm]{standalone}
 
@@ -39,7 +35,7 @@ Tikz is an extremely powerful tool, but it can be hard to get a grasp of. Here's
 
 which produces
 
-<img class="centered-full" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex1.svg" | prepend: site.baseurl }}" alt="not x or not y">
+<img class="centered" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex1.svg" | prepend: site.baseurl }}" alt="not x or not y">
 
 ### More complicated wiring
 
@@ -76,7 +72,7 @@ which produces
 
 which produces
 
-<img class="centered-full" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex2.svg" | prepend: site.baseurl }}" alt="useless circuit">
+<img class="centered" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex2.svg" | prepend: site.baseurl }}" alt="useless circuit">
 
 While not a very good circuit to diagram, it shows many of the capabilities of Tikz.
 
@@ -102,7 +98,7 @@ Just because it's useful and I have nowhere else to put it, here's how you graph
 \end{document}
 ```
 
-<img class="centered-full" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex3.svg" | prepend: site.baseurl }}" alt="graphing functions">
+<img class="centered" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex3.svg" | prepend: site.baseurl }}" alt="graphing functions">
 
 Something more advanced:
 
@@ -152,4 +148,4 @@ Something more advanced:
 
 $$\int_{-1}^{1} (x^2 + 2x - 7) \mathrm{d}x$$
 
-<img class="centered-full" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex4.svg" | prepend: site.baseurl }}" alt="graphing functions">
+<img class="centered" src="{{ "/assets/posts/drawing-logic-gates-with-tikz/ex4.svg" | prepend: site.baseurl }}" alt="graphing functions">

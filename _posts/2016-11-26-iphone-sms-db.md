@@ -4,7 +4,6 @@ title: Downloading your iPhone text messages as a SQLite database
 meta: Here's how to access and download your iPhone text messages as a SQLite database. Requires your phone to be jailbroken. Also works for retrieving your voicemail.
 ---
 
-<!-- Custom styles for the images -->
 <link rel="stylesheet" href="{{ "/assets/styles/tables.css" | prepend: site.baseurl }}">
 
 I wanted to find a specific message a friend sent me a while back, but we've sent so many messages back and forth it was impossible to find. Here's how you can access your entire text message history provided your iPhone is jailbroken.
@@ -35,43 +34,18 @@ Then connect your iPhone to your computer with the USB cable and run
 nots@abyss ~ $ iproxy 2222 22 &
 ```
 
-You can then SSH using port `2222`
+You can then SSH using port `2222` with default password `alpine`.
 
 ```
-nots@abyss ~ $ ssh root@localhost -p 2222
-root@localhost's password:
-root@abaddon ~ #
-```
-
-Depending on your network, this can be *much* faster than SSHing over WiFi.
-
----
-
-Next, change your password for both `mobile` and `root` accounts. Seriously. Do it.
-
-```
-root@abaddon ~ # passwd
-Changing password for root.
-New password:
-Retype new password:
-root@abaddon ~ # passwd mobile
-Changing password for mobile.
-New password:
-Retype new password:
-root@abaddon ~ #
-```
-
-Now change to the `mobile` user -- we're not modifying *anything* on the phone so there's no need to tempt fate as `root`
-
-```
-root@abaddon ~ # su mobile
-mobile@abaddon /var/root $
+nots@abyss ~ $ ssh mobile@localhost -p 2222
+mobile@localhost's password:
+mobile@abaddon ~ #
 ```
 
 Everything we need is located in `/var/mobile/Library/SMS/`
 
 ```
-mobile@abaddon /var/root $ cd /var/mobile/Library/SMS
+mobile@abaddon /var/mobile $ cd /var/mobile/Library/SMS
 mobile@abaddon ~/Library/SMS $
 ```
 

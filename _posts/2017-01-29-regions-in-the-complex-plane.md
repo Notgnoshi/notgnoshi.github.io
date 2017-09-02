@@ -4,9 +4,6 @@ title: Regions in the Complex Plane
 meta: The topological definitions that form the foundation for the development of limits and consideration of regions in the complex plane in complex analysis
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 Before we can rigorously develop a good foundation for the concepts of functions and limits we need some set theoretic definitions that will presumably come in handy later.
 
 **Defn.** An *$$\varepsilon$$-neighborhood* of a point $$z_0$$, often denoted as $$N_\varepsilon (z_0)$$ is the set of all points $$z$$ lying inside but not on a circle of radius $$\varepsilon$$ centered at $$z_0$$.

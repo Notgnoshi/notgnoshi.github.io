@@ -4,9 +4,6 @@ title: Complex-Valued Functions
 meta: Functions of complex variables, covering topics such as injective, surjective, domain, range, image, preimage, etc.
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 **Defn.** A *function* $$f$$ defined on a set $$S \subseteq \mathbb C$$ is a *rule* that assigns to each $$z \in S$$ a complex number $$w$$, called the *value* of $$f$$ at $$z$$ and is denote by $$f(z)$$.
 
 **Defn.** We call the set $$S$$ the *domain of definition* of $$f$$. Note we can't use the term "domain" because we've already defined it previously to mean an open, nonempty, and connected set.

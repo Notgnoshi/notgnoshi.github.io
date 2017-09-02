@@ -5,9 +5,6 @@ subtitle: some basic notes
 meta: Some notes on basic geometry, including the affine plane and complex numbers.
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 I picked up a [book](https://amzn.com/0486658120) on geometry a while ago. These are my notes as I work through reading it.
 
 ### The Euclidean Plane

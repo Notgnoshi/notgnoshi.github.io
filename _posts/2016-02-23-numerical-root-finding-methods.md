@@ -3,8 +3,6 @@ layout: post
 title: Numerical Root-Finding Methods
 meta: A brief description of open and bracketed numerical root finding methods for single variable functions
 ---
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
 
 Root-finding methods are split into roughly two categories: **bracketed** and **open** methods. Bracketed methods examine a function over a closed interval, and use information about sign change to determine the location of a root. Open methods attempt to make more sophisticated guesses using information about $$f(x)$$ and $$f'(x)$$ to find a root.
 

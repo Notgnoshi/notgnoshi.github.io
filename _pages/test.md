@@ -6,9 +6,6 @@ meta: This is a test page for Jekyll, Liquid, GitHub Pages, or any web-based tec
 
 This is a test page. Go away.
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 <!-- Custom styles for the truth tables -->
 <link rel="stylesheet" href="{{ "/assets/styles/truth_tables.css" | prepend: site.baseurl }}">
 

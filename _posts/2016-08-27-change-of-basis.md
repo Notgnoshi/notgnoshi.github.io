@@ -4,9 +4,6 @@ title: Change of Basis
 meta: Describes what a basis is, and how to change from one vector space to another using a transition matrix. Pays special attention to rotation matrices.
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 One of the things I knew well enough to pass an exam on, but not well enough to actually understand what it meant was the concept of changing basis in linear algebra. This is an attempt to remedy that.
 
 A **basis** for a vector space $$V$$ of dimension $$n$$ is a sequence of $$n$$ vectors $$(v_1, v_2, \dots, v_n)$$ such that all vectors in $$V$$ can be uniquely expressed as linear combinations of the basis vectors. Often calculations in one basis can be simplified if we change our basis to something else.

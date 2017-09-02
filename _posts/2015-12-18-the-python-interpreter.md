@@ -5,9 +5,6 @@ subtitle: An introduction
 meta: A brief description of the four pieces of the Python interpreter; The lexer, parser, compiler, and bytecode interpreter.
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 ### Introduction:
 
 The Python interpreter is a program distributed along with the Python standard library modules that is used to execute Python code. The Python interpreter works by converting human-readable Python source code into machine-understandable bytecode before executing the bytecode.

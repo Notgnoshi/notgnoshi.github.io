@@ -5,9 +5,6 @@ subtitle: A brief reminder
 meta: A list of properties of sets and functions to serve as a quick reference for me in the future
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 Sometime in early high school (or even earlier, I can't remember) the idea of sets and functions was introduced. What I'd like to do is give myself a reminder of the basic set and function definitions and operations that I've learned since then.
 
 ---

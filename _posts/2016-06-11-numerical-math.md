@@ -6,8 +6,6 @@ meta: A description of error using the Taylor Series in numerical computation
 ---
 <!-- Custom styles for the binary_word -->
 <link rel="stylesheet" href="{{ "/assets/styles/binary_word.css" | prepend: site.baseurl }}">
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
 
 ## Error
 
@@ -188,13 +186,13 @@ The largest representable value is $$1.7977 \times 10^{308}$$ (let's call it `re
 
 One way to calculate the machine epsilon on your system is to find the smallest number $$\varepsilon$$ such that $$0 + \varepsilon \ne 0$$ (i. e. the smallest possible gap between two numbers). In Python, an easy way of getting the machine epsilon is with NumPy:
 
-{% highlight python %}
+```python
 import numpy as np
 
 print(np.finfo(float).eps)       # 2.22044604925e-16
 print(np.finfo(np.float32).eps)  # 1.19209e-07
 print(np.finfo(np.float64).eps)  # 2.22044604925e-16
-{% endhighlight %}
+```
 
 You can also calculate the machine epsilon for a given data type using the following Python snippet
 

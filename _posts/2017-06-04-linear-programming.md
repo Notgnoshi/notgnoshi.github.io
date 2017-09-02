@@ -5,7 +5,6 @@ subtitle: A geometric understanding of Karmarkar's Algorithm
 meta: A geometric explanation of linear programs, and Karmarkar's Algorithm implemented in Python.
 ---
 
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/assets/styles/lp.css" | prepend: site.baseurl }}">
 
 In this post I intend to explain what a Linear Program (LP) is, and how to solve an LP problem using Karmarkar's Algorithm implemented in Python. As always, if you see an improvement, feel free to submit a pull request.

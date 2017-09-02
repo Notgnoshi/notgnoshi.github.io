@@ -4,9 +4,6 @@ title: Impartial Classic Combinatorial Games
 meta: A review of impartial classic combinatorial games from a game theory perspective. Includes description of nimber (aka Sprague-Grundy) values and N and P states.
 ---
 
-<!-- Custom styles for the images -->
-<link rel="stylesheet" href="{{ "/assets/styles/images.css" | prepend: site.baseurl }}">
-
 Game Theory is the mathematical modeling of conflict, cooperation, and the analysis and search of optimal solutions. The objects of study are **games**, which are composed of three pieces.
 
 1. A set $$N$$ of $$n$$ players. $$n = 1$$ is decision theory, and not a part of typical game theory. $$n = 2$$ is the classic von Neumann-Morgenstern game theory. $$n > 2$$ is coalition gaming, which can be modeled as multiple $$n = 2$$ games, with coalitions as players.

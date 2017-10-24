@@ -31,17 +31,17 @@ I was very hesitant to try Gnome at first, so I spent some time test driving dif
 
 <img class="centered-full" src="{{ "/assets/posts/workspace-grid/horizontal-workspace.svg" | prepend: site.baseurl }}" alt="A horizontal workspace">
 
-However, I found myself replicating one giant layered workspace with high priority applications on the left and low priority applications on the right. Instead of Alt-Tabbing between applications, I find myself switching workspaces to get from one application (rated by some measure of importance) to the next. I'm going to call this an *antipattern* because of personal preference, not because I have any objective reason to say one method of use is any better than another.
+However, I found myself replicating one giant layered workspace with high priority applications on the left and low priority applications on the right. Instead of Alt-Tabbing between applications, I find myself switching workspaces to get from one application (rated by some measure of importance) to the next. I'm going to call this an *antipattern* because of personal preference, but not because I have any objective reason to say one method of use is any better than another.
 
 I think (and I have no evidence to back me up) that this linear use pattern is because humans naturally devolve into ranking things by some metric when given some method of laying things out in a linear fashion.
 
-Another factor that contributed to this (that I didn't care enough to try to fix) was that if you pressed `ctrl+alt+T` to open a terminal in another workspace, it would open another session *in whatever workspace an existing terminal session was open in*.
+Another factor that contributed to this (that I didn't care enough to try to fix) was that if you pressed `ctrl+alt+T` to open a terminal in another workspace in Budgie, it would open another session *in whatever workspace an existing terminal session was open in*.
 
 <img class="centered-full" src="{{ "/assets/posts/workspace-grid/horizontally-layered-workspace.svg" | prepend: site.baseurl }}" alt="A horizontally layered workspace">
 
 ### Vertical workspaces
 
-I've used Gnome before, and found its vertical workspaces interesting, but still essentially the same idea as the horizontally layered workspace. Again, every time I've used the workspaces, I've found myself using each workspace for one application, and sorting them vertically by importance.
+I've used Gnome before, and found its vertical workspaces interesting (I have other opinions too, but they're not relevant here), but still essentially the same idea as the horizontally layered workspace. Again, every time I've used the workspaces, I've found myself using each workspace for one application, and sorting them vertically by importance.
 
 <img class="centered-real" src="{{ "/assets/posts/workspace-grid/vertical-workspace.svg" | prepend: site.baseurl }}" alt="A vertical workspace">
 
@@ -55,13 +55,13 @@ I've taught myself to think about switching to an application as a motion in 2-s
 
 ### The 2x2 workspace
 
-Oddly enough, I do not find myself using the 2x2 workspaces as one giant workspace with four layers. I think my applications not being laid out in a linear fashion prevents this so-called antipattern. Instead, I tend to use each workspace to group applications together by use.
+Oddly enough, I do not find myself using the 2x2 workspaces with this antipattern of one giant workspace with four layers. I think my applications not being laid out in a linear fashion may prevent this. Instead, I tend to use each workspace to group applications together by use.
 
 <img class="centered" src="{{ "/assets/posts/workspace-grid/2x2-workspace.svg" | prepend: site.baseurl }}" alt="A 2x2 workspace">
 
 I often have multiple browser windows open, sometimes one window full of Stack Overflow posts alongside a text editor full of bugs. Other times (like now) I'll have a $$\LaTeX$$ IDE open in one workspace, along with any relevant file browsers and terminal sessions, an editor and browser showing a live preview of this post in another, and in a third workspace I'll have several terminal sessions open.
 
-Over the years, I've trained my brain to think of the upper left workspace (and right monitor if I have more than one) as a text editor and documentation browser, while almost all forays into terminal land occur in the lower left workspace. If I'm working on some frustrating project that nearly everyone but me could do in their sleep and I happen to need a 6 hour Half Life 2 break (which in hindsight is probably why I find simple things so difficult), that happens in a dedicated right hand workspace. Any music players, long running terminal processes, or non project related browser windows get placed in the remaining right hand workspace.
+Over the years, I've trained my brain to think of the upper left workspace (and right monitor if I have more than one) as a text editor and documentation browser, while almost all forays into terminal land occur in the lower left workspace. If I'm working on some frustrating project that nearly everyone but me could do in their sleep and I happen to need a 2 hour Half Life 2 break (which in hindsight is probably why I find simple things so difficult), that happens in a dedicated right hand workspace. Any music players, long running terminal processes, or non project related browser windows get placed in the remaining right hand workspace.
 
 <img class="centered-real" src="{{ "/assets/posts/workspace-grid/2x2-workspace-use.svg" | prepend: site.baseurl }}" alt="My use of a 2x2 workspace">
 

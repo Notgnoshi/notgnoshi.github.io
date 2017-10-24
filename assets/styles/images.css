@@ -6,9 +6,26 @@ img.centered {
     margin-right: auto;
 }
 
+img.centered-real {
+    max-width: 50%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 img.centered-full {
     width: 90%;
     height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img.centered-vertical {
+    max-height: 800px;
+    width: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;

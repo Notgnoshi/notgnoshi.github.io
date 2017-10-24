@@ -1,9 +1,9 @@
 \documentclass[tikz]{standalone}
 
 \begin{document}
-\begin{tikzpicture}[scale=1, node distance=8cm]
+\begin{tikzpicture}[scale=1, node distance=10cm]
 
-    \node[] (left) {
+    \node[] (A) {
         \begin{tikzpicture}[y={(0.02cm,0.6cm)},x={(0.5cm,0cm)}, z={(-1cm, 0.5cm)}, scale=1]
             \draw[fill=gray!5]  (0, 0, -3) -- (8.5, 0, -3) -- (8.5, 11, -3) -- (0, 11, -3) -- cycle;
             \draw[fill=gray!15] (0, 0, -2) -- (8.5, 0, -2) -- (8.5, 11, -2) -- (0, 11, -2) -- cycle;
@@ -12,7 +12,7 @@
         \end{tikzpicture}
     };
 
-    \node[right of=left] (mid_left) {
+    \node[below of=A] (B) {
         \begin{tikzpicture}[y={(0.02cm,0.6cm)},x={(0.5cm,0cm)}, z={(-1cm, 0.5cm)}, scale=1]
             \draw[fill=gray!5]  (0, 0, -3) -- (8.5, 0, -3) -- (8.5, 11, -3) -- (0, 11, -3) -- cycle;
             \draw[fill=gray!15] (0, 0, -2) -- (8.5, 0, -2) -- (8.5, 11, -2) -- (0, 11, -2) -- cycle;
@@ -21,7 +21,7 @@
         \end{tikzpicture}
     };
 
-    \node[right of=mid_left] (mid) {
+    \node[right of=B] (C) {
         \begin{tikzpicture}[y={(0.02cm,0.6cm)},x={(0.5cm,0cm)}, z={(-1cm, 0.5cm)}, scale=1]
             \draw[fill=gray!5]  (0, 0, -3) -- (8.5, 0, -3) -- (8.5, 11, -3) -- (0, 11, -3) -- cycle;
             \draw[fill=gray!15] (0, 0, -2) -- (8.5, 0, -2) -- (8.5, 11, -2) -- (0, 11, -2) -- cycle;
@@ -30,7 +30,7 @@
         \end{tikzpicture}
     };
 
-    \node[right of=mid] (right) {
+    \node[above of=C] (D) {
         \begin{tikzpicture}[y={(0.02cm,0.6cm)},x={(0.5cm,0cm)}, z={(-1cm, 0.5cm)}, scale=1]
             \draw[fill=gray!5]  (0, 0, -3) -- (8.5, 0, -3) -- (8.5, 11, -3) -- (0, 11, -3) -- cycle;
             \draw[fill=gray!15] (0, 0, -2) -- (8.5, 0, -2) -- (8.5, 11, -2) -- (0, 11, -2) -- cycle;

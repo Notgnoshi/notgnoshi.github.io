@@ -1,0 +1,35 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}[scale=1, node distance=8.5cm]
+
+    \node[] (A) {
+        \begin{tikzpicture}
+            \draw[fill=gray!25] (0, 0) -- (8, 0) -- (8, 8) -- (0, 8) -- cycle;
+            \node[above] (label) at (4, 4) {text editing and documentation};
+        \end{tikzpicture}
+    };
+
+    \node[below of=A] (B) {
+        \begin{tikzpicture}
+            \draw[fill=gray!25] (0, 0) -- (8, 0) -- (8, 8) -- (0, 8) -- cycle;
+            \node[above] (label) at (4, 4) {project terminal sessions};
+        \end{tikzpicture}
+    };
+
+    \node[right of=B] (C) {
+        \begin{tikzpicture}
+            \draw[fill=gray!25] (0, 0) -- (8, 0) -- (8, 8) -- (0, 8) -- cycle;
+            \node[above] (label) at (4, 4) {nonproject browsers and terminal sessions};
+        \end{tikzpicture}
+    };
+
+    \node[above of=C] (D) {
+        \begin{tikzpicture}
+            \draw[fill=gray!25] (0, 0) -- (8, 0) -- (8, 8) -- (0, 8) -- cycle;
+            \node[above] (label) at (4, 4) {music and games};
+        \end{tikzpicture}
+    };
+
+\end{tikzpicture}
+\end{document}

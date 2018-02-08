@@ -1,0 +1,24 @@
+\documentclass[tikz]{standalone}
+\usepackage{relsize}
+\usetikzlibrary{calc}
+
+\tikzset{fontscale/.style = {font=\relsize{#1}}}
+\tikzstyle{every node}=[fontscale=4]
+
+\begin{document}
+\begin{tikzpicture}[x=10cm, y=10cm]
+    \draw[->, thick] (-0.1, -0.1) -- (1.1, -0.1) node[below]{$x_1$};
+    \draw[->, thick] (-0.1, -0.1) -- (-0.1, 1.1) node[left]{$x_2$};
+
+    \draw (0, -0.1) node[below]{$0$} -- (0, -0.07);
+    \draw (1, -0.1) node[below]{$1$} -- (1, -0.07);
+    \draw (-0.1, 1) node[left]{$1$} -- (-0.07, 1);
+    \draw (-0.1, 0) node[left]{$0$} -- (-0.07, 0);
+
+    \draw (0, 0) node{$\mathbf{0}$};
+    \draw (0, 1) node{$\mathbf{1}$};
+    \draw (1, 0) node{$\mathbf{1}$};
+    \draw (1, 1) node{$\mathbf{0}$};
+
+\end{tikzpicture}
+\end{document}

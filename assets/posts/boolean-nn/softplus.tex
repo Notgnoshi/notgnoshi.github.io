@@ -1,0 +1,16 @@
+\documentclass[tikz]{standalone}
+\usepackage{relsize}
+\usetikzlibrary{calc}
+
+\tikzset{fontscale/.style = {font=\relsize{#1}}}
+\tikzstyle{every node}=[fontscale=4]
+
+\begin{document}
+\begin{tikzpicture}[x=5cm, y=5cm, scale=2]
+    \draw[->](-1, 0) -- (1, 0) node[below] {$x$};
+    \draw[->](0, 0) -- (0, 1) node[left] {$softplus(x)$};
+
+    \draw[scale=0.33, very thick, domain=-3:3, smooth, variable=\x, color=red!90]
+            plot (\x, {ln(1 + exp(\x))});
+\end{tikzpicture}
+\end{document}

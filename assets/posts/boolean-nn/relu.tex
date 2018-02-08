@@ -1,0 +1,18 @@
+\documentclass[tikz]{standalone}
+\usepackage{relsize}
+\usetikzlibrary{calc}
+
+\tikzset{fontscale/.style = {font=\relsize{#1}}}
+\tikzstyle{every node}=[fontscale=4]
+
+\begin{document}
+\begin{tikzpicture}[x=5cm, y=5cm, scale=2]
+    \draw[->](-1, 0) -- (1, 0) node[below] {$x$};
+    \draw[->](0, 0) -- (0, 1) node[left] {$relu(x)$};
+
+    \draw[scale=1, very thick, domain=-1:0, smooth, variable=\x, color=red!90]
+            plot (\x, 0);
+    \draw[scale=1, very thick, domain=0:1, smooth, variable=\x, color=red!90]
+            plot (\x, \x);
+\end{tikzpicture}
+\end{document}

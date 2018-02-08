@@ -6,78 +6,44 @@ meta: This is a test page for Jekyll, Liquid, GitHub Pages, or any web-based tec
 
 This is a test page. Go away.
 
-<!-- Custom styles for the truth tables -->
-<link rel="stylesheet" href="{{ "/assets/styles/truth_tables.css" | prepend: site.baseurl }}">
+---
 
-<!-- Custom styles for the binary_word -->
-<link rel="stylesheet" href="{{ "/assets/styles/binary_word.css" | prepend: site.baseurl }}">
+# Fonts, font sizes, and header sizes
 
+Regular. *Italic* **bold** ***bold italic*** `mono` *`mono italic`* **`mono bold`**
 
-<img class="centered" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/False_position_method.svg/351px-False_position_method.svg.png" alt="false position">
-
-<img class="centered-full" src="{{ "/assets/posts/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
-
-<hr>
-
-<hr/>
-
-<table class="truth">
-    <tr>
-        <td>$$p$$</td>
-        <td>$$\neg p$$</td>
-    </tr>
-    <tr>
-        <td>T</td>
-        <td>F</td>
-    </tr>
-    <tr>
-        <td>F</td>
-        <td>T</td>
-    </tr>
-</table>
+# H1
+normal text
+## H2
+normal text
+### H3
+normal text
+#### H4
+normal text
 
 ---
 
-<table class="binary_word">
-    <tr>
-        <td>1</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-        <td>1</td>
-        <td>0</td>
-        <td>1</td>
-    </tr>
-    <tr>
-        <td>15</td>
-        <td>14</td>
-        <td>13</td>
-        <td>12</td>
-        <td>11</td>
-        <td>10</td>
-        <td>9</td>
-        <td>8</td>
-        <td>7</td>
-        <td>6</td>
-        <td>5</td>
-        <td>4</td>
-        <td>3</td>
-        <td>2</td>
-        <td>1</td>
-        <td>0</td>
-    </tr>
-</table>
+# Image classes
 
-Test post. `categories: [post, other]`
+Markdown
+
+![Clone URL]({{ "/assets/posts/floating-point-math/error.svg"  | prepend: site.baseurl }})
+
+Centered-full:
+
+<img class="centered-full" src="{{ "/assets/posts/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
+
+Centered:
+
+<img class="centered" src="{{ "/assets/posts/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
+
+Centered-real:
+
+<img class="centered-real" src="{{ "/assets/posts/floating-point-math/error.svg" | prepend: site.baseurl }}" alt="number line holes">
+
+Centered-vertical
+
+<img class="centered-vertical" src="{{ "/assets/posts/why-jailbreak/gauss-settings.png"  | prepend: site.baseurl }}" alt="Gauss Settings"/>
 
 
 ```python
@@ -90,7 +56,6 @@ if __name__ == '__main__':
     main()
 ```
 
-![Clone URL]({{ "/assets/posts/gh-pages/clone-url.png" | prepend: site.baseurl }})
 
 ```python
 {% raw %}{% highlight python %}

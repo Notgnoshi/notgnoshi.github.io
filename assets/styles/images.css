@@ -8,6 +8,7 @@ img.centered {
 
 img.centered-real {
     max-width: 50%;
+    max-height: 50%;
     width: auto;
     height: auto;
     display: block;
@@ -24,7 +25,7 @@ img.centered-full {
 }
 
 img.centered-vertical {
-    max-height: 800px;
+    max-height: 50vh;
     width: auto;
     display: block;
     margin-left: auto;
@@ -45,8 +46,19 @@ iframe.centered {
     margin-right: auto;
 }
 
+/* Put media queries for images here so that they override the above styles. */
 @media screen and (max-width: 900px) {
     img.centered {
         width: 90%
+    }
+    img.centered-real {
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 1092px) {
+    img {
+        /* max-width: 60%; */
+        max-height: 40vh;
     }
 }

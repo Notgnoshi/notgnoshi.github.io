@@ -109,4 +109,4 @@ This was my first experience with a neural network, so here are some things that
 
 ---
 
-Note that boolean functions are bad functions for neural networks to learn. This is because their domain and ranges are finite and (typically) small. Learning the function takes more time and space than simply listing a truth table.
+Note that boolean functions are bad functions for neural networks to learn. This is because their domain and ranges are discrete and (typically) small. Learning the function takes more time and space than simply listing a truth table.

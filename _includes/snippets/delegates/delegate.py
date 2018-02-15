@@ -11,7 +11,7 @@ class Delegate(object):
             self.functors.append(functor)
         return self
 
-    def unsunscribe(self, functor):
+    def unsubscribe(self, functor):
         """Unsubscribe a given functor to this delegate."""
         try:
             self.functors.remove(functor)

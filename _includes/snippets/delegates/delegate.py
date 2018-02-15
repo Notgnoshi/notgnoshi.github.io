@@ -4,15 +4,15 @@ class Delegate(object):
     def __init__(self):
         self.functors = list()
 
-    def __iadd__(self, functor):
-        """Overload += to subscribe a given functor to this delegate."""
+    def subscribe(self, functor):
+        """Subscribe a given functor to this delegate."""
         # Verify that functor is callable. If not, don't subscribe.
         if callable(functor):
             self.functors.append(functor)
         return self
 
-    def __isub__(self, functor):
-        """Overload -= to unsubscribe a given functor to this delegate."""
+    def unsunscribe(self, functor):
+        """Unsubscribe a given functor to this delegate."""
         try:
             self.functors.remove(functor)
         # Functor wasn't subscribed.
@@ -34,8 +34,8 @@ class Delegated(object):
 
     def subscribe(self, functor):
         """Subscribes the given functor to the output of self"""
-        self.delegate += functor
+        self.delegate.subscribe(functor)
 
     def unsubscribe(self, functor):
         """Unsubscribes the given functor from the output of self"""
-        self.delegate -= functor
+        self.delegate.unsubscribe(functor)

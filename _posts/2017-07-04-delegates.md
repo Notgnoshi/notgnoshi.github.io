@@ -29,7 +29,7 @@ The end result is that of applying the function $$\displaystyle f(n) = \left(2(n
 
 I've included an `Observer` object in the chain because we need some way to view the result of our calculations, which are as follows:
 
-```
+```text
 ~ $ ./main-simple.py
 Observed value(s): 4
 Observed value(s): 16
@@ -61,15 +61,15 @@ The next thing to look at is the [modifier](https://github.com/Notgnoshi/notgnos
 {% include snippets/delegates/modifiers.py %}
 ```
 
-These are fairly self explanatory: instead of passing on what they are given unchanged, they modify their input somehow before calling their delegates in the values.
+These are fairly self explanatory: instead of passing on what they are given unchanged, they modify their input somehow before calling their delegates on the values.
 
-Now for the implementation of the [`Delegated`](https://github.com/Notgnoshi/notgnoshi.github.io/blob/master/_includes/snippets/delegates/delegate.py) base class. A `Delegated` class has a `self.delegate` member, and two methods: `subscribe()` and `unsubscribe()`.
+Now for the implementation of the [`Delegated`](https://github.com/Notgnoshi/notgnoshi.github.io/blob/master/_includes/snippets/delegates/delegate.py) base class. A `Delegated` class has two methods: `subscribe()` and `unsubscribe()` to, appropriately, subscribe and unsubscribe from its output.
 
 ```python
 {% include snippets/delegates/delegate.py %}
 ```
 
-The `Delegate` class is where the magic happens. What I've defined a `Delegate` to be is a list of functors, all of which will be called on the given value(s) when the delegate is called. This way a `Delegated` class has *one* delegate, but an *arbitrary* number of subscribers. I overload `+=` and `-=` for convenience to subscribe functors to a delegate, doing some sanity checks along the way.
+The `Delegate` class is where the magic happens. What I've defined a `Delegate` to be is a list of functors, all of which will be called on the given value(s) when the delegate is called. This way a `Delegated` class has *one* delegate, but an *arbitrary* number of subscribers.
 
 ---
 

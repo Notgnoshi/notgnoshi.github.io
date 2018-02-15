@@ -1,19 +1,18 @@
 #!/usr/bin/python3
-from modifiers import Multiplier, Exponentiator, Incrementer
+from delegate import Delegated
+from modifiers import Exponentiator, Incrementer
 from observer import Observer
 
 
-class Doubler(Multiplier):
-    """A class to double numbers"""
+class Doubler(Delegated):
+    """A delegated class to double numbers"""
 
     def __init__(self):
-        # Set the parent class's multiplier to 2
-        super().__init__(2)
+        super().__init__()
 
     def double(self, val):
         """A method to double the given value"""
-        # Call the parent class's __call__() method
-        self(val)
+        self.delegate(2 * val)
 
 
 def main():
@@ -29,6 +28,7 @@ def main():
     squarer.subscribe(observer)
 
     for i in range(10):
+        # Call the first modifier in the chain, and let the delegates handle the rest
         incrementer(i)
 
     incrementer.unsubscribe(doubler.double)

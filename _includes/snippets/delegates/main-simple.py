@@ -20,6 +20,7 @@ def main():
     squarer.subscribe(observer)
 
     for i in range(10):
+        # Call the first modifier in the chain, and let the delegates handle the rest
         incrementer(i)
 
     # Unsubscribe functors.

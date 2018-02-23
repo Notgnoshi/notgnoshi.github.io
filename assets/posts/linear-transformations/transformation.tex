@@ -1,0 +1,11 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows, shapes, positioning}
+
+\begin{document}
+\begin{tikzpicture}
+    \node[cloud, draw, cloud puffs=19, cloud ignores aspect] (stuff) at (0, 0) {stuff};
+    \node[cloud, draw, cloud puffs=27, cloud ignores aspect] (new stuff) at (5, 0) {new stuff};
+
+    \draw[->, very thick] (stuff) -- node[midway, above]{$T$} (new stuff);
+\end{tikzpicture}
+\end{document}

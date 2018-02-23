@@ -1,0 +1,11 @@
+\documentclass[tikz]{standalone}
+
+\begin{document}
+\begin{tikzpicture}
+    \draw [very thin, gray!80, dashed] (-2, -2) grid (2, 2);
+    %Specify the transformation matrix and the center point
+    \pgftransformcm{1}{0}{0.5}{1}{\pgfpoint{0}{0}}
+    \draw [black!80] (-2, -2) grid (2, 2);
+    \draw [thick, red, arrows={<->[scale=10]}] (2.5, 0) node [above] {\large$x$} -- (0,0) -- (0, 2.5) node [right] {\large$y$};
+\end{tikzpicture}
+\end{document}

@@ -1,4 +1,4 @@
-img.centered {
+img.centered, video.centered {
     width: 50%;
     height: auto;
     display: block;
@@ -6,7 +6,7 @@ img.centered {
     margin-right: auto;
 }
 
-img.centered-real {
+img.centered-real, video.centered-real {
     max-width: 50%;
     max-height: 50%;
     width: auto;
@@ -16,7 +16,7 @@ img.centered-real {
     margin-right: auto;
 }
 
-img.centered-full {
+img.centered-full, video.centered-full {
     width: 90%;
     height: auto;
     display: block;
@@ -24,7 +24,7 @@ img.centered-full {
     margin-right: auto;
 }
 
-img.centered-vertical {
+img.centered-vertical, video.centered-vertical {
     max-height: 50vh;
     width: auto;
     display: block;
@@ -32,7 +32,7 @@ img.centered-vertical {
     margin-right: auto;
 }
 
-img.inline {
+img.inline, video.inline {
     display: inline;
     vertical-align: middle;
     margin: 2px;
@@ -48,16 +48,16 @@ iframe.centered {
 
 /* Put media queries for images here so that they override the above styles. */
 @media screen and (max-width: 900px) {
-    img.centered {
+    img.centered, video.centered {
         width: 90%
     }
-    img.centered-real {
+    img.centered-real, video.centered-real {
         max-width: 90%;
     }
 }
 
 @media screen and (min-width: 1092px) {
-    img {
+    img video {
         /* max-width: 60%; */
         max-height: 40vh;
     }

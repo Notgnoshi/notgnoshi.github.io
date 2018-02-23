@@ -1,6 +1,8 @@
 _site/
 .idea/
 .jekyll-metadata
+.ipynb_checkpoints/
+.vscode/
 *.pdf
 
 ## Core latex/pdflatex auxiliary files:

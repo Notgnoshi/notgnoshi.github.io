@@ -172,7 +172,7 @@ Here are some examples.
     $$A = \begin{pmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix}$$
 
     ```python
-    theta = np.pi / 6 # 30 degree clockwise rotation
+    theta = np.pi / 6 # 30 degree counter-clockwise rotation
     A = np.column_stack([[np.cos(theta), np.sin(theta)], [-np.sin(theta), np.cos(theta)]])
     anim = animate_transform(A, repeat=True)
     anim.save('rotation.mp4')
@@ -216,7 +216,7 @@ Here are some examples.
 Now we can visualize combining different transformations!
 
 ```python
-theta = np.pi / 6 # 30 degree clockwise rotation
+theta = np.pi / 6 # 30 degree counter-clockwise rotation
 A = np.column_stack([[np.cos(theta), np.sin(theta)], [-np.sin(theta), np.cos(theta)]])
 B = np.column_stack([[2, 0], [0, 1]])  # A scale by 2 units in the x direction
 anim = animate_transform(A @ B, repeat=True)

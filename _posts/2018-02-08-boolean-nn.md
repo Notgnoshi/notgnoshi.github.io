@@ -80,7 +80,7 @@ where the hidden layer activation function is $$softplus(x)$$ and the output lay
 Now we actually train the network.
 
 ```python
-XOR.fit(inputs, xor_labels, epochs=5000, verbose=0)
+XOR.fit(inputs, xor_outputs, epochs=5000, verbose=0)
 cost, acc = XOR.evaluate(inputs, xor_outputs, verbose=0)
 print(f'cost: {cost}, acc: {acc * 100}%')
 print(XOR.predict(inputs))

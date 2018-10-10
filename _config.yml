@@ -23,5 +23,5 @@ syntax-highlighting:
 kramdown:
     input: GFM
 
-plugins:
+plugins_dir:
     - jekyll-sitemap

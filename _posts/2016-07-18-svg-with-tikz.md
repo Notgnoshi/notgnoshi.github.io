@@ -54,7 +54,7 @@ The above code produces the following SVG image:
 
 <img class="centered-full" src="{{ "/assets/posts/geometry/polar/polar.svg" | prepend: site.baseurl }}" alt="polar coordinates">
 
-If you compile with the `-shell-escape` flag as mentioned [here]({% post_url 2016-02-15-latex-code-blocks %}) you can tell $$\LaTeX$$ to compile both a PDF file and an SVG image as so:
+If you compile with the `-shell-escape` flag, you can tell $$\LaTeX$$ to compile both a PDF file and an SVG image as so:
 
 ```latex {% raw %}
 \documentclass[tikz, convert={outext=.svg, command=\unexpanded{pdf2svg \infile\space\outfile}}, multi=false]{standalone}

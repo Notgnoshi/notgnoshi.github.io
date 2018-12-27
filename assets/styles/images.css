@@ -36,8 +36,6 @@ img.inline, video.inline {
     display: inline;
     vertical-align: middle;
     margin: 2px;
-    height: 24pt;
-    width: auto;
 }
 
 iframe.centered {

@@ -2,6 +2,7 @@
 layout: post
 title: Why I dislike Windows
 meta: A list of subjective personal opinions as to why Windows sucks
+redirect_to: https://agill.xyz/blog/why-i-dislike-windows
 ---
 
 I dumped Windows a few years ago and I couldn't be happier. Every time it comes up in conversation however, I have a difficult time explaining why my hatred for Windows is justified. That's what I wanted to do here.

@@ -3,6 +3,7 @@ layout: post
 title: "Error in Numerical Computation"
 subtitle: "A.K.A. `Fun with Taylor Series'"
 meta: A description of error using the Taylor Series in numerical computation
+redirect_to: https://agill.xyz/blog/error-in-numerical-computation
 ---
 <!-- Custom styles for the binary_word -->
 <link rel="stylesheet" href="{{ "/assets/styles/binary_word.css" | prepend: site.baseurl }}">

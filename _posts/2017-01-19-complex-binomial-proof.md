@@ -2,6 +2,7 @@
 layout: post
 title: Proof of the Complex Binomial Formula
 meta: A proof the the binomial formula for complex numbers as presented in my Complex Analysis class
+redirect_to: https://agill.xyz/blog/proof-of-the-complex-binomial-formula
 ---
 
 This is a presentation of the proof for the binomial formula for complex numbers. The intent is to provide a clear example of an inductive proof.

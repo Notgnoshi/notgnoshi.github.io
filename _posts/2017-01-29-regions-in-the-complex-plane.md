@@ -2,6 +2,7 @@
 layout: post
 title: Regions in the Complex Plane
 meta: The topological definitions that form the foundation for the development of limits and consideration of regions in the complex plane in complex analysis
+redirect_to: https://agill.xyz/blog/regions-in-the-complex-plane
 ---
 
 Before we can rigorously develop a good foundation for the concepts of functions and limits we need some set theoretic definitions that will presumably come in handy later.

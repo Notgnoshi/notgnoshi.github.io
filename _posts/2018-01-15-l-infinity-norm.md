@@ -1,8 +1,8 @@
 ---
 layout: post
 title: An infinity norm proof
-<!-- subtitle: Modeling my life by an unbounded decreasing sequence -->
 meta: My Deep Learning professor thought it would be a great idea to jump his class with a limit proof of lim p -> infty L_p = L_infty
+redirect_to: https://agill.xyz/blog/an-infinity-norm-proof
 ---
 
 $$\newcommand{\norm}[1]{\left\lVert#1\right\rVert}$$

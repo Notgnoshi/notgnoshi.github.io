@@ -2,6 +2,7 @@
 layout: post
 title: Completing the Square
 meta: Describes a geometric interpretation of the algebraic method of completing the square as found in Strogatz's "The Joy of X"
+redirect_to: https://agill.xyz/blog/completing-the-square
 ---
 <link rel="stylesheet" href="{{ "/assets/styles/square.css" | prepend: site.baseurl }}">
 

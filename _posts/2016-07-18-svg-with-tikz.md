@@ -2,6 +2,7 @@
 layout: post
 title: Producing SVG images with Tikz
 meta: A tutorial on producing vector graphics from a Tikz LaTeX image.
+redirect_to: https://agill.xyz/blog/producing-svg-images-with-tikz
 ---
 
 It's a fairly simple process as long as you're using Linux. This process requires `pdflatex` and [`pdf2svg`](https://github.com/dawbarton/pdf2svg), installable with `sudo apt install pdf2svg`.

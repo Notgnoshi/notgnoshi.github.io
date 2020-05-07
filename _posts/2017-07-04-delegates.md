@@ -3,6 +3,7 @@ layout: post
 title: Delegates
 subtitle: A Python implementation
 meta: A Python implementation of delegates. A delegate is an object to which a task is delegated. The purpose of delegation is to decouple code and add flexibility.
+redirect_to: https://agill.xyz/blog/python-delegates
 ---
 
 At my work this summer I've had the privilege to work on a code base that was very well-designed. As a result, I feel I have substantially grown as a developer. One of the neatest parts of the project I've been working on is that there are these magical things called *delegates* that glue the code together. These magical entities are what I want to talk about here.

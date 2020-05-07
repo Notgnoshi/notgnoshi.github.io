@@ -2,6 +2,7 @@
 layout: post
 title: Complex Polynomial Inequality Verification
 meta: The verification of a complex polynomial inequality as stated in my Complex Analysis textbook
+redirect_to: https://agill.xyz/blog/complex-polynomial-inequality-verification
 ---
 
 **Defn.** For $$z, a_i \in \mathbb C$$ and $$n \in \mathbb R^+$$

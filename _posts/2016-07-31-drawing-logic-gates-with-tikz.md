@@ -2,6 +2,7 @@
 layout: post
 title: Drawing Logic Gates with Tikz
 meta: A basic tutorial on drawing digital circuit diagrams with Tikz
+redirect_to: https://agill.xyz/blog/drawing-logic-gates-with-tikz
 ---
 
 Tikz is an extremely powerful tool, but it can be hard to get a grasp of. Here's a few examples of drawing digital circuit diagrams using the `shapes.gates.logic` Tikz library. Each of these examples uses the <a href="{{ "/assets/posts/drawing-logic-gates-with-tikz/standalone.cfg" | prepend: site.baseurl }}">`standalone.cfg`</a> file introduced in [this]({% post_url 2016-07-18-svg-with-tikz %}) post.

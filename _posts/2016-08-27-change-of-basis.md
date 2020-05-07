@@ -2,6 +2,7 @@
 layout: post
 title: Change of Basis
 meta: Describes what a basis is, and how to change from one vector space to another using a transition matrix. Pays special attention to rotation matrices.
+redirect_to: https://agill.xyz/blog/change-of-basis
 ---
 
 One of the things I knew well enough to pass an exam on, but not well enough to actually understand what it meant was the concept of changing basis in linear algebra. This is an attempt to remedy that.

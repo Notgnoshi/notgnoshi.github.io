@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+redirect_to: https://agill.xyz
 ---
 
 My name is Austin. I graduated with a degree in Applied and Computational Mathematics from the [South Dakota School of Mines and Technology](https://www.sdsmt.edu/) in May of 2018. I'm now working on a Masters degree in Computational Sciences and Robotics from the same department.

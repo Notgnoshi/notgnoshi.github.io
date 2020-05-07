@@ -2,6 +2,7 @@
 layout: post
 title: Exploring Linear Transformations with Python
 meta: Animating linear transformations using matplotlib and numpy in a Jupyter Notebook.
+redirect_to: https://agill.xyz/blog/exploring-linear-transformations-with-python
 ---
 
 Every undergraduate math student knows that matrices are *linear transformations.* That's all well and good, but what is a transformation, and what does it mean for one to be linear?

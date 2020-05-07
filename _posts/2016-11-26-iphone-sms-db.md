@@ -2,6 +2,7 @@
 layout: post
 title: Downloading your iPhone text messages as a SQLite database
 meta: Here's how to access and download your iPhone text messages as a SQLite database. Requires your phone to be jailbroken. Also works for retrieving your voicemail.
+redirect_to: https://agill.xyz/blog/downloading-your-iphone-sms-messages-as-a-sqlite-database
 ---
 
 <link rel="stylesheet" href="{{ "/assets/styles/tables.css" | prepend: site.baseurl }}">

@@ -2,6 +2,7 @@
 layout: post
 title: Product Spaces
 meta: The difference between the box and product topologies in terms of their bases.
+redirect_to: https://agill.xyz/blog/product-spaces
 ---
 
 There is some preliminary information we need to cover before a discussion of product spaces makes sense.

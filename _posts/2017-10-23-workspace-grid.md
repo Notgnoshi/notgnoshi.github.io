@@ -3,6 +3,7 @@ layout: post
 title: I Want My 2x2 Workspaces Back!
 subtitle: My constant opposition to change
 meta: A short explanation of how to install and configure the workspace-grid Gnome Shell Extension for Ubuntu 17.10
+redirect_to: https://agill.xyz/blog/i-want-my-2-by-2-workspaces-back
 ---
 
 I installed Ubuntu 17.10 yesterday, which has abandoned Unity in favor of Gnome. So far it has been a smooth transition. However, one of the things I really liked about Unity over other desktop managers was the workspaces. It just clicked with my existing mental model of how to use software.

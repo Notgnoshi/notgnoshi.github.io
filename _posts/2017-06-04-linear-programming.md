@@ -3,6 +3,7 @@ layout: post
 title: Linear Programming
 subtitle: A geometric understanding of Karmarkar's Algorithm
 meta: A geometric explanation of linear programs, and Karmarkar's Algorithm implemented in Python.
+redirect_to: https://agill.xyz/blog/karmarkars-algorithm
 ---
 
 <link rel="stylesheet" href="{{ "/assets/styles/lp.css" | prepend: site.baseurl }}">

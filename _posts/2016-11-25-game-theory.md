@@ -2,6 +2,7 @@
 layout: post
 title: Impartial Classic Combinatorial Games
 meta: A review of impartial classic combinatorial games from a game theory perspective. Includes description of nimber (aka Sprague-Grundy) values and N and P states.
+redirect_to: https://agill.xyz/blog/impartial-classic-combinatorial-games
 ---
 
 Game Theory is the mathematical modeling of conflict, cooperation, and the analysis and search of optimal solutions. The objects of study are **games**, which are composed of three pieces.

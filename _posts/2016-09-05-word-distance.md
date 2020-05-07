@@ -2,6 +2,7 @@
 layout: post
 title: Levenshtein Distance
 meta: Describes string metrics, metric spaces, and in particular the definition and computation of the Levenshtein distance metric in Python.
+redirect_to: https://agill.xyz/blog/levenshtein-distance
 ---
 
 Suppose we want to transform one string into another. How might we describe the distance between the two words mathematically? The most common form of distance metric for strings is the [Levenshtein](https://en.wikipedia.org/wiki/Levenshtein_distance) distance between the first $$i$$ characters of $$a$$ and the first $$j$$ characters of $$b$$, given by

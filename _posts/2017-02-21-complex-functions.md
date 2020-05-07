@@ -2,6 +2,7 @@
 layout: post
 title: Complex-Valued Functions
 meta: Functions of complex variables, covering topics such as injective, surjective, domain, range, image, preimage, etc.
+redirect_to: https://agill.xyz/blog/complex-functions
 ---
 
 **Defn.** A *function* $$f$$ defined on a set $$S \subseteq \mathbb C$$ is a *rule* that assigns to each $$z \in S$$ a complex number $$w$$, called the *value* of $$f$$ at $$z$$ and is denote by $$f(z)$$.

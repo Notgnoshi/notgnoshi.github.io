@@ -2,6 +2,7 @@
 layout: post
 title: Learning Boolean Functions with (simple) Neural Networks
 meta: Reproducing the AND, OR, XOR, etc. boolean functions using neural networks implemented in Keras
+redirect_to: https://agill.xyz/blog/learning-boolean-functions-with-neural-networks
 ---
 <link rel="stylesheet" href="{{ "/assets/styles/truth_tables.css" | prepend: site.baseurl }}">
 
